@@ -377,6 +377,46 @@
       "ust": [],
       "tanim_tr": "Tehlikeden uzaklaşma hâlinde kasdolunan yer; ister maddî ister i'tibârî olsun.",
       "misal_tr": "Onlar için azaptan bir _ yoktur."
+    },
+    {
+      "id": "51677",
+      "arapca": ["كُهَيْرَبٌ", "إِلِكْتْرْونٌ", "أَلِكْتْرُونٌ"],
+      "ingilizce": [],
+      "tanim": "دقيقة ذات شِحْنَة كهربائية سالبة ، شحنتها هي الجزء الذي لا يتجزأ من الكهربائية",
+      "misal": "يُعتبر ال_ العنصر الأساسي في الكهرباء",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "ek"
+    },
+    {
+      "id": "50896",
+      "arapca": ["تَكَهْرُبٌ", "كَهْرَبَةٌ"],
+      "ingilizce": [],
+      "tanim": "سَرَيانُ وتفرغ القُوَّةِ الكَهْرَبائِيَّةِ في شيء ما",
+      "misal": "يتم _ المواد بتوصيلها بتيار كهربائي",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "ek"
+    },
+    {
+      "id": "51162",
+      "arapca": ["كَهْرَبَا", "كَهْرَمَانٌ"],
+      "ingilizce": [],
+      "tanim": "مادّة راتنجيّة أفرزتها أشجارٌ من المخروطيَّات ، عاشت في عصور جيولوجيَّة قديمة ، وهي صلبة شبه شفّافة لا تذوب في الماء وتنصهر ، ولها خاصِّيّة جذب الأشياء الخفيفة عند الاحتكاك",
+      "misal": "يتم صناعة بعض الحلي من ال_",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "ek"
+    },
+    {
+      "id": "53040",
+      "arapca": ["كَهْرَبَائِيٌّ", "كَهْرَبِيٌّ"],
+      "ingilizce": [],
+      "tanim": "دور للشخص المتخصص في تمديد أسلاك الكهرباء وصيانتها وصيانة الأجهزة والتراكيب التي تعمل بالكهرباء والأدوات التي تعمل على إيصال الكهرباء إلى تلك الأجهزة",
+      "misal": "أحضر أبي _اً ليفحصَ سبب انقطاع الكهرباء من حينٍ لآخر",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "ek"
     }
   ],
   "vikisozluk": [
@@ -1013,6 +1053,79 @@
       "etiket": ["form-i", "no-gloss"],
       "okunus": ["uhrubā", "haraba"],
       "etimoloji": 2
+    },
+    {
+      "madde": "كهارب",
+      "tur": "noun",
+      "baslik": "كَهَارِب • (kahārib) m pl",
+      "anlam": ["plural of كَهْرَب (kahrab)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["كَهْرَب"],
+      "okunus": ["kahārib"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "كهرب",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كَهْرَبَ • (kahraba) Iq (non-past يُكَهْرِبُ (yukahribu), verbal noun كَهْرَبَة (kahraba))",
+      "anlam": ["to electrify", "to ionize", "To get shocked"],
+      "okunus": ["kahraba"],
+      "ipa": ["/kah.ra.ba/"],
+      "etimoloji": 4,
+      "bag": "ek"
+    },
+    {
+      "madde": "كهرب",
+      "tur": "noun",
+      "etim_no": "2",
+      "baslik": "كَهْرَب • (kahrab) m (plural كَهَارِب (kahārib))",
+      "esanlamli": ["إِلِكْتْرُون"],
+      "anlam": ["electron"],
+      "etiket": ["rare"],
+      "okunus": ["kahrab"],
+      "ipa": ["/kah.rab/"],
+      "bag": "ek"
+    },
+    {
+      "madde": "كهرب",
+      "tur": "noun",
+      "etim_no": "3",
+      "esanlamli": ["كَهْرَمَان"],
+      "anlam": ["amber"],
+      "etiket": ["collective"],
+      "okunus": ["kahrab"],
+      "ipa": ["/kah.rab/"],
+      "bag": "ek"
+    },
+    {
+      "madde": "كهرباء",
+      "tur": "noun",
+      "baslik": "كَهْرَبَاء or كَهْرُبَاء • (kahrabāʔ or kahrubāʔ) f",
+      "etim_sablon": [
+        ["bor+", "Borrowed from Classical Persian کَهْرُبا (kahrubā, “amber”)"],
+        ["der", "Middle Persian khlpʾd (kah-rubāy)"]
+      ],
+      "esanlamli": ["كَهْرَب", "كَهْرَمَان"],
+      "anlam": ["electricity", "amber"],
+      "etiket": ["obsolete"],
+      "okunus": ["kahrabāʔ", "kahrubāʔ"],
+      "ipa": ["/kah.ra.baːʔ/", "/kah.ru.baːʔ/"],
+      "dr": ["كَهْرَبَ", "كَهْرَبَائِيّ", "كَهْرُبَائِيّ", "كَهْرُوـ"],
+      "rl": ["كَهْرَبِيَّة", "كَهْرَبائِيَّة"],
+      "etimoloji": 5,
+      "bag": "ek"
+    },
+    {
+      "madde": "كهربة",
+      "tur": "noun",
+      "baslik": "كَهْرَبَة • (kahraba) f",
+      "anlam": ["verbal noun of كَهْرَبَ (kahraba) (form Iq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["كَهْرَبَ"],
+      "okunus": ["kahraba"],
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -1036,6 +1149,20 @@
       "kognatlar": [
         ["هَرَبَ", "هرب#Arabic"],
         ["escape", "escape"]
+      ]
+    },
+    {
+      "metin": "Denominal verb from كَهْرَبَاء (kahrabāʔ).",
+      "kognatlar": [
+        ["كَهْرَبَاء", "كهرباء#Arabic"]
+      ]
+    },
+    {
+      "metin": "Borrowed from Classical Persian کَهْرُبا (kahrubā, “amber”), from Middle Persian khlpʾd (kah-rubāy). Cognate with كَهْرَب (kahrab).",
+      "kognatlar": [
+        ["کَهْرُبا", "کهربا#Persian"],
+        ["khlpʾd", "khlpʾd#Middle_Persian"],
+        ["كَهْرَب", "كهرب#Arabic"]
       ]
     }
   ],

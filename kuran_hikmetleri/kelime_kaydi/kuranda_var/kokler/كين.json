@@ -503,6 +503,26 @@
       ],
       "tanim_tr": "Bulunmuş veya bulunacak olan, idrâk edebildiğimiz veya tasavvur edebildiğimiz her şey.",
       "misal_tr": "Her şey yolunda."
+    },
+    {
+      "id": "51909",
+      "arapca": ["كِينَا"],
+      "ingilizce": [],
+      "tanim": "شَجَرمن الفصيلة الكُويّة دائمة الخضرة وتمتاز بارتفعاتها الشاهقة تستخد للحصول على جين الورقز يتنْبُتُ في المَناطِقِ الحارَّةِ ، وَفي أمْيركا الجَنوبِيَّةِ\" بِخاصَّةٍ\"",
+      "misal": "توجد أكبر شجرة _ في أميركا الجنوبية",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "kelime"
+    },
+    {
+      "id": "51915",
+      "arapca": ["كِينَا"],
+      "ingilizce": [],
+      "tanim": "شجر دائم الخضرة ينبت في المناطق الحارة وهو من اشجار الأوكالبتوس، ويستخرج من ورقة مادة قلوية بيضاء اللون وشديدة المرارة تستخدم لعلاج الحمى والملاريا",
+      "misal": "يعالج دواء ال_ حالات الحمى الشديدة",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "kelime"
     }
   ],
   "vikisozluk": [
@@ -516,12 +536,100 @@
       "okunus": ["kaynūna"],
       "bag": "müştak",
       "anlam_tr": ["كَانَ (kāna, bâb I) fiilinin masdarı"]
+    },
+    {
+      "madde": "أستكان",
+      "tur": "verb",
+      "baslik": "أستكان (form X)\n# أُسْتَكَانُ (ʔustakānu) /ʔus.ta.kaː.nu/: first-person singular non-past passive indicative of اِسْتَكَانَ (istakāna)\n# أُسْتَكَانَ (ʔustakāna) /ʔus.ta.kaː.na/: first-person singular non-past passive subjunctive of اِسْتَكَانَ (istakāna)",
+      "etiket": ["form-x", "no-gloss"],
+      "okunus": ["ʔustakānu", "istakāna", "ʔustakāna"],
+      "etimoloji": 1,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "استكانا",
+      "tur": "verb",
+      "baslik": "اِسْتَكَانَا • (istakānā) (form X) /is.ta.kaː.naː/\n# third-person masculine dual past active of اِسْتَكَانَ (istakāna)",
+      "etiket": ["form-x", "no-gloss"],
+      "okunus": ["istakānā", "istakāna"],
+      "etimoloji": 1,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "استكانوا",
+      "tur": "verb",
+      "baslik": "اِسْتَكَانُوا • (istakānū) (form X) /is.ta.kaː.nuː/\n# third-person masculine plural past active of اِسْتَكَانَ (istakāna)",
+      "etiket": ["form-x", "no-gloss"],
+      "okunus": ["istakānū", "istakāna"],
+      "etimoloji": 1,
+      "bag": "kelime"
+    },
+    {
+      "madde": "كأن",
+      "tur": "conj",
+      "baslik": "كَأَنَّ • (kaʔanna)",
+      "anlam": ["as if"],
+      "okunus": ["kaʔanna"],
+      "ipa": ["/ka.ʔan.na/"],
+      "torunlar": [
+        ["aeb", "كِايِنّ", "kēyenn"]
+      ],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كأن",
+      "tur": "conj",
+      "baslik": "كَأَنْ • (kaʔan)",
+      "anlam": ["as if"],
+      "okunus": ["kaʔan"],
+      "ipa": ["/ka.ʔan.na/"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كأين",
+      "tur": "particle",
+      "baslik": "كَأَيِّنْ • (kaʔayyin)",
+      "esanlamli": ["كَمْ"],
+      "anlam": ["how many!"],
+      "etiket": ["archaic"],
+      "okunus": ["kaʔayyin"],
+      "etimoloji": 3,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كينيا",
+      "tur": "name",
+      "baslik": "كِينِيَا or كِينْيَا • (kīniyā or kīnyā) f",
+      "anlam": ["Kenya (a country in Africa)"],
+      "okunus": ["kīniyā", "kīnyā"],
+      "ipa": ["/kiː.ni.jaː/", "/kiːn.jaː/"],
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
     {
       "metin": "",
       "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "From كَ (ka) + أَنَّ (ʔanna).",
+      "kognatlar": [
+        ["كَ", "ك#Arabic"],
+        ["أَنَّ", "أن#Arabic"]
+      ]
+    },
+    {
+      "metin": "Univerbation of كَـ (ka-) + أَيٍّ (ʔayyin).",
+      "kognatlar": [
+        ["كَـ", "ك#Arabic"],
+        ["أَيٍّ", "أي#Arabic"]
+      ]
     }
   ],
   "etymarab": {
@@ -683,5 +791,8 @@
       }
     ],
     "ortalama_benzerlik": 0.543
+  },
+  "tr_ek": {
+    "استكانوا": "boyun eğdi"
   }
 }

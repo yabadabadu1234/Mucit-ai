@@ -884,6 +884,92 @@
       "okunus": ["yubninna", "ʔabanna", "yubnin"],
       "kok_yazilis": "أبن",
       "etimoloji": 0
+    },
+    {
+      "madde": "أبنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أُبْنَا • (ʔubnā) (form I) /ʔub.naː/\n# first-person plural past active of آبَ (ʔāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔubnā", "ʔāba"],
+      "etimoloji": 0,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "ابن",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "اِبْن • (ibn) m (plural أَبْنَاء (ʔabnāʔ) or بَنُون (banūn) or بَنَات (banāt), feminine اِبْنَة (ibna) or بِنْت (bint))",
+      "anlam": [
+        "son",
+        "descendant, scion",
+        "offspring, son of the fatherland",
+        "member (of a group or set of people or things)"
+      ],
+      "okunus": ["ibn"],
+      "ipa": ["/ibn/"],
+      "torunlar": [
+        ["acw", "ابن", "ibin"],
+        ["mt", "iben", ""],
+        ["ary", "بن", "bin"],
+        ["en", "ibn", ""],
+        ["ms", "bin", ""],
+        ["fa-cls", "اِبن", ""],
+        ["sw", "bin", ""]
+      ],
+      "rl": ["بُنُوَّة", "بَنَوِيّ", "تَبَنٍّ"],
+      "ct": [
+        "أَب",
+        "أُمّ",
+        "جَدّ",
+        "جَدَّة",
+        "أَخ",
+        "أُخْت",
+        "اِبْن",
+        "اِبْنَة",
+        "حَفِيد",
+        "حَفِيدَة",
+        "عَمّ",
+        "عَمَّة",
+        "خَال",
+        "خَالَة",
+        "زَوْج",
+        "زَوْجَة",
+        "حَم",
+        "حَمَاة",
+        "صِهْر",
+        "كَنَّة",
+        "رَابّ",
+        "رَابَّة",
+        "رَبِيب",
+        "رَبِيبَة"
+      ],
+      "etimoloji": 5,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "ابنة",
+      "tur": "noun",
+      "baslik": "اِبْنَة • (ibna) f (dual اِبْنَتَان (ibnatān), plural بَنَات (banāt), masculine اِبْن (ibn))",
+      "anlam": ["daughter"],
+      "okunus": ["ibna"],
+      "ipa": ["/ib.na/"],
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "الأبناء",
+      "tur": "name",
+      "baslik": "الْأَبْنَاء • (al-ʔabnāʔ) pl",
+      "esanlamli": ["بَنُو الأَحْرَار"],
+      "anlam": [
+        "a colony in early Islamic Yemen descended from Sasanian Persian military people",
+        "a group residing in Abbasid-era old Baghdad descended from army members of Persian origin"
+      ],
+      "etiket": ["archaic", "historical"],
+      "okunus": ["al-ʔabnāʔ"],
+      "wp": ["Abbasid Caliphate"],
+      "etimoloji": 6,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -913,6 +999,21 @@
         ["بَنَّة", "بنة#Arabic"],
         ["بُنّ", "بن#Arabic:_coffee"],
         ["بُون", "بون#Omani_Arabic"]
+      ]
+    },
+    {
+      "metin": "Inherited from Proto-Semitic *bin-.",
+      "kognatlar": [
+        ["*bin-", "Reconstruction:Proto-Semitic/bin-"]
+      ]
+    },
+    {
+      "metin": "From اَلْ (al-) + أَبْنَاء (ʔabnāʔ), plural of اِبْن (ibn, “son”).\nThe second sense may be a short form of the phrase أَبْنَاء الْدَوْلَة (ʔabnāʔ al-dawla, literally “sons of the state, i.e. the Abbasid Caliphate”).",
+      "kognatlar": [
+        ["اَلْ", "ال#Arabic"],
+        ["أَبْنَاء", "أبناء#Arabic"],
+        ["اِبْن", "ابن#Arabic"],
+        ["أَبْنَاء الْدَوْلَة", "أبناء الدولة#Arabic"]
       ]
     }
   ],
@@ -984,5 +1085,10 @@
       }
     ],
     "ortalama_benzerlik": 0.205
+  },
+  "tr_ek_belirsiz": {
+    "ابناء": "oğul",
+    "ابنه": "oğul",
+    "ابني": "oğul"
   }
 }

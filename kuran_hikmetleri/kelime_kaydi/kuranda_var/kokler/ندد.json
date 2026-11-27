@@ -767,6 +767,26 @@
       "misal": "_ عامر عن طريق الصلاح عندما صاحب شخصاً سيء الخلق",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "49773",
+      "arapca": ["كازِينُو", "مَلْهىً", "نَادٍ"],
+      "ingilizce": [],
+      "tanim": "NULL",
+      "misal": "أغلقت الشرطة ال_ الذي افتتح مؤخراً في السر",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "46983",
+      "arapca": ["نَدَهَ", "نَادَى", "نَادَى إلى", "نَادَى ب", "نَادَى على", "نَادَى في", "نَادَى ل"],
+      "ingilizce": [],
+      "tanim": "صاح عاليا ليُلفت الانتباه و المسامع حول قضية معينة عبر عنها بالكلام",
+      "misal": "أخذ المتظاهر ي _ الحرية للأسرى",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -1175,6 +1195,47 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["yunaddidā", "naddada", "yunaddadā"],
       "etimoloji": 0
+    },
+    {
+      "madde": "تند",
+      "tur": "noun",
+      "etim_no": "3",
+      "baslik": "تِنَد • (tinad) pl",
+      "anlam": ["plural of تَنْدَة (tanda)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["تَنْدَة"],
+      "okunus": ["tinad"],
+      "etimoloji": 0,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "لندني",
+      "tur": "adj",
+      "baslik": "لُنْدُنِيّ • (lunduniyy) (feminine لُنْدُنِيَّة (lunduniyya), masculine plural لُنْدُنِيُّون (lunduniyyūn), feminine plural لُنْدُنِيَّات (lunduniyyāt))",
+      "anlam": ["London"],
+      "okunus": ["lunduniyy", "landaniyy"],
+      "ipa": ["/lun.du.nijj/", "/lan.da.nijj/"],
+      "etimoloji": 4,
+      "bag": "ek"
+    },
+    {
+      "madde": "لندني",
+      "tur": "noun",
+      "baslik": "لَنْدَنِيّ or لُنْدُنِيّ • (landaniyy or lunduniyy) m (plural لَنْدَنِيُّون (landaniyyūn) or لُنْدُنِيُّون (lunduniyyūn), feminine لَنْدَنِيَّة (landaniyya) or لُنْدُنِيَّة (lunduniyya))",
+      "anlam": ["Londoner"],
+      "okunus": ["landaniyy", "lunduniyy"],
+      "ipa": ["/lun.du.nijj/", "/lan.da.nijj/"],
+      "etimoloji": 4,
+      "bag": "ek"
+    },
+    {
+      "madde": "ندك",
+      "tur": "verb",
+      "baslik": "ندك (form I)\n# نَدُكُّ (nadukku) /na.duk.ku/: first-person plural non-past active indicative of دَكَّ (dakka)\n# نُدَكُّ (nudakku) /nu.dak.ku/: first-person plural non-past passive indicative of دَكَّ (dakka)\n# نَدُكَّ (nadukka) /na.duk.ka/: first-person plural non-past active subjunctive/jussive of دَكَّ (dakka)\n# نُدَكَّ (nudakka) /nu.dak.ka/: first-person plural non-past passive subjunctive/juss",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nadukku", "dakka", "nudakku"],
+      "etimoloji": 0,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -1194,6 +1255,15 @@
       "metin": "Borrowed from Italian tenda.",
       "kognatlar": [
         ["tenda", "tenda#Italian"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nArabic لُنْدُن (lundun)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic لندني\nFrom لُنْدُن (lundun, “London”) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["لُنْدُن", "لندن#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["لُنْدُن", "لندن#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
       ]
     }
   ],
@@ -1239,7 +1309,8 @@
   ],
   "tr_ek": {
     "التناد": "birbirini çağırma",
-    "المناد": "çağıran"
+    "المناد": "çağıran",
+    "اندادا": "benzerler"
   },
   "mustak_kanit": [
     [

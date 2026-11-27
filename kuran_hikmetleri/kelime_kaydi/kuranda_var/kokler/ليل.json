@@ -646,6 +646,50 @@
       "bag": "müştak",
       "etimoloji": 7,
       "anlam_tr": ["Melilla (İspanya'ya bağlı, Fas'ın kenarında bulunan özerk şehir ve ayrık toprak)"]
+    },
+    {
+      "madde": "الألى",
+      "tur": "pron",
+      "baslik": "اَلْأُلَى • (al-ʔulā) m pl or f pl",
+      "anlam": ["who, that, which"],
+      "okunus": ["al-ʔulā"],
+      "ipa": ["/al.ʔu.laː/"],
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "لآلئ",
+      "tur": "noun",
+      "baslik": "لَآلِئ • (laʔāliʔ)",
+      "anlam": ["plural of لُؤْلُؤَة (luʔluʔa)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["لُؤْلُؤَة"],
+      "okunus": ["laʔāliʔ"],
+      "ipa": ["/la.ʔaː.liʔ/"],
+      "etimoloji": 3,
+      "bag": "kelime"
+    },
+    {
+      "madde": "لئلا",
+      "tur": "conj",
+      "baslik": "لِئَلَّا • (liʔallā)",
+      "anlam": ["in order not to"],
+      "okunus": ["liʔallā"],
+      "ipa": ["/li.ʔal.laː/"],
+      "etimoloji": 8,
+      "bag": "kelime"
+    },
+    {
+      "madde": "ليلا",
+      "tur": "adv",
+      "baslik": "لَيْلًا • (laylan)",
+      "etim_sablon": [
+        ["adverbial accusative", "Adverbial accusative of لَيْل (layl, “night”)"]
+      ],
+      "anlam": ["by night"],
+      "okunus": ["laylan"],
+      "ipa": ["/laj.lan/"],
+      "etimoloji": 9,
+      "bag": "kelime"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -701,6 +745,22 @@
       "metin": "Borrowed from Tarifit mlilt.",
       "kognatlar": [
         ["mlilt", "mlilt#Tarifit:_Melilla"]
+      ]
+    },
+    {
+      "metin": "From لِـ (li-) + أَنْ (ʔan) + لَا (lā).",
+      "kognatlar": [
+        ["لِـ", "ل#Arabic"],
+        ["أَنْ", "أن#Arabic"],
+        ["لَا", "لا#Arabic"]
+      ]
+    },
+    {
+      "metin": "Adverbial accusative of لَيْل (layl, “night”).",
+      "kognatlar": [
+        ["Adverbial accusative", "adverbial accusative"],
+        ["لَيْل", "ليل#Arabic"],
+        ["night", "night"]
       ]
     }
   ],
@@ -877,7 +937,11 @@
     }
   ],
   "tr_ek": {
-    "لالي": "-e, -a, doğru"
+    "لالي": "-e, -a, doğru",
+    "باليل": "gece",
+    "لئلا": "hayır, -me, -ma (yasak/olumsuzluk)",
+    "واليل": "gece",
+    "وباليل": "gece"
   },
   "mustak_kanit": [
     ["masdar · sülâsî mücerred", 0, "fa'l", "semâî aday", "لَيْل", "layl", "Gece", "lugat", "Kur'ân · Luggat"],
@@ -983,5 +1047,12 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_ek": {
+    "فلولا": "-mesi olmasaydı",
+    "ولولا": "-mesi olmasaydı"
+  },
+  "tr_ek_belirsiz": {
+    "لوليه": "veli, dost, yardımcı"
   }
 }

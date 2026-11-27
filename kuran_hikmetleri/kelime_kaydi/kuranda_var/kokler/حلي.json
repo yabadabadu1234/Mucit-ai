@@ -351,6 +351,30 @@
       "ust": [],
       "tanim_tr": "Şeyin haricî çerçevesini teşkil eden çakılı çubuklar topluluğu (korkuluk).",
       "misal_tr": "Oğlunun damın korkuluğundan düşmesinden sakın."
+    },
+    {
+      "id": "303012294",
+      "arapca": ["حَلْوَانِيٌّ"],
+      "ingilizce": [],
+      "tanim": "بائع الحَلْوى كثيرًا ما يذهب الأطفالُ إلى الحَلْوانيّ \".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "454412031", "Retail Salesperson"]
+      ],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "303012295",
+      "arapca": ["حَلْوَانِيٌّ"],
+      "ingilizce": [],
+      "tanim": "صانع الحَلْوى يعمل حَلْوانيًّا \".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "454351011", "Chefs and Head Cook"]
+      ],
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk": [
@@ -695,6 +719,73 @@
       "etiket": ["form-i", "no-gloss"],
       "okunus": ["iḥlayā", "ḥaliya"],
       "etimoloji": 1
+    },
+    {
+      "madde": "استحلا",
+      "tur": "verb",
+      "baslik": "استحلا (form X)\n# اِسْتَحَلَّا (istaḥallā) /is.ta.ħal.laː/: third-person masculine dual past active of اِسْتَحَلَّ (istaḥalla)\n# اِسْتَحِلَّا (istaḥillā) /is.ta.ħil.laː/: second-person dual imperative of اِسْتَحَلَّ (istaḥalla)",
+      "etiket": ["form-x", "no-gloss"],
+      "okunus": ["istaḥallā", "istaḥalla", "istaḥillā"],
+      "etimoloji": 1,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "حلواني",
+      "tur": "noun",
+      "baslik": "حَلْوَانِيّ • (ḥalwāniyy) m (plural حَلْوَانِيُّون (ḥalwāniyyūn), feminine حَلْوَانِيَّة (ḥalwāniyya))",
+      "etim_sablon": [
+        ["affix", "حَلْوَى (ḥalwā) + ـَانـ (-ān-) + ـِيّ (-iyy)"],
+        [
+          "ar-etym-nisba-linking",
+          "Relative adjective (nisba) composed of حَلْوَى (ḥalwā) + ـَانـ (-ān-) + ـِيّ (-iyy)"
+        ]
+      ],
+      "anlam": ["confectioner"],
+      "okunus": ["ḥalwāniyy"],
+      "ipa": ["/ħal.waː.nijj/"],
+      "etimoloji": 3,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كحولي",
+      "tur": "adj",
+      "baslik": "كُحُولِيّ • (kuḥūliyy) (feminine كُحُولِيَّة (kuḥūliyya), masculine plural كُحُولِيُّون (kuḥūliyyūn), feminine plural كُحُولِيَّات (kuḥūliyyāt))",
+      "anlam": ["alcoholic"],
+      "okunus": ["kuḥūliyy"],
+      "etimoloji": 4,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كحولية",
+      "tur": "adj",
+      "baslik": "كُحُولِيَّة • (kuḥūliyya)",
+      "anlam": ["feminine singular of كُحُولِيّ (kuḥūliyy)"],
+      "etiket": ["feminine", "form-of", "singular"],
+      "form_of": ["كُحُولِيّ"],
+      "okunus": ["kuḥūliyya"],
+      "etimoloji": 1,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كحوليون",
+      "tur": "adj",
+      "baslik": "كُحُولِيُّون • (kuḥūliyyūn)",
+      "anlam": ["masculine plural of كُحُولِيّ (kuḥūliyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["كُحُولِيّ"],
+      "okunus": ["kuḥūliyyūn"],
+      "etimoloji": 1,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "يحلون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحلون (form I)\n# يَحُلُّونَ (yaḥullūna) /ja.ħul.luː.na/: third-person masculine plural non-past active indicative of حَلَّ (ḥalla)\n# يُحَلُّونَ (yuḥallūna) /ju.ħal.luː.na/: third-person masculine plural non-past passive indicative of حَلَّ (ḥalla)\n# يَحِلُّونَ (yaḥillūna) /ja.ħil.luː.na/: third-person masculine plural non-past active indicative of حَلَّ (ḥalla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥullūna", "ḥalla", "yuḥallūna"],
+      "etimoloji": 1,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -710,6 +801,26 @@
       "metin": "Verbal noun of حَلَّى (ḥallā).",
       "kognatlar": [
         ["حَلَّى", "حلى#Arabic"]
+      ]
+    },
+    {
+      "metin": "Relative adjective (nisba) composed of حَلْوَى (ḥalwā) + ـَانـ (-ān-) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["حَلْوَى", "حلوى#Arabic"],
+        ["ـَانـ", "ان#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nEnglish alcoholbor.\nArabic كُحُول (kuḥūl)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic كحولي\nFrom كُحُول (kuḥūl, “alcohol”) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["alcohol", "alcohol#English"],
+        ["كُحُول", "كحول#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["alcohol", "alcohol"],
+        ["كُحُول", "كحول#Arabic"],
+        ["alcohol", "alcohol"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
       ]
     }
   ],
@@ -1104,5 +1215,8 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek": {
+    "وحلوا": "helal, çözülme"
   }
 }

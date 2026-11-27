@@ -130,6 +130,24 @@
       "etiket": ["obsolete"],
       "okunus": ["mariḥ"],
       "bag": "müştak"
+    },
+    {
+      "madde": "كرح",
+      "tur": "noun",
+      "baslik": "كِرْح • (kirḥ) m (plural أَكْرَاح (ʔakrāḥ))",
+      "etim_sablon": [
+        ["bor", "Classical Syriac ܟܘܪܚܐ (kurḥā, “monk’s cell”)"],
+        [
+          "der",
+          "Akkadian 𒆠𒅕𒄷 (kirḫu, “acropolis, inner sanctum; an enclosed part of a temple sanctuary with restricted access outside of the priestly class”)"
+        ]
+      ],
+      "esanlamli": ["صَوْمَعَة", "قَلَّايَة"],
+      "anlam": ["monk’s cell"],
+      "okunus": ["kirḥ"],
+      "ipa": ["/kirħ/"],
+      "etimoloji": 4,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -153,6 +171,13 @@
       "metin": "Derived from the passive participle of أَرَاحَ (ʔarāḥa, “to let rest”).",
       "kognatlar": [
         ["أَرَاحَ", "أراح#Arabic"]
+      ]
+    },
+    {
+      "metin": "From Classical Syriac ܟܘܪܚܐ (kurḥā, “monk’s cell”), ultimately from Akkadian 𒆠𒅕𒄷 (kirḫu, “acropolis, inner sanctum; an enclosed part of a temple sanctuary with restricted access outside of the priestly class”).",
+      "kognatlar": [
+        ["ܟܘܪܚܐ", "ܟܘܪܚܐ#Classical_Syriac"],
+        ["𒆠𒅕𒄷", "𒆠𒅕𒄷#Akkadian"]
       ]
     }
   ],
@@ -238,5 +263,81 @@
       }
     ],
     "ortalama_benzerlik": 0.3
+  },
+  "ontoloji": [
+    {
+      "id": "47567",
+      "arapca": ["تَطَمْأَنَ", "طَمْأَنَ", "أَرَاحَ", "هَدَّأَ", "سَكَّنَ", "أَمَّنَ", "أَمَّنَ على"],
+      "ingilizce": [],
+      "tanim": "واقعة إدخال السكينة إلى قلب شخص ما والتخفيف عنه",
+      "misal": "_ الشرطي أصحاب المنزل بعدما ألقى القبض على الشخص الذي حأول السطو على منزلهم",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "kelime"
+    },
+    {
+      "id": "48199",
+      "arapca": [
+        "هَدَأَ",
+        "هَدَأَ ب",
+        "هَدَأَ في",
+        "تَطَمْأَنَ",
+        "سَجا1",
+        "طَمْأَنَ",
+        "لَطَّفَ",
+        "لَطَّفَ من",
+        "خَفَّفَ",
+        "خَفَّفَ عن",
+        "خَفَّفَ من",
+        "أَرَاحَ",
+        "قَرَّ3",
+        "قَرَّ ب",
+        "قَرَّ على",
+        "قَرَّ في",
+        "هَدَّأَ",
+        "سَكَّنَ",
+        "أَمَّنَ",
+        "أَمَّنَ على"
+      ],
+      "ingilizce": [],
+      "tanim": "جَعَلَهُ يَهدأ ويرتاح",
+      "misal": "_ من رَوْعِ صديقِهِ",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "kelime"
+    },
+    {
+      "id": "46903",
+      "arapca": ["طَرِبَ ل", "طَرِبَ من", "اِرْتاحَ", "اِرْتاحَ ل", "اِرْتاحَ من", "مَرِحَ"],
+      "ingilizce": [],
+      "tanim": "شعور الشخص بالراحة والطمأنينة والسرور لشيء أو لشخص",
+      "misal": "_ يوسف لسماع خبر نجاحه في الثانوية العامة",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "49083",
+      "arapca": ["أَرَاحَ", "خَلَّصَ", "خَلَّصَ على", "أَعْفَى"],
+      "ingilizce": [],
+      "tanim": "أسقط عنه أداء واجب لتهمة لذنب أو عقاب",
+      "misal": "قرر زيارته وشكره بعد أن _ه من دُيونِه",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "kelime"
+    },
+    {
+      "id": "54181",
+      "arapca": ["رَوْحٌ", "ذَاتٌ1", "رُوحٌ"],
+      "ingilizce": [],
+      "tanim": "نَفْسٌ الشخص",
+      "misal": "هرب الغزال مسرعاً ليحفظ _ه من الحيوانات المفترسة",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    }
+  ],
+  "tr_ek_belirsiz": {
+    "روحه": "ruh"
   }
 }

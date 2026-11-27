@@ -623,6 +623,16 @@
       "misal": "اشترت هيفاء _ من الذهب",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "53251",
+      "arapca": ["مَسارُ المَقْذُوف", "مَسير"],
+      "ingilizce": [],
+      "tanim": "الفضاء الذي يسير فيها الشيء المرمي بأقصى قوة حتى يصل نقطة سقوطه ويكون خاضعاً لقوّة وزنه فقط",
+      "misal": "في _ / المقذوف يتمّ إهمال مقأومة الاحتكاك بالهواء",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -1093,6 +1103,22 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["yusawwirū", "sawwara", "yusawwarū"],
       "etimoloji": 1
+    },
+    {
+      "madde": "الأساورة",
+      "tur": "name",
+      "baslik": "اَلْأَسَاوِرَة • (al-ʔasāwira) m pl",
+      "etim_sablon": [
+        ["der", "Middle Persian ʾswbʾl"]
+      ],
+      "esanlamli": ["اَلْأَسَاوِير"],
+      "anlam": [
+        "a group settled in early Islamic Basra composed of a faction of Sassanian Persian noble cavalrymen and their descendants"
+      ],
+      "etiket": ["historical"],
+      "okunus": ["al-ʔasāwira"],
+      "etimoloji": 6,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -1138,6 +1164,16 @@
       "metin": "From سَارَ (sāra).",
       "kognatlar": [
         ["سَارَ", "سار#Arabic"]
+      ]
+    },
+    {
+      "metin": "Plural of اَلْأَسْوَار (al-ʔaswār), from اَلْ (al-) + أَسْوَار (ʔaswār), from Middle Persian ʾswbʾl, ʾsp̄wʾl (aswār, “horseman, rider”).",
+      "kognatlar": [
+        ["اَلْأَسْوَار", "الأسوار#Arabic"],
+        ["اَلْ", "ال#Arabic"],
+        ["أَسْوَار", "أسوار#Arabic"],
+        ["ʾswbʾl", "ʾswbʾl#Middle_Persian"],
+        ["ʾsp̄wʾl", "ʾsp̄wʾl#Middle_Persian"]
       ]
     }
   ],
@@ -1270,7 +1306,9 @@
     }
   ],
   "tr_ek": {
-    "السيارة": "gezgin kafile"
+    "السيارة": "gezgin kafile",
+    "اساور": "bilezikler",
+    "تسوروا": "duvar aşarak girdi"
   },
   "mustak_kanit": [
     [
@@ -1456,5 +1494,8 @@
       }
     ],
     "ortalama_benzerlik": 0.483
+  },
+  "tr_ek_belirsiz": {
+    "اسورة": "bilezikler"
   }
 }

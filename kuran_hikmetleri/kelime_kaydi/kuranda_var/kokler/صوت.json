@@ -894,6 +894,16 @@
       "ust": [
         ["alt_tur_of", "303026616", "اِسْمٌ"]
       ]
+    },
+    {
+      "id": "54098",
+      "arapca": ["سَمْعِيّاتٌ", "صَوْتِيَّاتٌ"],
+      "ingilizce": [],
+      "tanim": "هو كل ما له علاقة بالسمع وإصدار الأصوات",
+      "misal": "يتوجب على المذيع أن يدرس _ حتى يتقن مخارج الحروف",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "ek"
     }
   ],
   "ontoloji_tr": [
@@ -1340,6 +1350,42 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["yuṣawwitāni", "ṣawwata"],
       "etimoloji": 1
+    },
+    {
+      "madde": "أصواتي",
+      "tur": "adj",
+      "etim_no": "1",
+      "baslik": "أَصْوَاتِيّ • (ʔaṣwātiyy) (feminine أَصْوَاتِيَّة (ʔaṣwātiyya), masculine plural أَصْوَاتِيُّون (ʔaṣwātiyyūn), feminine plural أَصْوَاتِيَّات (ʔaṣwātiyyāt))",
+      "anlam": ["acoustic, related to sounds"],
+      "etiket": ["relational"],
+      "okunus": ["ʔaṣwātiyy"],
+      "ipa": ["/ʔasˤ.waː.tijj/"],
+      "etimoloji": 7,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "أصواتي",
+      "tur": "noun",
+      "etim_no": "2",
+      "baslik": "أَصْوَاتِيّ • (ʔaṣwātiyy) m (plural أَصْوَاتِيُّون (ʔaṣwātiyyūn), feminine أَصْوَاتِيَّة (ʔaṣwātiyya))",
+      "etim_sablon": [
+        ["ar-occupational noun", "Occupational noun"]
+      ],
+      "anlam": ["phonetician"],
+      "okunus": ["ʔaṣwātiyy"],
+      "ipa": ["/ʔasˤ.waː.tijj/"],
+      "etimoloji": 8,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "صوتيات",
+      "tur": "noun",
+      "baslik": "صَوْتِيَّات • (ṣawtiyyāt) pl",
+      "anlam": ["phonetics", "acoustics"],
+      "okunus": ["ṣawtiyyāt"],
+      "ipa": ["/sˤaw.tij.jaːt/"],
+      "etimoloji": 9,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -1387,6 +1433,30 @@
       "metin": "Derived from the active participle of صَاتَ (ṣāta, “to make a sound”).",
       "kognatlar": [
         ["صَاتَ", "صات#Arabic"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nArabic أَصْوَات (ʔaṣwāt)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic أصواتي\nFrom أَصْوَات (ʔaṣwāt, “sounds”) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["أَصْوَات", "أصوات#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["أَصْوَات", "أصوات#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
+    },
+    {
+      "metin": "Occupational noun from أَصْوَات (ʔaṣwāt, “sounds”).",
+      "kognatlar": [
+        ["أَصْوَات", "أصوات#Arabic"]
+      ]
+    },
+    {
+      "metin": "From صَوْت (ṣawt, “sound”) + ـِيَّات (-iyyāt).",
+      "kognatlar": [
+        ["sound", "sound"],
+        ["صَوْت", "صوت#Arabic"],
+        ["sound", "sound"],
+        ["ـِيَّات", "يات#Arabic"]
       ]
     }
   ],
@@ -1616,5 +1686,11 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek": {
+    "اصوتكم": "ses",
+    "اصوتهم": "ses",
+    "الاصوات": "ses",
+    "الاصوت": "ses"
   }
 }

@@ -2250,6 +2250,26 @@
       "ust": [
         ["alt_tur_of", "293721", "spatial referent"]
       ]
+    },
+    {
+      "id": "49663",
+      "arapca": ["في اتجاه الغرب", "نحو الغَرب", "غَرباً"],
+      "ingilizce": [],
+      "tanim": "الجهة المقابلة لشروق الشمس",
+      "misal": "يقع بيت جدِّه _ من بيته",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "kelime"
+    },
+    {
+      "id": "50088",
+      "arapca": ["غَرْبِيٌّاً", "مُتَّجِه غرباً", "مُتِّجِه نحو الغَرب", "مُتّجِه غرباً"],
+      "ingilizce": [],
+      "tanim": "NULL",
+      "misal": "كان الريح هذا الصّباح _",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "ek"
     }
   ],
   "ontoloji_tr": [
@@ -3708,6 +3728,111 @@
       "etiket": ["form-i", "no-gloss"],
       "okunus": ["uḡrubā", "ḡaraba", "ḡaruba"],
       "etimoloji": 7
+    },
+    {
+      "madde": "الغربية",
+      "tur": "name",
+      "baslik": "الْغَرْبِيَّة • (al-ḡarbiyya) f",
+      "anlam": ["Gharbia (a governorate of Egypt)"],
+      "okunus": ["al-ḡarbiyya"],
+      "ipa": ["/al.ɣar.bij.ja/"],
+      "etimoloji": 16,
+      "bag": "ek"
+    },
+    {
+      "madde": "المغرب",
+      "tur": "name",
+      "baslik": "الْمَغْرِب • (al-maḡrib) m",
+      "etim_sablon": [
+        ["yesno", "L"],
+        ["m-g", "“the West”"],
+        ["lit", "Literally, “the West”"]
+      ],
+      "anlam": [
+        "Maghreb (the predominantly Arabic-speaking geographic region comprising northwest Africa, particularly the region of Africa north of the Sahara and west of the Nile; the coastal plains of Morocco, Algeria, Tunisia, and western Libya)",
+        "Morocco (a country in North Africa)"
+      ],
+      "okunus": ["al-maḡrib"],
+      "ipa": ["/al.maɣ.rib/"],
+      "torunlar": [
+        ["ary", "المَغْرِب", "el-maḡrib"],
+        ["ary", "المُغْرِب", "el-muḡrib"],
+        ["az", "Məğrib", ""],
+        ["bn", "মাগরেব", "magreb"],
+        ["fr", "Maghreb", ""],
+        ["kk", "Мағриб", "Mağrıyb"],
+        ["ky", "Магриб", "Magrib"],
+        ["fa", "مغرب", "maġreb"],
+        ["ota", "مغرب", "mağrib"],
+        ["tt", "Мәгъриб", "Mäğrib"],
+        ["ur", "اَلْمَغْرِبْ", "almaġrib"],
+        ["ug", "مەغرىب", "meghrib"],
+        ["uz", "Magʻrib", ""]
+      ],
+      "dr": ["مَغْرِبِيّ"],
+      "etimoloji": 17,
+      "bag": "kelime"
+    },
+    {
+      "madde": "مغاربي",
+      "tur": "adj",
+      "baslik": "مَغَارِبِيّ • (maḡāribiyy) (feminine مَغَارِبِيَّة (maḡāribiyya), masculine plural مَغَارِبِيُّون (maḡāribiyyūn), feminine plural مَغَارِبِيَّات (maḡāribiyyāt))",
+      "etim_sablon": [
+        ["af", "مَغَارِبَة (maḡāriba, “Maghrebis”) + ـِيّ (-iyy)"]
+      ],
+      "anlam": ["Maghrebi"],
+      "okunus": ["maḡāribiyy"],
+      "ipa": ["/ma.ɣaː.ri.bijj/"],
+      "etimoloji": 18,
+      "bag": "ek"
+    },
+    {
+      "madde": "مغاربي",
+      "tur": "noun",
+      "baslik": "مَغَارِبِيّ • (maḡāribiyy) m (plural مَغَارِبِيُّون (maḡāribiyyūn), feminine مَغَارِبِيَّة (maḡāribiyya))",
+      "etim_sablon": [
+        ["af", "مَغَارِبَة (maḡāriba, “Maghrebis”) + ـِيّ (-iyy)"]
+      ],
+      "anlam": ["Maghrebi"],
+      "okunus": ["maḡāribiyy"],
+      "ipa": ["/ma.ɣaː.ri.bijj/"],
+      "etimoloji": 18,
+      "bag": "ek"
+    },
+    {
+      "madde": "مغاربية",
+      "tur": "adj",
+      "baslik": "مَغَارِبِيَّة • (maḡāribiyya)",
+      "anlam": ["feminine singular of مَغَارِبِيّ (maḡāribiyy)"],
+      "etiket": ["feminine", "form-of", "singular"],
+      "form_of": ["مَغَارِبِيّ"],
+      "okunus": ["maḡāribiyya"],
+      "etimoloji": 7,
+      "bag": "ek"
+    },
+    {
+      "madde": "مغاربيون",
+      "tur": "adj",
+      "baslik": "مَغَارِبِيُّون • (maḡāribiyyūn) m pl",
+      "anlam": ["masculine plural of مَغَارِبِيّ (maḡāribiyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["مَغَارِبِيّ"],
+      "okunus": ["maḡāribiyyūn"],
+      "ipa": ["/ma.ɣaː.ri.bij.juːn/"],
+      "etimoloji": 7,
+      "bag": "ek"
+    },
+    {
+      "madde": "مغاربيون",
+      "tur": "noun",
+      "baslik": "مَغَارِبِيُّون • (maḡāribiyyūn) m pl",
+      "anlam": ["plural of مَغَارِبِيّ (maḡāribiyy)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["مَغَارِبِيّ"],
+      "okunus": ["maḡāribiyyūn"],
+      "ipa": ["/ma.ɣaː.ri.bij.juːn/"],
+      "etimoloji": 7,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -3849,6 +3974,31 @@
       "metin": "Derived from the passive participle of the verb اِسْتَغْرَبَ (istaḡraba).",
       "kognatlar": [
         ["اِسْتَغْرَبَ", "استغرب#Arabic"]
+      ]
+    },
+    {
+      "metin": "From the definite form of غَرْبِيَّة (ḡarbiyya).",
+      "kognatlar": [
+        ["غَرْبِيَّة", "غربية#Arabic"]
+      ]
+    },
+    {
+      "metin": "Literally, “the West”, see مَغْرِب (maḡrib) for more.",
+      "kognatlar": [
+        ["مَغْرِب", "مغرب#Arabic"]
+      ]
+    },
+    {
+      "metin": "مَغَارِبَة (maḡāriba, “Maghrebis”) + ـِيّ (-iyy). مَغَارِبَة (maḡāriba) is the plural of مَغْرِبِيّ (maḡribiyy, “Maghrebi”), derived from الْمَغْرِب (al-maḡrib, “Maghreb”).",
+      "kognatlar": [
+        ["مَغَارِبَة", "مغاربة#Arabic"],
+        ["Maghrebi", "Maghrebi"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["مَغَارِبَة", "مغاربة#Arabic"],
+        ["مَغْرِبِيّ", "مغربي#Arabic"],
+        ["Maghrebi", "Maghrebi"],
+        ["الْمَغْرِب", "المغرب#Arabic"],
+        ["Maghreb", "Maghreb"]
       ]
     }
   ],
@@ -4551,5 +4701,8 @@
       }
     ],
     "ortalama_benzerlik": 0.555
+  },
+  "tr_ek": {
+    "والمغرب": "batı"
   }
 }

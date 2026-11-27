@@ -69,6 +69,59 @@
       "ipa": ["/ha.ða.jaːn/"],
       "bag": "asıl madde",
       "etimoloji": 2
+    },
+    {
+      "madde": "كهذا",
+      "tur": "adv",
+      "baslik": "كَهَٰذَا • (kahāḏā)",
+      "anlam": ["like this"],
+      "okunus": ["kahāḏā"],
+      "ipa": ["/ka.haː.ðaː/"],
+      "etimoloji": 3,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "لهذا",
+      "tur": "adv",
+      "baslik": "لِهٰذَا • (li-hāḏā)",
+      "etim_sablon": [
+        ["compound", "لِـ (li-, “for”) + هٰذَا (hāḏā, “this”)"]
+      ],
+      "esanlamli": ["لِذٰلِكَ"],
+      "anlam": ["therefore"],
+      "okunus": ["li-hāḏā"],
+      "ipa": ["/li.haː.ðaː/"],
+      "etimoloji": 4,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "هذا",
+      "tur": "pron",
+      "baslik": "هٰذَا • (hāḏā) m (feminine هٰذِهِ (hāḏihī))",
+      "etim_sablon": [
+        ["univerbation", "Univerbation of هَا (hā) + ذَا (ḏā)"],
+        ["cog", "Hebrew הזה (hazé, “this”)"],
+        ["cog", "Phoenician 𐤄𐤆𐤄 (hèzè, “this”)"]
+      ],
+      "anlam": ["this"],
+      "okunus": ["hāḏā"],
+      "ipa": ["/haː.ðaː/", "/haː.ða/"],
+      "torunlar": [
+        ["mt", "hedan", ""]
+      ],
+      "etimoloji": 5,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "هذاك",
+      "tur": "pron",
+      "baslik": "هٰذَاكَ • (hāḏāka) m (feminine هَاتِيكَ (hātīka) or هَاتَاكَ (hātāka))",
+      "esanlamli": ["ذَاكَ", "ذٰلِكَ"],
+      "anlam": ["that (demonstrative pronoun)"],
+      "okunus": ["hāḏāka"],
+      "ipa": ["/haː.ðaː.ka/"],
+      "etimoloji": 6,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -89,6 +142,36 @@
         ["هَذْي", "هذي#Arabic"],
         ["delirium", "delirium"],
         ["ـَان", "ان#Arabic"]
+      ]
+    },
+    {
+      "metin": "From كَ (ka) + هَٰذَا (hāḏā).",
+      "kognatlar": [
+        ["كَ", "ك#Arabic"],
+        ["هَٰذَا", "هذا#Arabic"]
+      ]
+    },
+    {
+      "metin": "Compound from لِـ (li-, “for”) + هٰذَا (hāḏā, “this”).",
+      "kognatlar": [
+        ["لِـ", "ل#Arabic"],
+        ["هٰذَا", "هذا#Arabic"]
+      ]
+    },
+    {
+      "metin": "Univerbation of هَا (hā) + ذَا (ḏā). Cognate with Hebrew הזה (hazé, “this”) and Phoenician 𐤄𐤆𐤄 (hèzè, “this”).",
+      "kognatlar": [
+        ["هَا", "ها#Arabic"],
+        ["ذَا", "ذا#Arabic"],
+        ["הזה", "הזה#Hebrew"],
+        ["𐤄𐤆𐤄", "𐤄𐤆𐤄#Phoenician"]
+      ]
+    },
+    {
+      "metin": "From هَا (hā, “behold”) + ذَاكَ (ḏāka, “that”).",
+      "kognatlar": [
+        ["هَا", "ها#Arabic"],
+        ["ذَاكَ", "ذاك#Arabic"]
       ]
     }
   ],
@@ -164,5 +247,15 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek": {
+    "اهذا": "bu, bu olan"
+  },
+  "tr_ek_belirsiz": {
+    "بهذا": "bu, bu olan",
+    "فهذا": "bu, bu olan",
+    "لهذا": "bu, bu olan",
+    "هذا": "bu, bu olan",
+    "وهذا": "bu, bu olan"
   }
 }

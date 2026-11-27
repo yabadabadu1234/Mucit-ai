@@ -157,6 +157,53 @@
       "okunus": ["matattu", "matta", "matatta"],
       "bag": "müştak",
       "etimoloji": 4
+    },
+    {
+      "madde": "ات",
+      "tur": "suffix",
+      "baslik": "ـَات • (-āt)",
+      "anlam": [
+        "Suffix used to pluralize feminine nouns and adjectives ending in ـَة (-a).",
+        "Suffix used to pluralize non-human nouns."
+      ],
+      "etiket": ["morpheme"],
+      "okunus": ["-āt"],
+      "ipa": ["/.aːt/"],
+      "bag": "kelime"
+    },
+    {
+      "madde": "بتاتا",
+      "tur": "adv",
+      "etim_no": "1",
+      "baslik": "بَتَاتًا • (batātan)",
+      "etim_sablon": [
+        ["adverbial accusative", "Adverbial accusative of بَتَات (batāt)"]
+      ],
+      "anlam": ["definitely, absolutely"],
+      "okunus": ["batātan"],
+      "ipa": ["/ba.taː.tan/"],
+      "etimoloji": 5,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "بتاتا",
+      "tur": "noun",
+      "etim_no": "2",
+      "baslik": "بَتَاتَا • (batātā) f",
+      "anlam": ["alternative form of بَطَاطِس (baṭāṭis, “potato”)"],
+      "etiket": ["alt-of", "alternative", "rare"],
+      "okunus": ["batātā"],
+      "ipa": ["/ba.taː.taː/"],
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "متتا",
+      "tur": "verb",
+      "baslik": "مَتَّتَا • (mattatā) (form I) /mat.ta.taː/\n# third-person feminine dual past active of مَتَّ (matta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mattatā", "matta"],
+      "etimoloji": 4,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -193,6 +240,13 @@
     {
       "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
+    },
+    {
+      "metin": "Adverbial accusative of بَتَات (batāt).",
+      "kognatlar": [
+        ["Adverbial accusative", "adverbial accusative"],
+        ["بَتَات", "بتات#Arabic"]
+      ]
     }
   ],
   "kuran": {
@@ -253,5 +307,36 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
-  }
+  },
+  "tr_ek_belirsiz": {
+    "ءاتي": "geldi, verdi",
+    "ائت": "geldi, verdi",
+    "اتاتون": "geldi, verdi",
+    "اتت": "geldi, verdi",
+    "اتي": "geldi, verdi",
+    "اتيت": "geldi, verdi",
+    "اوت": "geldi, verdi"
+  },
+  "ontoloji": [
+    {
+      "id": "46858",
+      "arapca": ["مُقْبِلٌ", "مُقْبِلَةٌ", "وَاصِلٌ", "وافِدٌ", "رَاجِعٌ1", "قَادِمٌ", "آتٍ"],
+      "ingilizce": [],
+      "tanim": "عاد إلى المكان الذي رحل منه",
+      "misal": "احتشد الجميع لانتظار الرئيس عندما علموا بأنه _ في تمام الساعة الحادية عشرة",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "kelime"
+    },
+    {
+      "id": "48186",
+      "arapca": ["مُقْبِلٌ", "مُقْبِلَةٌ", "وَاصِلٌ", "وافِدٌ", "قَابِلٌ", "قَادِمٌ", "واصَلَ", "واصَلَ في", "آتٍ"],
+      "ingilizce": [],
+      "tanim": "وصف لمن كان يُنتظر مجيئُه من مكان،  والوافد وصف يُطلقه أهل المكان الذين ينتظرون قدومه إليهم.",
+      "misal": "حضّت الاسرة احتفالاً كبيراً لاستقبال ابنهم ال_ من امريكا",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "kelime"
+    }
+  ]
 }

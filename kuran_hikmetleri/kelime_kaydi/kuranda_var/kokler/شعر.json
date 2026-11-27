@@ -2333,6 +2333,52 @@
       "etiket": ["form-i", "no-gloss"],
       "okunus": ["šaʕartumā", "šaʕara", "šuʕirtumā"],
       "etimoloji": 4
+    },
+    {
+      "madde": "الشعرى",
+      "tur": "name",
+      "baslik": "اَلشِّعْرَى • (aš-šiʕrā) f",
+      "anlam": ["short for اَلشِّعْرَى اَلْيَمَانِيَّة (aš-šiʕrā l-yamāniyya) (Sirius)"],
+      "etiket": ["abbreviation", "alt-of"],
+      "okunus": ["aš-šiʕrā"],
+      "ipa": ["/aʃ.ʃaʕ.raː/"],
+      "etimoloji": 11,
+      "bag": "kelime"
+    },
+    {
+      "madde": "تشاعرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَشَاعَرَا • (tašāʕarā) (form VI) /ta.ʃaː.ʕa.raː/\n# inflection of تَشَاعَرَ (tašāʕara):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tašāʕarā", "tašāʕara"],
+      "etimoloji": 4,
+      "bag": "ek"
+    },
+    {
+      "madde": "تشاعرنا",
+      "tur": "verb",
+      "baslik": "تَشَاعَرْنَا • (tašāʕarnā) (form VI) /ta.ʃaː.ʕar.naː/\n# first-person plural past active of تَشَاعَرَ (tašāʕara)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tašāʕarnā", "tašāʕara"],
+      "etimoloji": 4,
+      "bag": "ek"
+    },
+    {
+      "madde": "شعوري",
+      "tur": "adj",
+      "baslik": "شُعُورِيّ • (šuʕūriyy) (feminine شُعُورِيَّة (šuʕūriyya), masculine plural شُعُورِيُّون (šuʕūriyyūn), feminine plural شُعُورِيَّات (šuʕūriyyāt))",
+      "zit": ["لَاشُعُورِيّ"],
+      "anlam": ["related to feeling", "conscious"],
+      "etiket": ["relational", "uncommon"],
+      "okunus": ["šuʕūriyy"],
+      "ipa": ["/ʃu.ʕuː.rijj/"],
+      "torunlar": [
+        ["az", "şüuri", ""],
+        ["fa", "shuuriy", ""]
+      ],
+      "etimoloji": 12,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -2417,6 +2463,24 @@
       "metin": "Diminutive of شَعْرَة (šaʕra).",
       "kognatlar": [
         ["شَعْرَة", "شعرة#Arabic"]
+      ]
+    },
+    {
+      "metin": "From اَل (al-) + شَعْرَى (šaʕrā).",
+      "kognatlar": [
+        ["اَل", "ال#Arabic"],
+        ["شَعْرَى", "شعرى#Arabic"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nArabic شُعُور (šuʕūr)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic شعوري\nFrom شُعُور (šuʕūr, “feeling”) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["شُعُور", "شعور#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["feeling", "feeling"],
+        ["شُعُور", "شعور#Arabic"],
+        ["feeling", "feeling"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
       ]
     }
   ],
@@ -3073,5 +3137,10 @@
       }
     ],
     "ortalama_benzerlik": 0.448
+  },
+  "tr_ek": {
+    "شعئر": "şiarlar",
+    "واشعارها": "şiir",
+    "والشعراء": "şair"
   }
 }

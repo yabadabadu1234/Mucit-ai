@@ -142,6 +142,16 @@
       "etiket": ["no-gloss", "with-definite-article"],
       "okunus": ["zānī", "zānin", "“adulterer”"],
       "bag": "müştak"
+    },
+    {
+      "madde": "زنزانة",
+      "tur": "noun",
+      "baslik": "زِنْزَانَة • (zinzāna) f (plural زِنْزَانَات (zinzānāt) or زَنَازِين (zanāzīn))",
+      "anlam": ["gaol cell, dungeon, oubliette"],
+      "okunus": ["zinzāna"],
+      "ipa": ["/zin.zaː.na/"],
+      "etimoloji": 5,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -179,6 +189,12 @@
       "metin": "From Middle Persian [Book Pahlavi needed] (mwznydyy /⁠muznē⁠/, “cloud, mist”), cognate to Classical Persian مزنه (muzna).",
       "kognatlar": [
         ["مزنه", "مزنه#Persian"]
+      ]
+    },
+    {
+      "metin": "Derived from Middle Persian zyndʾn' (zēndān, “prison”).",
+      "kognatlar": [
+        ["zyndʾn'", "zyndʾn'#Middle_Persian"]
       ]
     }
   ],
@@ -260,5 +276,29 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
-  }
+  },
+  "ontoloji": [
+    {
+      "id": "50641",
+      "arapca": ["زِينَةٌ", "حِلْيَةٌ", "حَلْيٌ 2"],
+      "ingilizce": [],
+      "tanim": "المصنوع المعدني أو الحجري الذي تزين به المرأة جسدها وقد يكون له قيمة عالية أو زهيدة",
+      "misal": "تحب رباب ارتداء _",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "41848",
+      "arapca": ["زِنَا"],
+      "ingilizce": [],
+      "tanim": "الوطئ في قُبْل خالٍ عن ملك وشبهة",
+      "misal": "",
+      "veri_kaynagi": "38",
+      "ust": [
+        ["alt_tur_of", "293252", "event | accomplishment"]
+      ],
+      "bag": "belirsiz"
+    }
+  ]
 }

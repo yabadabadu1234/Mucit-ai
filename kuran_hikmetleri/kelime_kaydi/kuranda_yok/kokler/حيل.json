@@ -377,6 +377,88 @@
       "okunus": ["taḥāyalī", "taḥāyala"],
       "bag": "müştak",
       "etimoloji": 0
+    },
+    {
+      "madde": "تحايلا",
+      "tur": "verb",
+      "baslik": "تَحَايَلَا • (taḥāyalā) (form VI) /ta.ħaː.ja.laː/\n# inflection of تَحَايَلَ (taḥāyala):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taḥāyalā", "taḥāyala"],
+      "etimoloji": 0,
+      "bag": "ek"
+    },
+    {
+      "madde": "تحايلنا",
+      "tur": "verb",
+      "baslik": "تَحَايَلْنَا • (taḥāyalnā) (form VI) /ta.ħaː.jal.naː/\n# first-person plural past active of تَحَايَلَ (taḥāyala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taḥāyalnā", "taḥāyala"],
+      "etimoloji": 0,
+      "bag": "ek"
+    },
+    {
+      "madde": "حولل",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "حُولَل • (ḥūlal) m pl",
+      "anlam": ["plural of حَائِل (ḥāʔil)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["حَائِل"],
+      "okunus": ["ḥūlal"],
+      "etimoloji": 0,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "حولل",
+      "tur": "adj",
+      "etim_no": "2",
+      "baslik": "حُولَل • (ḥūlal)",
+      "anlam": ["masculine plural of حَائِل (ḥāʔil)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["حَائِل"],
+      "okunus": ["ḥūlal"],
+      "etimoloji": 0,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كحولي",
+      "tur": "adj",
+      "baslik": "كُحُولِيّ • (kuḥūliyy) (feminine كُحُولِيَّة (kuḥūliyya), masculine plural كُحُولِيُّون (kuḥūliyyūn), feminine plural كُحُولِيَّات (kuḥūliyyāt))",
+      "anlam": ["alcoholic"],
+      "okunus": ["kuḥūliyy"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كحولية",
+      "tur": "adj",
+      "baslik": "كُحُولِيَّة • (kuḥūliyya)",
+      "anlam": ["feminine singular of كُحُولِيّ (kuḥūliyy)"],
+      "etiket": ["feminine", "form-of", "singular"],
+      "form_of": ["كُحُولِيّ"],
+      "okunus": ["kuḥūliyya"],
+      "etimoloji": 0,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كحوليون",
+      "tur": "adj",
+      "baslik": "كُحُولِيُّون • (kuḥūliyyūn)",
+      "anlam": ["masculine plural of كُحُولِيّ (kuḥūliyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["كُحُولِيّ"],
+      "okunus": ["kuḥūliyyūn"],
+      "etimoloji": 0,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كحيلاء",
+      "tur": "noun",
+      "baslik": "كُحَيْلَاء • (kuḥaylāʔ) f",
+      "anlam": ["alternative form of كَحْلَاء (kaḥlāʔ)"],
+      "etiket": ["alt-of", "alternative"],
+      "okunus": ["kuḥaylāʔ"],
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -387,6 +469,18 @@
     {
       "metin": "",
       "kognatlar": []
+    },
+    {
+      "metin": "Etymology tree\nEnglish alcoholbor.\nArabic كُحُول (kuḥūl)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic كحولي\nFrom كُحُول (kuḥūl, “alcohol”) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["alcohol", "alcohol#English"],
+        ["كُحُول", "كحول#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["alcohol", "alcohol"],
+        ["كُحُول", "كحول#Arabic"],
+        ["alcohol", "alcohol"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
     }
   ],
   "kuran": {
@@ -447,5 +541,8 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_belirsiz": {
+    "حوله": "etrafında"
   }
 }

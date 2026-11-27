@@ -3259,6 +3259,83 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["yunawwirāni", "nawwara", "yunawwarāni"],
       "etimoloji": 9
+    },
+    {
+      "madde": "النار",
+      "tur": "name",
+      "baslik": "النَّار • (an-nār) f",
+      "esanlamli": ["جَهَنَّم", "جَحِيم", "سَقَر", "حُطَمَة", "لَظَىٰ", "سَعِير", "هَاوِيَة"],
+      "zit": ["جَنَّة", "فِرْدَوْس", "نَعِيم"],
+      "anlam": ["Hell, the Fire"],
+      "okunus": ["an-nār"],
+      "torunlar": [
+        ["zh", "火獄", "Huǒyù"],
+        ["zh", "火狱", "Huǒyù"]
+      ],
+      "bag": "kelime"
+    },
+    {
+      "madde": "سنوريات",
+      "tur": "noun",
+      "baslik": "سِنَّوْرِيَّات • (sinnawriyyāt) pl",
+      "anlam": ["Felidae"],
+      "okunus": ["sinnawriyyāt"],
+      "ipa": ["/sin.naw.rij.jaːt/"],
+      "etimoloji": 19,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "فنار",
+      "tur": "noun",
+      "baslik": "فَنَار • (fanār) m (plural فَنَارَات (fanārāt))",
+      "esanlamli": ["مَنَارَة", "نِبْرَاس", "مَنَارَة", "نِبْرَاس", "سِرَاج", "مِصْبَاح", "فَانُوس", "بَابُور"],
+      "anlam": ["beacon", "lighthouse", "lamp, lantern"],
+      "etiket": ["nonstandard"],
+      "okunus": ["fanār"],
+      "ipa": ["/fa.naːr/"],
+      "torunlar": [
+        ["trk-oat", "فنار", "fänār"]
+      ],
+      "etimoloji": 20,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "نؤار",
+      "tur": "verb",
+      "baslik": "نؤار (form I)\n# نُؤَارُ (nuʔāru) /nu.ʔaː.ru/: first-person plural non-past passive indicative of آرَ (ʔāra)\n# نُؤَارَ (nuʔāra) /nu.ʔaː.ra/: first-person plural non-past passive subjunctive of آرَ (ʔāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuʔāru", "ʔāra", "nuʔāra"],
+      "etimoloji": 9,
+      "bag": "kelime"
+    },
+    {
+      "madde": "نؤر",
+      "tur": "verb",
+      "baslik": "نُؤَرْ • (nuʔar) (form I) /nu.ʔar/\n# first-person plural non-past passive jussive of آرَ (ʔāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuʔar", "ʔāra"],
+      "etimoloji": 9,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "نئر",
+      "tur": "verb",
+      "baslik": "نَئِرْ • (naʔir) (form I) /na.ʔir/\n# first-person plural non-past active jussive of آرَ (ʔāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naʔir", "ʔāra"],
+      "etimoloji": 9,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "نوريات",
+      "tur": "noun",
+      "baslik": "نَوَرِيَّات • (nawariyyāt) f pl",
+      "anlam": ["plural of نَوَرِيَّة (nawariyya)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["نَوَرِيَّة"],
+      "okunus": ["nawariyyāt"],
+      "etimoloji": 9,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -3419,6 +3496,22 @@
       "metin": "Borrowed from French manœuvre.",
       "kognatlar": [
         ["manœuvre", "manœuvre#French"]
+      ]
+    },
+    {
+      "metin": "From سِنَّوْر (sinnawr) + ـِيَّات (-iyyāt).",
+      "kognatlar": [
+        ["سِنَّوْر", "سنور#Arabic"],
+        ["ـِيَّات", "يات#Arabic"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nAncient Greek φᾱνός (phānós)\nAncient Greek -άριον (-árion)\nMedieval Greek φανάριον (phanárion)bor.\nArabic فنار\nBorrowed from Medieval Greek φανάριον (phanárion).",
+      "kognatlar": [
+        ["φᾱνός", "φανός#Ancient_Greek"],
+        ["-άριον", "-άριον#Ancient_Greek"],
+        ["φανάριον", "φανάριον#Ancient_Greek"],
+        ["φανάριον", "φανάριον#Ancient_Greek"]
       ]
     }
   ],
@@ -4104,5 +4197,14 @@
       }
     ],
     "ortalama_benzerlik": 0.758
+  },
+  "tr_ek": {
+    "فالنار": "ateş, cehennem",
+    "لنوره": "nur, aydınlık",
+    "والنار": "ateş, cehennem",
+    "والنور": "nur, aydınlık"
+  },
+  "tr_ek_belirsiz": {
+    "نوره": "nur, aydınlık"
   }
 }

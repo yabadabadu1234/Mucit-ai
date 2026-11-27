@@ -1792,6 +1792,18 @@
       "ust": [
         ["alt_tur_of", "0", ""]
       ]
+    },
+    {
+      "id": "293252",
+      "arapca": ["فَعَّالِيَّةٌ", "حَدَثٌ", "وَاقِعَةٌ2"],
+      "ingilizce": ["event", "accomplishment"],
+      "tanim": "حدث غير تراكمي يتكون من سلسلة من العمليات و/او الأفعال تدرك كحدث واحد، أجزاءه الزمنية غير متشابهة، ويدرك كل جزء زمني منه على حدة",
+      "misal": "فتحت الشرطة تحقيقا في واقعة السطو على البنك",
+      "veri_kaynagi": "200",
+      "ust": [
+        ["alt_tur_of", "293202", "occurrent"]
+      ],
+      "bag": "kelime"
     }
   ],
   "ontoloji_tr": [
@@ -3225,6 +3237,84 @@
       "etiket": ["form-i", "no-gloss"],
       "okunus": ["ifʕalā", "faʕala"],
       "etimoloji": 5
+    },
+    {
+      "madde": "انفعالات",
+      "tur": "noun",
+      "baslik": "اِنْفِعَالَات • (infiʕālāt) m pl",
+      "anlam": ["plural of اِنْفِعَال (infiʕāl)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["اِنْفِعَال"],
+      "okunus": ["infiʕālāt"],
+      "etimoloji": 5,
+      "bag": "kelime"
+    },
+    {
+      "madde": "انفعالي",
+      "tur": "adj",
+      "baslik": "اِنْفِعَالِيّ • (infiʕāliyy) (feminine اِنْفِعَالِيَّة (infiʕāliyya), masculine plural اِنْفِعَالِيُّون (infiʕāliyyūn), feminine plural اِنْفِعَالِيَّات (infiʕāliyyāt))",
+      "anlam": ["excitable", "susceptible", "passive"],
+      "etiket": ["passive"],
+      "okunus": ["infiʕāliyy"],
+      "ipa": ["/in.fi.ʕaː.lijj/"],
+      "etimoloji": 17,
+      "bag": "ek"
+    },
+    {
+      "madde": "انفعالية",
+      "tur": "adj",
+      "baslik": "اِنْفِعَالِيَّة • (infiʕāliyya)",
+      "anlam": ["feminine singular of اِنْفِعَالِيّ (infiʕāliyy)"],
+      "etiket": ["feminine", "form-of", "singular"],
+      "form_of": ["اِنْفِعَالِيّ"],
+      "okunus": ["infiʕāliyya"],
+      "etimoloji": 5,
+      "bag": "ek"
+    },
+    {
+      "madde": "انفعاليون",
+      "tur": "adj",
+      "baslik": "اِنْفِعَالِيُّون • (infiʕāliyyūn)",
+      "anlam": ["masculine plural of اِنْفِعَالِيّ (infiʕāliyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["اِنْفِعَالِيّ"],
+      "okunus": ["infiʕāliyyūn"],
+      "etimoloji": 5,
+      "bag": "ek"
+    },
+    {
+      "madde": "بالفعل",
+      "tur": "adv",
+      "baslik": "بِٱلْفِعْلِ • (bi-l-fiʕli)",
+      "etim_sablon": [
+        ["af", "بِـ (bi-, “in, with”) + ال (al-, definite article) + فِعْل (fiʕl, “deed, act, action”)"],
+        ["noncog", "English indeed, in fact"]
+      ],
+      "esanlamli": ["فِعْلًا", "حَقًّا"],
+      "anlam": ["truly, actually, as of now, being already effective"],
+      "okunus": ["bi-l-fiʕli"],
+      "ipa": ["/bil.fiʕ.li/"],
+      "etimoloji": 18,
+      "bag": "ek"
+    },
+    {
+      "madde": "تفاعلا",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "تَفَاعَلَا • (tafāʕalā) (form VI) /ta.faː.ʕa.laː/\n# inflection of تَفَاعَلَ (tafāʕala):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tafāʕalā", "tafāʕala"],
+      "etimoloji": 5,
+      "bag": "ek"
+    },
+    {
+      "madde": "تفاعلنا",
+      "tur": "verb",
+      "baslik": "تَفَاعَلْنَا • (tafāʕalnā) (form VI) /ta.faː.ʕal.naː/\n# first-person plural past active of تَفَاعَلَ (tafāʕala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tafāʕalnā", "tafāʕala"],
+      "etimoloji": 5,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -3350,6 +3440,29 @@
       "kognatlar": [
         ["اِنْفَعَلَ", "انفعل#Arabic"],
         ["infuriated", "infuriated"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nArabic اِنْفِعَال (infiʕāl)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic انفعالي\nFrom اِنْفِعَال (infiʕāl, “excitement, passivity”) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["اِنْفِعَال", "انفعال#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["excitement", "excitement"],
+        ["passivity", "passivity"],
+        ["اِنْفِعَال", "انفعال#Arabic"],
+        ["excitement", "excitement"],
+        ["passivity", "passivity"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
+    },
+    {
+      "metin": "Composed of بِـ (bi-, “in, with”) + ال (al-, definite article) + فِعْل (fiʕl, “deed, act, action”). Compare English indeed, in fact.",
+      "kognatlar": [
+        ["بِـ", "ب#Arabic"],
+        ["ال", "ال#Arabic"],
+        ["فِعْل", "فعل#Arabic"],
+        ["indeed", "indeed#English"],
+        ["in fact", "in fact#English"]
       ]
     }
   ],
@@ -3797,7 +3910,17 @@
     }
   ],
   "tr_ek": {
-    "فعلي": "üzerine, üzerinde"
+    "فعلي": "üzerine, üzerinde",
+    "افعل": "yaptı",
+    "تفعلوا": "yaptı",
+    "فافعلوا": "yaptı",
+    "فعلته": "yaptı",
+    "فعلتها": "yaptı",
+    "فعله": "yaptı",
+    "فعلوا": "yaptı",
+    "فعليه": "üzerine, üzerinde",
+    "وافعلوا": "yaptı",
+    "يفعلوا": "yaptı"
   },
   "mustak_kanit": [
     [

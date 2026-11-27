@@ -729,6 +729,18 @@
       "misal": "كان أبي _اً جداً لأخي بسبب علاماته المتدنية",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "334000027",
+      "arapca": ["تلاؤميه"],
+      "ingilizce": ["adequatism"],
+      "tanim": "NULL",
+      "misal": "",
+      "veri_kaynagi": "334",
+      "ust": [
+        ["alt_tur_of", "0", ""]
+      ],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -925,6 +937,71 @@
       "okunus": ["talāwamī", "talāwama"],
       "bag": "müştak",
       "etimoloji": 2
+    },
+    {
+      "madde": "تلاوما",
+      "tur": "verb",
+      "baslik": "تَلَاوَمَا • (talāwamā) (form VI) /ta.laː.wa.maː/\n# inflection of تَلَاوَمَ (talāwama):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["talāwamā", "talāwama"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "تلاومنا",
+      "tur": "verb",
+      "baslik": "تَلَاوَمْنَا • (talāwamnā) (form VI) /ta.laː.wam.naː/\n# first-person plural past active of تَلَاوَمَ (talāwama)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["talāwamnā", "talāwama"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "لوما",
+      "tur": "conj",
+      "etim_no": "1",
+      "baslik": "لَوْمَا • (lawmā)",
+      "anlam": ["if not for"],
+      "okunus": ["lawmā"],
+      "ipa": ["/law.maː/"],
+      "etimoloji": 3,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "يتلاوم",
+      "tur": "verb",
+      "baslik": "يتلاوم (form VI)\n# يَتَلَاوَمُ (yatalāwamu) /ja.ta.laː.wa.mu/: third-person masculine singular non-past active indicative of تَلَاوَمَ (talāwama)\n# يَتَلَاوَمَ (yatalāwama) /ja.ta.laː.wa.ma/: third-person masculine singular non-past active subjunctive of تَلَاوَمَ (talāwama)\n# يَتَلَاوَمْ (yatalāwam) /ja.ta.laː.wam/: third-person masculine singular non-past active jussive of تَلَاوَمَ (talāwama)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yatalāwamu", "talāwama", "yatalāwama"],
+      "etimoloji": 2,
+      "bag": "kelime"
+    },
+    {
+      "madde": "يتلاوما",
+      "tur": "verb",
+      "baslik": "يَتَلَاوَمَا • (yatalāwamā) (form VI) /ja.ta.laː.wa.maː/\n# third-person masculine dual non-past active subjunctive/jussive of تَلَاوَمَ (talāwama)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yatalāwamā", "talāwama"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "يتلاومان",
+      "tur": "verb",
+      "baslik": "يَتَلَاوَمَانِ • (yatalāwamāni) (form VI) /ja.ta.laː.wa.maː.ni/\n# third-person masculine dual non-past active indicative of تَلَاوَمَ (talāwama)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yatalāwamāni", "talāwama"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "يتلاومون",
+      "tur": "verb",
+      "baslik": "يَتَلَاوَمُونَ • (yatalāwamūna) (form VI) /ja.ta.laː.wa.muː.na/\n# third-person masculine plural non-past active indicative of تَلَاوَمَ (talāwama)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yatalāwamūna", "talāwama"],
+      "etimoloji": 2,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -948,6 +1025,13 @@
     {
       "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
+    },
+    {
+      "metin": "From لَوْ (law) + مَا (mā).",
+      "kognatlar": [
+        ["لَوْ", "لو#Arabic"],
+        ["مَا", "ما#Arabic"]
+      ]
     }
   ],
   "etymarab": {
@@ -1343,5 +1427,10 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek": {
+    "تلوموني": "olmadı (olumsuz geçmiş)",
+    "لمتنني": "olmadı (olumsuz geçmiş)",
+    "ولوموا": "olmadı (olumsuz geçmiş)"
   }
 }

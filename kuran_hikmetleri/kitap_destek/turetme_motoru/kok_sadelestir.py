@@ -397,6 +397,154 @@ def kirp(hedef=None, yaz=False):
     return sayac
 
 
+ARAPCA = re.compile('[\u0600-\u06ff]')
+HAREKE = re.compile('[\u064b-\u065f\u0670\u0640\u06d6-\u06ed]')
+ONEKLER = ('وال', 'فال', 'بال', 'كال', 'لل', 'ال', 'و', 'ف', 'ب', 'ل', 'ك', 'س', '')
+SONEKLER = ('', 'ه', 'ها', 'هم', 'هن', 'هما', 'ك', 'كم', 'كن', 'كما', 'نا', 'ي', 'ني', 'ان', 'ين', 'ون', 'ات', 'ا', 'ة')
+
+
+def esitle(w):
+    a = HAREKE.sub('', w).translate({0x623: 0x627, 0x625: 0x627, 0x622: 0x627, 0x671: 0x627, 0x649: 0x64a, 0x629: 0x647, 0x624: 0x648, 0x626: 0x64a})
+    return a.replace('ء', '').strip()
+
+
+def form_dizini():
+    F = collections.defaultdict(set)
+    for ad in ('kuranda_var', 'kuranda_yok'):
+        yol = os.path.join(K, 'kelime_kaydi', ad, 'kokler')
+        for f in sorted(os.listdir(yol)):
+            d = json.load(open(os.path.join(yol, f), encoding='utf-8'))
+            for rows in MS.mustak_tam(d).values():
+                for r in rows:
+                    F[esitle(r[2])].add(d['kok'])
+            for g in d.get('kelimeler', []):
+                F[esitle(g['lemma'])].add(d['kok'])
+                for b in g['bicimler']:
+                    F[esitle(b['kelime'])].add(d['kok'])
+    return F
+
+
+def kelime_koku(F, w):
+    a = esitle(w)
+    if a in F:
+        return 'tam', F[a]
+    for o in ONEKLER:
+        if o and not a.startswith(o):
+            continue
+        for sn in SONEKLER:
+            if sn and not a.endswith(sn):
+                continue
+            b = a[len(o):len(a) - len(sn)] if sn else a[len(o):]
+            if len(b) >= 2 and b in F and (o or sn):
+                return 'ek', F[b]
+    return None, None
+
+
+def koklerini_bul(F, kelimeler):
+    tek = {'tam': set(), 'ek': set()}
+    belirsiz = set()
+    for w in kelimeler:
+        if not ARAPCA.search(w):
+            continue
+        t, rs = kelime_koku(F, w)
+        if not t:
+            continue
+        if len(rs) == 1:
+            tek[t] |= rs
+        elif len(rs) <= 3:
+            belirsiz |= rs
+    for t in ('tam', 'ek'):
+        if tek[t]:
+            return t, tek[t]
+    if belirsiz:
+        return 'belirsiz', belirsiz
+    return None, None
+
+
+def vik_ekle(d, rec, bag):
+    kok = d['kok']
+    liste, etl = vikisozluk([rec], kok)
+    e = liste[0]
+    if 'etimoloji' in e:
+        yeni = etl[e['etimoloji']]
+        mevcut = d.setdefault('vikisozluk_etimolojiler', [])
+        if yeni not in mevcut:
+            mevcut.append(yeni)
+        e['etimoloji'] = mevcut.index(yeni)
+    e['bag'] = e.get('bag') or ('kelime' if bag == 'tam' else bag)
+    return e
+
+
+def kelimeleri_dagit(yaz=False):
+    F = form_dizini()
+    kd = os.path.join(K, 'kelime_kaydi', 'kuranda_yok', 'kelimeler')
+    kayitlar = collections.OrderedDict()
+    for f in sorted(os.listdir(kd)):
+        j = json.load(open(os.path.join(kd, f), encoding='utf-8'))
+        for kaynak, L in j['sozlukler'].items():
+            for r in L:
+                anahtar = (kaynak, r['id'] if kaynak == 'arabic_ontology' else json.dumps(r, ensure_ascii=False, sort_keys=True))
+                kayitlar.setdefault(anahtar, (kaynak, r, j['kelime']))
+    sayac = collections.Counter()
+    kokluk = collections.defaultdict(list)
+    koksuz = collections.OrderedDict()
+    for (kaynak, _), (_, r, ad) in kayitlar.items():
+        if kaynak == 'kaikki_vikisozluk':
+            ws = list(r.get('fo') or []) + [r.get('u', '')]
+        elif kaynak == 'arabic_ontology':
+            ws = r['arapca']
+        elif kaynak == 'renk_sozluk':
+            ws = [r['kelime']]
+        else:
+            ws = [r['arapca']] if isinstance(r.get('arapca'), str) else list(r.get('arapca', []))
+        t, rs = koklerini_bul(F, ws)
+        if not t:
+            koksuz.setdefault(kaynak, []).append(r)
+            sayac[kaynak + ' köksüz'] += 1
+            continue
+        for k in sorted(rs):
+            kokluk[k].append((kaynak, r, t))
+        sayac[kaynak + ' ' + t] += 1
+    yer = {}
+    for ad in ('kuranda_var', 'kuranda_yok'):
+        yol = os.path.join(K, 'kelime_kaydi', ad, 'kokler')
+        for f in os.listdir(yol):
+            yer[f[:-5]] = os.path.join(yol, f)
+    eklenen = collections.Counter()
+    for k, L in kokluk.items():
+        d = json.load(open(yer[k], encoding='utf-8'), object_pairs_hook=collections.OrderedDict)
+        for kaynak, r, t in L:
+            if kaynak == 'kaikki_vikisozluk':
+                e = vik_ekle(d, r, t)
+                if e in d.get('vikisozluk', []):
+                    eklenen['zaten'] += 1
+                    continue
+                d.setdefault('vikisozluk', []).append(e)
+            elif kaynak == 'arabic_ontology':
+                if any(c['id'] == r['id'] for c in d.get('ontoloji', [])):
+                    eklenen['zaten'] += 1
+                    continue
+                e = {a: b for a, b in r.items() if a not in ONTOLOJI_ATILAN}
+                e['bag'] = 'kelime' if t == 'tam' else t
+                d.setdefault('ontoloji', []).append(e)
+            elif kaynak == 'renk_sozluk':
+                hedef = 'tr_ek' if t == 'tam' else 'tr_ek_' + t
+                d.setdefault(hedef, {})[r['kelime']] = r['turkce']
+            else:
+                e = dict(r)
+                e['bag'] = 'kelime' if t == 'tam' else t
+                if e in d.get('jeffery', []):
+                    eklenen['zaten'] += 1
+                    continue
+                d.setdefault('jeffery', []).append(e)
+            eklenen[kaynak] += 1
+        if yaz:
+            open(yer[k], 'w', encoding='utf-8').write(okunur(d) + '\n')
+    if yaz:
+        open(os.path.join(K, 'kelime_kaydi', 'kuranda_yok', 'koksuz.json'), 'w', encoding='utf-8').write(okunur({'aciklama': 'Köke bağlanamayan lügat, ontoloji, renk ve Jeffery kayıtları; kaynağa göre', 'kaynaklar': koksuz}) + '\n')
+    return len(kayitlar), sayac, eklenen, {k: len(v) for k, v in koksuz.items()}
+
+
 def calis(yaz=False, kaynak=None, hedef=None):
     tohum()
     esas, ek_lugat, etim = ekler()
@@ -437,7 +585,7 @@ def fihrist(kd=None):
         'tr_durum': 'yazılmadıysa: ' + VARSAYILAN_DURUM}
     f['red_sebepleri'] = {v: k for k, v in SEBEP.items()}
     f['mana_yontemleri'] = {v: k for k, v in YONTEM.items()}
-    f['sabitler'] = {'baz_fiil_guven': 'orta', 'baz_fiil_dayanak': 'Türkçe fiil sapı ve kök manası okunarak Claude hükmü', 'prototip_halka_esikleri': 'veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi', 'cebel_yok': "kökte cebel anahtarı yoksa: Cebel mu'cemlerinde kök yok", 'vikisozluk_bag': 'yazılmadıysa: kökün kendi maddesi; kök dışı: asıl madde veya müştak'}
+    f['sabitler'] = {'baz_fiil_guven': 'orta', 'baz_fiil_dayanak': 'Türkçe fiil sapı ve kök manası okunarak Claude hükmü', 'prototip_halka_esikleri': 'veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi', 'cebel_yok': "kökte cebel anahtarı yoksa: Cebel mu'cemlerinde kök yok", 'vikisozluk_bag': 'yazılmadıysa: kökün kendi maddesi; kök dışı: asıl madde veya müştak', 'bag': "vikisozluk, ontoloji ve jeffery kayıtlarında: kelime = kaydın Arapça kelimesi bu köke biçim eşleşmesiyle bağlandı; ek = ön ek veya son ek atılarak bağlandı; belirsiz = kelime en çok üç köke uyar, hepsine yazıldı", 'tr_ek_ek': 'tr_ek gibi; ek atılarak bağlanan kelimeler', 'tr_ek_belirsiz': 'tr_ek gibi; birden çok köke uyan kelimeler', 'koksuz': 'kuranda_yok/koksuz.json: hiçbir köke bağlanamayan kayıtlar (noktalama, deyim, özel ad, kök dışı kelime)'}
     f['kaynaklar'] = {
         'kuran_korpusu': 'Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)',
         'cebel': "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
@@ -450,7 +598,9 @@ def fihrist(kd=None):
     open(yol, 'w', encoding='utf-8').write(okunur(f) + '\n')
 
 
-if __name__ == '__main__' and '--fihrist' in sys.argv:
+if __name__ == '__main__' and '--dagit' in sys.argv:
+    print(kelimeleri_dagit('--yaz' in sys.argv))
+elif __name__ == '__main__' and '--fihrist' in sys.argv:
     tohum()
     for ad in ('kuranda_var', 'kuranda_yok'):
         fihrist(os.path.join(K, 'kelime_kaydi', ad))

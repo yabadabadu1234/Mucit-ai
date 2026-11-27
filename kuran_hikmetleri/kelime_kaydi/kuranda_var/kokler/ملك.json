@@ -3023,6 +3023,87 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["yumallikā", "mallaka", "yumallakā"],
       "etimoloji": 2
+    },
+    {
+      "madde": "تمالكا",
+      "tur": "verb",
+      "baslik": "تَمَالَكَا • (tamālakā) (form VI) /ta.maː.la.kaː/\n# inflection of تَمَالَكَ (tamālaka):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tamālakā", "tamālaka"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "تمالكنا",
+      "tur": "verb",
+      "baslik": "تَمَالَكْنَا • (tamālaknā) (form VI) /ta.maː.lak.naː/\n# first-person plural past active of تَمَالَكَ (tamālaka)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tamālaknā", "tamālaka"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "ملائكي",
+      "tur": "adj",
+      "baslik": "مَلَائِكِيّ • (malāʔikiyy) (feminine مَلَائِكِيَّة (malāʔikiyya), masculine plural مَلَائِكِيُّون (malāʔikiyyūn), feminine plural مَلَائِكِيَّات (malāʔikiyyāt))",
+      "anlam": ["angelic"],
+      "okunus": ["malāʔikiyy"],
+      "ipa": ["/ma.laː.ʔi.kijj/"],
+      "etimoloji": 10,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "ملائكية",
+      "tur": "adj",
+      "baslik": "مَلَائِكِيَّة • (malāʔikiyya)",
+      "anlam": ["feminine singular of مَلَائِكِيّ (malāʔikiyy)"],
+      "etiket": ["feminine", "form-of", "singular"],
+      "form_of": ["مَلَائِكِيّ"],
+      "okunus": ["malāʔikiyya"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "ملائكيون",
+      "tur": "adj",
+      "baslik": "مَلَائِكِيُّون • (malāʔikiyyūn)",
+      "anlam": ["masculine plural of مَلَائِكِيّ (malāʔikiyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["مَلَائِكِيّ"],
+      "okunus": ["malāʔikiyyūn"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "ملكوت",
+      "tur": "noun",
+      "baslik": "مَلَكُوت • (malakūt) m",
+      "etim_sablon": [
+        [
+          "etymon",
+          "[Appendix:Glossary#loanword|Borrowed]] from\", \"terms\" : [ { \"id\" : \"kingdom\", \"children\" : [ ], \"status\" : \"ok\", \"lang_name\" : \"Aramaic\", \"term\" : \"מַלְכוּתָא\", \"lang\" : \"arc\" } ], \"keyword\" : \"bor\" }"
+        ],
+        ["bor+", "Borrowed from Aramaic מַלְכוּתָא"],
+        ["etymon", ""]
+      ],
+      "esanlamli": ["مَمْلَكَة", "مُلْك"],
+      "anlam": ["kingdom, dominion, reign", "kingdom (of God) (those places and spheres where God’s will truly reigns)"],
+      "okunus": ["malakūt"],
+      "ipa": ["/ma.la.kuːt/"],
+      "rl": [
+        "جَبَرُوت",
+        "حانُوت",
+        "رَحَمُوت",
+        "رَغَبُوت",
+        "رَهَبُوت",
+        "سَلَبُوت",
+        "طَاغُوت",
+        "عَظَمُوت",
+        "كَهَنُوت",
+        "لَاهُوت"
+      ],
+      "etimoloji": 11,
+      "bag": "kelime"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -3087,6 +3168,24 @@
       "metin": "Verbal noun of اِسْتَمْلَكَ (istamlaka).",
       "kognatlar": [
         ["اِسْتَمْلَكَ", "استملك#Arabic"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nArabic مَلَائِك (malāʔik)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic ملائكي\nFrom مَلَائِك (malāʔik, “angels”) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["مَلَائِك", "ملائك#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["angels", "angels"],
+        ["مَلَائِك", "ملائك#Arabic"],
+        ["angels", "angels"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
+    },
+    {
+      "metin": "Borrowed from Aramaic מַלְכוּתָא / ܡܰܠܟ݁ܽܘܬ݂ܳܐ (malḵūṯā).",
+      "kognatlar": [
+        ["מַלְכוּתָא", "מלכותא#Aramaic"],
+        ["ܡܰܠܟ݁ܽܘܬ݂ܳܐ", "ܡܠܟܘܬܐ#Classical_Syriac"]
       ]
     }
   ],
@@ -4140,5 +4239,17 @@
       }
     ],
     "ortalama_benzerlik": 0.696
+  },
+  "tr_ek": {
+    "املك": "sahip oldu",
+    "بالملئكة": "mülk, hükümranlık",
+    "بالملك": "mülk, hükümranlık",
+    "للملئكة": "mülk, hükümranlık",
+    "والملئكة": "mülk, hükümranlık",
+    "والملك": "mülk, hükümranlık",
+    "وملئكته": "mülk, hükümranlık"
+  },
+  "tr_ek_belirsiz": {
+    "ملكه": "mülk, hükümranlık"
   }
 }

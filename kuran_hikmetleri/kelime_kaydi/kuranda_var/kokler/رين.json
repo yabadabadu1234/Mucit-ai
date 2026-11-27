@@ -243,6 +243,100 @@
       "okunus": ["marīn"],
       "ipa": ["/ma.riːn/"],
       "anlam_tr": ["رَانَ (râne) fiilinin ism-i mef‘ûlü"]
+    },
+    {
+      "madde": "تراءين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرَاءَيْنَ • (tarāʔayna) (form VI) /ta.raː.ʔaj.na/\n# inflection of تَرَاءَى (tarāʔā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tarāʔayna", "tarāʔā"],
+      "etimoloji": 1,
+      "bag": "kelime"
+    },
+    {
+      "madde": "تراءينا",
+      "tur": "verb",
+      "baslik": "تَرَاءَيْنَا • (tarāʔaynā) (form VI) /ta.raː.ʔaj.naː/\n# first-person plural past active of تَرَاءَى (tarāʔā)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tarāʔaynā", "tarāʔā"],
+      "etimoloji": 1,
+      "bag": "ek"
+    },
+    {
+      "madde": "سرياني",
+      "tur": "adj",
+      "baslik": "سُرْيَانِيّ • (suryāniyy) (feminine سُرْيَانِيَّة (suryāniyya), masculine plural سُرْيَانِيُّون (suryāniyyūn), feminine plural سُرْيَانِيَّات (suryāniyyāt))",
+      "etim_sablon": [
+        ["affix", "سُورِيَة (sūriya) + ـَانـ (-ān-) + ـِيّ (-iyy)"],
+        [
+          "ar-etym-nisba-linking",
+          "Relative adjective (nisba) composed of سُورِيَة (sūriya) + ـَانـ (-ān-) + ـِيّ (-iyy)"
+        ]
+      ],
+      "anlam": ["Syriac"],
+      "okunus": ["suryāniyy"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "سرياني",
+      "tur": "noun",
+      "baslik": "سُرْيَانِيّ • (suryāniyy) m (plural سُرْيَان (suryān), feminine سُرْيَانِيَّة (suryāniyya))",
+      "etim_sablon": [
+        ["affix", "سُورِيَة (sūriya) + ـَانـ (-ān-) + ـِيّ (-iyy)"],
+        [
+          "ar-etym-nisba-linking",
+          "Relative adjective (nisba) composed of سُورِيَة (sūriya) + ـَانـ (-ān-) + ـِيّ (-iyy)"
+        ]
+      ],
+      "anlam": ["Syriac (person)"],
+      "okunus": ["suryāniyy"],
+      "torunlar": [
+        ["az", "süryani", ""],
+        ["chg", "سریانی", "sryʾny"],
+        ["ms", "Suryani", ""],
+        ["ml", "സുറിയാനി", "suṟiyāni"],
+        ["ota", "سریانی", "Süryânî"],
+        ["ps", "سرياني", ""],
+        ["fa", "سریانی", "soryâni"],
+        ["pa", "سُرْیانِی", "suryānī"],
+        ["sd", "سرياني", "sryāne"],
+        ["tk", "sürýany", ""],
+        ["ur", "سریانی", "suryānī"]
+      ],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "سريانية",
+      "tur": "adj",
+      "baslik": "سُرْيَانِيَّة • (suryāniyya)",
+      "anlam": ["feminine singular of سُرْيَانِيّ (suryāniyy, “Syriac”)"],
+      "etiket": ["feminine", "form-of", "singular"],
+      "form_of": ["سُرْيَانِيّ"],
+      "okunus": ["suryāniyya"],
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "سريانية",
+      "tur": "noun",
+      "baslik": "سُرْيَانِيَّة • (suryāniyya) f",
+      "anlam": ["the Syriac language"],
+      "etiket": ["definite", "usually"],
+      "okunus": ["suryāniyya"],
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "سريانيون",
+      "tur": "adj",
+      "baslik": "سُرْيَانِيُّون • (suryāniyyūn)",
+      "anlam": ["masculine plural of سُرْيَانِيّ (suryāniyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["سُرْيَانِيّ"],
+      "okunus": ["suryāniyyūn"],
+      "etimoloji": 1,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -253,6 +347,16 @@
     {
       "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
+    },
+    {
+      "metin": "Relative adjective (nisba) composed of سُورِيَة (sūriya) + ـَانـ (-ān-) + ـِيّ (-iyy), based on a modified form of سُورِيَة (sūriya, “Syria”).",
+      "kognatlar": [
+        ["سُورِيَة", "سورية#Arabic"],
+        ["ـَانـ", "ان#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["سُورِيَة", "سورية#Arabic"],
+        ["Syria", "Syria"]
+      ]
     }
   ],
   "etymarab": {
@@ -399,5 +503,9 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_belirsiz": {
+    "ارينه": "gösterdi",
+    "راينه": "gördü"
   }
 }

@@ -997,6 +997,16 @@
       "ust": [
         ["alt_tur_of", "454399010", "childcare worker"]
       ]
+    },
+    {
+      "id": "53083",
+      "arapca": ["رَبَّى", "رَبَّتَ", "رَبَّتَ على", "نَشَّأَ"],
+      "ingilizce": [],
+      "tanim": "عملية رعاية وعناية بشيء ما حتى يكبر",
+      "misal": "_ الولد قطاً صغيراً",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -1353,6 +1363,49 @@
         ["uz", "murabbiya", ""]
       ],
       "anlam_tr": ["مُرَبٍّ (murabbin) kelimesinin müennes mukabili"]
+    },
+    {
+      "madde": "الرب",
+      "tur": "name",
+      "baslik": "الرَّبّ • (ar-rabb) m",
+      "anlam": ["the Lord, God"],
+      "okunus": ["ar-rabb"],
+      "etimoloji": 9,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "ربوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ربوا (form I)\n# رَبُّوا (rabbū) /rab.buː/: third-person masculine plural past active of رَبَّ (rabba)\n# رُبُّوا (rubbū) /rub.buː/: inflection of رَبَّ (rabba):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rabbū", "rabba", "rubbū"],
+      "etimoloji": 5,
+      "bag": "kelime"
+    },
+    {
+      "madde": "فربيون",
+      "tur": "noun",
+      "baslik": "فَرْبِيُون • (farbiyūn) m",
+      "etim_sablon": [
+        ["bor", "Ancient Greek εὐφόρβιον (euphórbion)"]
+      ],
+      "esanlamli": ["حُلَّب", "تَاكُوت", "يَتُّوع"],
+      "anlam": ["spurge"],
+      "okunus": ["farbiyūn"],
+      "ipa": ["/far.bi.juːn/"],
+      "etimoloji": 10,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "يربوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يربوا (form I)\n# يَرُبُّوا (yarubbū) /ja.rub.buː/: third-person masculine plural non-past active subjunctive/jussive of رَبَّ (rabba)\n# يُرَبُّوا (yurabbū) /ju.rab.buː/: third-person masculine plural non-past passive subjunctive/jussive of رَبَّ (rabba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarubbū", "rabba", "yurabbū"],
+      "etimoloji": 5,
+      "bag": "kelime"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -1413,6 +1466,20 @@
       "metin": "Derived from the active participle of رَبَّى (rabbā)",
       "kognatlar": [
         ["رَبَّى", "ربى#Arabic"]
+      ]
+    },
+    {
+      "metin": "Definite form of رَبّ (rabb, “lord, master”).",
+      "kognatlar": [
+        ["رَبّ", "رب#Arabic"],
+        ["lord", "lord"],
+        ["master", "master"]
+      ]
+    },
+    {
+      "metin": "Borrowed from Ancient Greek εὐφόρβιον (euphórbion) in the science translation environment.",
+      "kognatlar": [
+        ["εὐφόρβιον", "εὐφόρβιον#Ancient_Greek"]
       ]
     }
   ],
@@ -1644,7 +1711,12 @@
     }
   ],
   "tr_ek": {
-    "ربي": "Rab, Efendi"
+    "ربي": "Rab, Efendi",
+    "الربوا": "faiz",
+    "ربياني": "Rabbim",
+    "ليربوا": "kabardı",
+    "ويربي": "faizi artırdı",
+    "يربوا": "kabardı"
   },
   "mustak_kanit": [
     [
@@ -1997,5 +2069,19 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
-  }
+  },
+  "tr_ek_belirsiz": {
+    "اربي": "faizi artırdı"
+  },
+  "jeffery": [
+    {
+      "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
+      "translit": "Ribbīyūn",
+      "ayet_atiflari": "iii, 146",
+      "ilk_baslik_dilleri": ["Syriac"],
+      "metin": "iii, 146. Myriads. 1 Dalman, Worte Jesu, 267, and see his Grammatik des jüd. paläst. Aramäisch, p. 176. Hübschmann, Arm. Gramm, i, 376; ZDMG, xlvi, 251. 3 Mingana, Syriac Influence, 85, agrees, but see Horovitz, JPN, 200. 4 Fraenkel in Beit. Ass, iii, 74, says that Nöldeke suggested this derivation, but I cannot locate the reference. 2 foreign vocabulary of the qurn 139 The passage is a late Madinan one encouraging the Prophet in his difficulties. as-Suyūtī, Itq, 321, says that certain early authorities considered it a Syriac word, and this is probably correct. Syr. F!, the plu. of ! meaning myriads, translates both μυρίοι and μυριάδες of the LXX.1",
+      "arapca": "ربيون",
+      "bag": "belirsiz"
+    }
+  ]
 }

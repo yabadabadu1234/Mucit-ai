@@ -337,6 +337,26 @@
       "misal": "الجار الحسن يقف مع جاره في _ تصيبه يواسيه ويقدم له ما استطاع من المساعدة",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "54021",
+      "arapca": ["عِنْدَمَا", "حِينَمَا", "لَمَّا"],
+      "ingilizce": [],
+      "tanim": "ظرف زمان بمعنى في موعد حدوث ذلك الفعل",
+      "misal": "دمعت عينا ليلى _ سمعت خبر نجاحها في الثانوية العامة",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "51064",
+      "arapca": ["لَمْلَمَ"],
+      "ingilizce": [],
+      "tanim": "ج جمع أطراف الشيء إلى بعض",
+      "misal": "_ حوائجه وَخرجَ غضباناً من البيت",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "ek"
     }
   ],
   "ontoloji_tr": [
@@ -537,6 +557,83 @@
       "okunus": ["lummī", "lamma"],
       "bag": "müştak",
       "etimoloji": 4
+    },
+    {
+      "madde": "كلميم",
+      "tur": "name",
+      "baslik": "كُلْمِيم • (gulmīm) f",
+      "anlam": ["Guelmim (the capital city of the region of Guelmim-Oued Noun, Morocco)"],
+      "okunus": ["gulmīm"],
+      "ipa": ["/ɡul.miːm/"],
+      "etimoloji": 5,
+      "bag": "ek"
+    },
+    {
+      "madde": "لما",
+      "tur": "particle",
+      "etim_no": "1",
+      "baslik": "لَمَّا • (lammā)",
+      "etim_sablon": [
+        ["univerbation", "Univerbation of لَم (lam, “not”) + مَا (mā, relative)"]
+      ],
+      "anlam": ["not yet, but not, yet not; (governs a jussive verb)"],
+      "okunus": ["lammā"],
+      "etimoloji": 6,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "لما",
+      "tur": "adv",
+      "etim_no": "1",
+      "baslik": "لِمَا • (limā)",
+      "etim_sablon": [
+        ["univerbation", "Univerbation of لَم (lam, “not”) + مَا (mā, relative)"]
+      ],
+      "anlam": ["for what (relative, not interrogative)"],
+      "okunus": ["limā"],
+      "etimoloji": 6,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "لما",
+      "tur": "conj",
+      "etim_no": "2",
+      "baslik": "لَمَّا • (lammā)",
+      "etim_sablon": [
+        ["univerbation", "Univerbation of لِ (li, “for”) + إِمَّا (ʔimmā, as for)"]
+      ],
+      "esanlamli": ["إِلَّا"],
+      "anlam": [
+        "when; (in the past only)",
+        "in view of, the fact that; because, since",
+        "synonym of إِلَّا (ʔillā, “except”)"
+      ],
+      "etiket": ["obsolete"],
+      "okunus": ["lammā"],
+      "etimoloji": 7,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "لما",
+      "tur": "name",
+      "etim_no": "2",
+      "baslik": "لَمَا • (lamā) f",
+      "etim_sablon": [
+        ["univerbation", "Univerbation of لِ (li, “for”) + إِمَّا (ʔimmā, as for)"]
+      ],
+      "anlam": ["a female given name, Lama"],
+      "okunus": ["lamā"],
+      "etimoloji": 7,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "لما",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "لما (form I)\n# لَمَّا (lammā) /lam.maː/: third-person masculine dual past active of لَمَّ (lamma)\n# لُمَّا (lummā) /lum.maː/: inflection of لَمَّ (lamma):\n## third-person masculine dual past passive\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lammā", "lamma", "lummā"],
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -571,6 +668,26 @@
     {
       "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
+    },
+    {
+      "metin": "Borrowed from Tashelhit agulmim.",
+      "kognatlar": [
+        ["agulmim", "agulmim#Tashelhit"]
+      ]
+    },
+    {
+      "metin": "Univerbation of لَم (lam, “not”) + مَا (mā, relative), the original thought being \"but not have it that\".",
+      "kognatlar": [
+        ["لَم", "لم#Arabic"],
+        ["مَا", "ما#Arabic"]
+      ]
+    },
+    {
+      "metin": "Univerbation of لِ (li, “for”) + إِمَّا (ʔimmā, as for), the original thought being \"for as for [when] this is so\".",
+      "kognatlar": [
+        ["لِ", "ل#Arabic"],
+        ["إِمَّا", "إما#Arabic"]
+      ]
     }
   ],
   "kuran": {
@@ -830,5 +947,8 @@
       }
     ],
     "ortalama_benzerlik": 0.019
+  },
+  "tr_ek_belirsiz": {
+    "الم": "olmadı (olumsuz geçmiş)"
   }
 }

@@ -952,6 +952,30 @@
       "misal": "أبو نزار رجل ذو _ و نفوذ",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "303027158",
+      "arapca": ["سَاعَاتِيٌّ"],
+      "ingilizce": [],
+      "tanim": "من يشتغل بتصليح السَّاعات أو بيعها ترك ساعته عند السَّاعاتي \".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "454499064", "Watch and Clock Repairer"]
+      ],
+      "bag": "ek"
+    },
+    {
+      "id": "454499064",
+      "arapca": ["سَاعَاتِيٌّ"],
+      "ingilizce": ["Watch and Clock Repairer"],
+      "tanim": "NULL",
+      "misal": "",
+      "veri_kaynagi": "454",
+      "ust": [
+        ["alt_tur_of", "454499060", "precision instrument and equipment repairer"]
+      ],
+      "bag": "ek"
     }
   ],
   "ontoloji_tr": [
@@ -997,12 +1021,31 @@
         "عَتِيّ (ʕatiyy) sıfatının ism-i tafdîl derecesi:",
         "daha/en gaddar, daha/en vahşi, daha/en sert ve haşin"
       ]
+    },
+    {
+      "madde": "ساعاتي",
+      "tur": "noun",
+      "baslik": "سَاعَاتِيّ • (sāʕātiyy) m (plural سَاعَاتِيُّون (sāʕātiyyūn), feminine سَاعَاتِيَّة (sāʕātiyya))",
+      "etim_sablon": [
+        ["af", "سَاعَات (sāʕāt, “watches”) + ـِيّ (-iyy)"]
+      ],
+      "anlam": ["One who fixes or sells clocks or watches; watchmaker, clockmaker"],
+      "okunus": ["sāʕātiyy"],
+      "etimoloji": 1,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
     {
       "metin": "",
       "kognatlar": []
+    },
+    {
+      "metin": "سَاعَات (sāʕāt, “watches”) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["سَاعَات", "ساعة#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
     }
   ],
   "etymarab": {
@@ -1294,5 +1337,9 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek": {
+    "فعتوا": "azdı",
+    "وعتوا": "azdı"
   }
 }

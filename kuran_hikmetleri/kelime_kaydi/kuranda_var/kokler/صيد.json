@@ -756,6 +756,56 @@
       "okunus": ["ṣāʔid"],
       "ipa": ["/sˤaː.ʔid/"],
       "anlam_tr": ["avcı", "balıkçı"]
+    },
+    {
+      "madde": "أصطاد",
+      "tur": "verb",
+      "baslik": "أصطاد (form VIII)\n# أَصْطَادُ (ʔaṣṭādu) /ʔasˤ.tˤaː.du/: first-person singular non-past active indicative of اِصْطَادَ (iṣṭāda)\n# أُصْطَادُ (ʔuṣṭādu) /ʔusˤ.tˤaː.du/: first-person singular non-past passive indicative of اِصْطَادَ (iṣṭāda)\n# أَصْطَادَ (ʔaṣṭāda) /ʔasˤ.tˤaː.da/: first-person singular non-past active subjunctive of اِصْطَادَ (iṣṭāda)\n# أُصْطَادَ (ʔuṣṭāda) /ʔusˤ.tˤaː.da/: first-person si",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔaṣṭādu", "iṣṭāda", "ʔuṣṭādu"],
+      "etimoloji": 8,
+      "bag": "kelime"
+    },
+    {
+      "madde": "اصطادا",
+      "tur": "verb",
+      "baslik": "اِصْطَادَا • (iṣṭādā) (form VIII) /isˤ.tˤaː.daː/\n# inflection of اِصْطَادَ (iṣṭāda):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iṣṭādā", "iṣṭāda"],
+      "etimoloji": 8,
+      "bag": "ek"
+    },
+    {
+      "madde": "اصطادي",
+      "tur": "verb",
+      "baslik": "اِصْطَادِي • (iṣṭādī) (form VIII) /isˤ.tˤaː.diː/\n# second-person feminine singular imperative of اِصْطَادَ (iṣṭāda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iṣṭādī", "iṣṭāda"],
+      "etimoloji": 8,
+      "bag": "ek"
+    },
+    {
+      "madde": "صيدا",
+      "tur": "name",
+      "etim_no": "1",
+      "baslik": "صَيْدَا • (ṣaydā) f",
+      "etim_sablon": [
+        ["bor", "North Levantine Arabic صَيْدَا (ṣaydā)"],
+        ["cog", "Aramaic ܨܝܕܘܢ (ṣīdōn)"],
+        ["der", "Phoenician 𐤑𐤉𐤃𐤅𐤍 (ṣydwn /⁠ṣīdūn⁠/)"],
+        ["cog", "Classical Syriac ܨܰܝܕ݁ܳܢ (ṣaydon)"],
+        ["cog", "Hebrew צִידוֹן (ṣīḏōn)"],
+        ["cog", "Ancient Greek Σιδών (Sidṓn)"],
+        ["cog", "Latin Sīdōn"]
+      ],
+      "anlam": ["Saïda (a city in Lebanon), the ancient Sidon (a former city-state in Phoenicia)"],
+      "okunus": ["ṣaydā"],
+      "torunlar": [
+        ["ota", "صیدا", "Sayda"],
+        ["fr", "Saïda", ""]
+      ],
+      "etimoloji": 9,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -812,6 +862,23 @@
         ["ܨܰܝܕ݁ܳܢ", "ܨܝܕܢ#Classical_Syriac"],
         ["𐤑𐤉𐤃𐤅𐤍", "𐤑𐤉𐤃𐤅𐤍#Phoenician"],
         ["ܨܝܕܘܢ", "ܨܝܕܘܢ#Aramaic"],
+        ["צִידוֹן", "צידון#Hebrew"],
+        ["Σιδών", "Σιδών#Ancient_Greek"],
+        ["Sīdōn", "Sidon#Latin"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "Incorporated into the standard language from North Levantine Arabic صَيْدَا (ṣaydā), which is perhaps a reshaping of صَيْدُون (ṣaydūn) (itself still the name of a nearby Lebanese village) on the pattern of the many other Levantine and especially Lebanese and Syrian villages whose name ends in ـا (-ā). Ultimately from or cognate to Aramaic ܨܝܕܘܢ (ṣīdōn), from Phoenician 𐤑𐤉𐤃𐤅𐤍 (ṣydwn /⁠ṣīdūn⁠/). Cognate with Classical Syriac ܨܰܝܕ݁ܳܢ (ṣaydon), Hebrew צִידוֹן (ṣīḏōn), Ancient Greek Σιδών (Sidṓn), Latin Sīdōn.",
+      "kognatlar": [
+        ["صَيْدَا", "صيدا#North_Levantine_Arabic"],
+        ["صَيْدُون", "صيدون#Arabic"],
+        ["ܨܝܕܘܢ", "ܨܝܕܘܢ#Aramaic"],
+        ["𐤑𐤉𐤃𐤅𐤍", "𐤑𐤉𐤃𐤅𐤍#Phoenician"],
+        ["ܨܰܝܕ݁ܳܢ", "ܨܝܕܢ#Classical_Syriac"],
         ["צִידוֹן", "צידון#Hebrew"],
         ["Σιδών", "Σιδών#Ancient_Greek"],
         ["Sīdōn", "Sidon#Latin"]
@@ -1084,5 +1151,8 @@
       }
     ],
     "ortalama_benzerlik": 0.609
+  },
+  "tr_ek": {
+    "فاصطادوا": "avlanma"
   }
 }

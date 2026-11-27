@@ -1114,6 +1114,18 @@
       "ust": [
         ["alt_tur_of", "334000107", "part of speech"]
       ]
+    },
+    {
+      "id": "334000025",
+      "arapca": ["اِسْميَّةٌ"],
+      "ingilizce": ["nominalism"],
+      "tanim": "NULL",
+      "misal": "",
+      "veri_kaynagi": "334",
+      "ust": [
+        ["alt_tur_of", "0", ""]
+      ],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -1793,6 +1805,103 @@
       "bag": "müştak",
       "etimoloji": 10,
       "anlam_tr": ["mesâmiyyet, gözeneklilik"]
+    },
+    {
+      "madde": "اسمي",
+      "tur": "phrase",
+      "etim_no": "1",
+      "baslik": "اِسْمِي ... or اِسْمِيَ ... • (ismī ... or ismiya ...)",
+      "etim_sablon": [
+        [
+          "phrasebook",
+          "Arabic phrasebook\n This entry is part of the phrasebook project, which presents criteria for inclusion based on utility, simplicity and commonness."
+        ],
+        ["suffix", "اِسْم (ism, “name”) + ـِي (-ī, “first-person singular possessive suffix”)"]
+      ],
+      "esanlamli": ["أُدْعَى ..."],
+      "anlam": ["my name is ..."],
+      "okunus": ["ismī ...", "ismiya ..."],
+      "ipa": ["/is.miː/"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "اسمية",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "اِسْمِيَّة • (ismiyya) f",
+      "etim_sablon": [
+        ["wp", ""],
+        ["suffix", "اِسْم (ism) + ـِيَّة (-iyya)"],
+        ["ar-etym-iyya", "Relative noun (nisba) composed of اِسْم (ism) + ـِيَّة (-iyya)"]
+      ],
+      "anlam": ["nominalism"],
+      "okunus": ["ismiyya"],
+      "ipa": ["/is.mij.ja/"],
+      "etimoloji": 11,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "تساميا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسَامَيَا • (tasāmayā) (form VI) /ta.saː.ma.jaː/\n# inflection of تَسَامَى (tasāmā):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tasāmayā", "tasāmā"],
+      "etimoloji": 8,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "تسامينا",
+      "tur": "verb",
+      "baslik": "تَسَامَيْنَا • (tasāmaynā) (form VI) /ta.saː.maj.naː/\n# first-person plural past active of تَسَامَى (tasāmā)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tasāmaynā", "tasāmā"],
+      "etimoloji": 8,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "تسمى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسَمَّى • (tasammā) V (non-past يَتَسَمَّى (yatasammā), verbal noun تَسَمٍّ (tasammin))",
+      "anlam": ["to use as a name, to go by"],
+      "okunus": ["tasammā"],
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "ساسم",
+      "tur": "noun",
+      "baslik": "سَاسَم • (sāsam) m",
+      "etim_sablon": [
+        ["der", "Sanskrit शिन्शप (śinśapa)"]
+      ],
+      "anlam": ["sissoo, shisham (Dalbergia sissoo)"],
+      "okunus": ["sāsam"],
+      "ipa": ["/saː.sam/"],
+      "etimoloji": 12,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "سمسميات",
+      "tur": "noun",
+      "baslik": "سِمْسِمِيَّات • (simsimiyyāt) f pl",
+      "anlam": ["plural of سِمْسِمِيَّة (simsimiyya)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["سِمْسِمِيَّة"],
+      "okunus": ["simsimiyyāt"],
+      "etimoloji": 8,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "سموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سموا (form I)\n# سَمُّوا (sammū) /sam.muː/: third-person masculine plural past active of سَمَّ (samma)\n# سُمُّوا (summū) /sum.muː/: inflection of سَمَّ (samma):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sammū", "samma", "summū"],
+      "etimoloji": 8,
+      "bag": "kelime"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -1877,6 +1986,19 @@
         ["مَسَامّ", "مسام#Arabic"],
         ["pores", "pores"],
         ["ـِيَّة", "ية#Arabic"]
+      ]
+    },
+    {
+      "metin": "Relative noun (nisba) composed of اِسْم (ism) + ـِيَّة (-iyya)",
+      "kognatlar": [
+        ["اِسْم", "اسم#Arabic"],
+        ["ـِيَّة", "ية#Arabic"]
+      ]
+    },
+    {
+      "metin": "Ultimately from Sanskrit शिन्शप (śinśapa).",
+      "kognatlar": [
+        ["शिन्शप", "शिन्शप#Sanskrit"]
       ]
     }
   ],
@@ -2442,5 +2564,20 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_belirsiz": {
+    "اسمئه": "isim",
+    "اسماء": "isim",
+    "الاسم": "isim"
+  },
+  "tr_ek": {
+    "الاسماء": "isim",
+    "باسماء": "isim",
+    "باسمائهم": "isim",
+    "سميتموها": "adlandırdı",
+    "سميكم": "adlandırdı",
+    "والسماء": "gök, sema",
+    "والسموت": "gök, sema",
+    "ويسماء": "gök, sema"
   }
 }

@@ -2150,6 +2150,26 @@
       "ust": [
         ["alt_tur_of", "293721", "spatial referent"]
       ]
+    },
+    {
+      "id": "54461",
+      "arapca": ["أَنَابَ", "أَنَابَ إِلَى", "أَنَابَ عَنْ", "أَجَازَ", "خَوَّلَ", "فَوَّضَ", "مَكَّنَ", "مَكَّنَ ل"],
+      "ingilizce": [],
+      "tanim": "فعل إعطاء شخص إذن بتسيير أعمالك أو اتخاذ القرارات بالنيابة عنك",
+      "misal": "_ أبو عامر لإبنه الأكبر أن يبيع الأرض ليغطي تكاليف عملية ولده",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "49473",
+      "arapca": ["غِرْبالٌ", "مُنْخُلٌ"],
+      "ingilizce": [],
+      "tanim": "أَداةٌ تشبه الدُّفَّ ذات ثقوب ، يُنَقَّى بها الحَبُّ من الشوائب",
+      "misal": "أمسكت الأمّ بِال_ لتغربل الطَّحين",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -3414,6 +3434,58 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["ḵallilī", "ḵallala"],
       "etimoloji": 6
+    },
+    {
+      "madde": "الخليل",
+      "tur": "name",
+      "baslik": "الْخَلِيل • (al-ḵalīl) f",
+      "anlam": ["Hebron (a city in the West Bank, Palestine)"],
+      "okunus": ["al-ḵalīl"],
+      "ipa": ["/al.xa.liːl/"],
+      "torunlar": [
+        ["en", "al-Khalil", ""]
+      ],
+      "etimoloji": 16,
+      "bag": "ek"
+    },
+    {
+      "madde": "تخلخلا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَخَلْخَلَا • (taḵalḵalā) (form IIq) /ta.xal.xa.laː/\n# inflection of تَخَلْخَلَ (taḵalḵala):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-iiq", "no-gloss"],
+      "okunus": ["taḵalḵalā", "taḵalḵala"],
+      "etimoloji": 6,
+      "bag": "ek"
+    },
+    {
+      "madde": "تخلخلنا",
+      "tur": "verb",
+      "baslik": "تَخَلْخَلْنَا • (taḵalḵalnā) (form IIq) /ta.xal.xal.naː/\n# first-person plural past active of تَخَلْخَلَ (taḵalḵala)",
+      "etiket": ["form-iiq", "no-gloss"],
+      "okunus": ["taḵalḵalnā", "taḵalḵala"],
+      "etimoloji": 6,
+      "bag": "ek"
+    },
+    {
+      "madde": "تخلخلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَخَلْخَلِي • (taḵalḵalī) (form IIq) /ta.xal.xa.liː/\n# second-person feminine singular imperative of تَخَلْخَلَ (taḵalḵala)",
+      "etiket": ["form-iiq", "no-gloss"],
+      "okunus": ["taḵalḵalī", "taḵalḵala"],
+      "etimoloji": 6,
+      "bag": "ek"
+    },
+    {
+      "madde": "خللنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "خللنا (form I)\n# خَلَلْنَا (ḵalalnā) /xa.lal.naː/: first-person plural past active of خَلَّ (ḵalla)\n# خُلِلْنَا (ḵulilnā) /xu.lil.naː/: first-person plural past passive of خَلَّ (ḵalla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵalalnā", "ḵalla", "ḵulilnā"],
+      "etimoloji": 6,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -3520,6 +3592,13 @@
       "metin": "Derived from the active participle of the verb أَخَلَّ (ʔaḵalla, literally “breaking by transfixing”).",
       "kognatlar": [
         ["أَخَلَّ", "أخل#Arabic"]
+      ]
+    },
+    {
+      "metin": "Literally means \"the friend\", referring to Abraham as a friend of God. Shortening of خليل الرحمن (Khalil al-Rahman, “friend of God, the Compassionate”).",
+      "kognatlar": [
+        ["Abraham", "Abraham"],
+        ["خليل الرحمن", "خليل الرحمن#Arabic"]
       ]
     }
   ],
@@ -3644,7 +3723,9 @@
   ],
   "tr_ek": {
     "الخيل": "atlar",
-    "الخالية": "boş"
+    "الخالية": "boş",
+    "الاخلاء": "dost",
+    "خلله": "arasında, yol"
   },
   "mustak_kanit": [
     [
@@ -4295,5 +4376,8 @@
       }
     ],
     "ortalama_benzerlik": 0.339
+  },
+  "tr_ek_belirsiz": {
+    "خوله": "verdi"
   }
 }

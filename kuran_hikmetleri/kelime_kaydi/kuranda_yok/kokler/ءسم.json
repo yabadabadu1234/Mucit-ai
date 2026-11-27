@@ -54,6 +54,18 @@
       "misal": "يعتبر ال_ ملك الغابة",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "334000025",
+      "arapca": ["اِسْميَّةٌ"],
+      "ingilizce": ["nominalism"],
+      "tanim": "NULL",
+      "misal": "",
+      "veri_kaynagi": "334",
+      "ust": [
+        ["alt_tur_of", "0", ""]
+      ],
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk": [
@@ -90,6 +102,63 @@
       "okunus": ["ʔasummu", "samma", "ʔusammu"],
       "bag": "müştak",
       "etimoloji": 1
+    },
+    {
+      "madde": "أتسام",
+      "tur": "verb",
+      "baslik": "أَتَسَامَ • (ʔatasāma) (form VI) /ʔa.ta.saː.ma/\n# first-person singular non-past active jussive of تَسَامَى (tasāmā)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["ʔatasāma", "tasāmā"],
+      "etimoloji": 1,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "اسمي",
+      "tur": "phrase",
+      "etim_no": "1",
+      "baslik": "اِسْمِي ... or اِسْمِيَ ... • (ismī ... or ismiya ...)",
+      "etim_sablon": [
+        [
+          "phrasebook",
+          "Arabic phrasebook\n This entry is part of the phrasebook project, which presents criteria for inclusion based on utility, simplicity and commonness."
+        ],
+        ["suffix", "اِسْم (ism, “name”) + ـِي (-ī, “first-person singular possessive suffix”)"]
+      ],
+      "esanlamli": ["أُدْعَى ..."],
+      "anlam": ["my name is ..."],
+      "okunus": ["ismī ...", "ismiya ..."],
+      "ipa": ["/is.miː/"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "اسمية",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "اِسْمِيَّة • (ismiyya) f",
+      "etim_sablon": [
+        ["wp", ""],
+        ["suffix", "اِسْم (ism) + ـِيَّة (-iyya)"],
+        ["ar-etym-iyya", "Relative noun (nisba) composed of اِسْم (ism) + ـِيَّة (-iyya)"]
+      ],
+      "anlam": ["nominalism"],
+      "okunus": ["ismiyya"],
+      "ipa": ["/is.mij.ja/"],
+      "etimoloji": 3,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "ساسم",
+      "tur": "noun",
+      "baslik": "سَاسَم • (sāsam) m",
+      "etim_sablon": [
+        ["der", "Sanskrit शिन्शप (śinśapa)"]
+      ],
+      "anlam": ["sissoo, shisham (Dalbergia sissoo)"],
+      "okunus": ["sāsam"],
+      "ipa": ["/saː.sam/"],
+      "etimoloji": 4,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -100,6 +169,26 @@
     {
       "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
+    },
+    {
+      "metin": "Arabic phrasebook\n This entry is part of the phrasebook project, which presents criteria for inclusion based on utility, simplicity and commonness.\nFrom اِسْم (ism, “name”) + ـِي (-ī, “first-person singular possessive suffix”).",
+      "kognatlar": [
+        ["اِسْم", "اسم#Arabic"],
+        ["ـِي", "ي#Arabic:_pronoun"]
+      ]
+    },
+    {
+      "metin": "Relative noun (nisba) composed of اِسْم (ism) + ـِيَّة (-iyya)",
+      "kognatlar": [
+        ["اِسْم", "اسم#Arabic"],
+        ["ـِيَّة", "ية#Arabic"]
+      ]
+    },
+    {
+      "metin": "Ultimately from Sanskrit शिन्शप (śinśapa).",
+      "kognatlar": [
+        ["शिन्शप", "शिन्शप#Sanskrit"]
+      ]
     }
   ],
   "kuran": {
@@ -157,5 +246,9 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_belirsiz": {
+    "اسمئه": "isim",
+    "اسماء": "isim"
   }
 }

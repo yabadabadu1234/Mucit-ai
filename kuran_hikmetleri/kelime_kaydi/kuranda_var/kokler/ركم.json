@@ -479,6 +479,45 @@
       "okunus": ["tarākamī", "tarākama"],
       "bag": "müştak",
       "etimoloji": 1
+    },
+    {
+      "madde": "تراكمنا",
+      "tur": "verb",
+      "baslik": "تَرَاكَمْنَا • (tarākamnā) (form VI) /ta.raː.kam.naː/\n# first-person plural past active of تَرَاكَمَ (tarākama)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tarākamnā", "tarākama"],
+      "etimoloji": 1,
+      "bag": "ek"
+    },
+    {
+      "madde": "تركمان",
+      "tur": "noun",
+      "anlam": ["Turkmens"],
+      "etiket": ["collective"],
+      "okunus": ["turkumān"],
+      "ipa": ["/tur.ku.maːn/"],
+      "bag": "ek"
+    },
+    {
+      "madde": "كركم",
+      "tur": "noun",
+      "baslik": "كُرْكُم • (kurkum) m",
+      "etim_sablon": [
+        ["cog", "Semitic"],
+        ["cog", "Aramaic כּוּרְכְּמָא"],
+        ["cog", "Akkadian 𒌑𒆪𒄀𒆸𒈾 (/⁠kurkanū⁠/)"],
+        ["cog", "Hebrew כַּרְכֹּם / כַּרְכֹּום (karkom)"],
+        ["der", "Sanskrit कुङ्कुम (kuṅkuma)"],
+        ["cog", "Middle Persian [Book Pahlavi needed] (kwlkwm /⁠kurkum⁠/)"],
+        ["cog", "Old Armenian քրքում (kʻrkʻum)"],
+        ["cog", "Old Georgian ქურქუმაჲ (kurkumay)"],
+        ["cog", "Ancient Greek κρόκος (krókos)"]
+      ],
+      "anlam": ["Curcuma and especially Curcuma longa, turmeric, Indian saffron", "curcumin"],
+      "okunus": ["kurkum"],
+      "ipa": ["/kur.kum/"],
+      "etimoloji": 2,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -489,6 +528,20 @@
     {
       "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
+    },
+    {
+      "metin": "Semitic cognates include Aramaic כּוּרְכְּמָא, ܟܽܘܪܟܡܳܐ (kurkmā), Akkadian 𒌑𒆪𒄀𒆸𒈾 (/⁠kurkanū⁠/), Hebrew כַּרְכֹּם / כַּרְכֹּום (karkom); however because of non-philological evidence it is a preferred assumption that the Arabic word comes via India, from Sanskrit कुङ्कुम (kuṅkuma).\nAkin to Middle Persian [Book Pahlavi needed] (kwlkwm /⁠kurkum⁠/), Old Armenian քրքում (kʻrkʻum), Old Georgian ქურქუმაჲ (kurkumay), Ancient Greek κρόκος (krókos).",
+      "kognatlar": [
+        ["כּוּרְכְּמָא", "כורכמא#Aramaic"],
+        ["ܟܽܘܪܟܡܳܐ", "ܟܘܪܟܡܐ#Classical_Syriac"],
+        ["𒌑𒆪𒄀𒆸𒈾", "𒌑𒆪𒄀𒆸𒈾#Akkadian"],
+        ["כַּרְכֹּם", "כרכם#Hebrew"],
+        ["כַּרְכֹּום", "כרכום#Hebrew"],
+        ["कुङ्कुम", "कुङ्कुम#Sanskrit"],
+        ["քրքում", "քրքում#Old_Armenian"],
+        ["ქურქუმაჲ", "ქურქუმაჲ#Old_Georgian"],
+        ["κρόκος", "κρόκος#Ancient_Greek"]
+      ]
     }
   ],
   "etymarab": {
@@ -676,5 +729,8 @@
       }
     ],
     "ortalama_benzerlik": 0.529
+  },
+  "tr_ek": {
+    "فيركمه": "üst üste yığar"
   }
 }

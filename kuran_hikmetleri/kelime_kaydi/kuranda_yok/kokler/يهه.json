@@ -48,6 +48,55 @@
       "okunus": ["yah", "yeh"],
       "bag": "müştak",
       "anlam_tr": ["Evet, evet"]
+    },
+    {
+      "madde": "إليها",
+      "tur": "prep_phrase",
+      "baslik": "إِلَيْهَا • (ʔilayhā)",
+      "anlam": ["to her, to it"],
+      "okunus": ["ʔilayhā"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "يؤه",
+      "tur": "verb",
+      "baslik": "يَؤُهْ • (yaʔuh) (form I) /ja.ʔuh/\n# third-person masculine singular non-past active jussive of آهَ (ʔāha)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʔuh", "ʔāha"],
+      "etimoloji": 3,
+      "bag": "kelime"
+    },
+    {
+      "madde": "ية",
+      "tur": "suffix",
+      "baslik": "ـِيَّة • (-iyya)",
+      "anlam": [
+        "Used to form abstract nouns from other nouns and from adjectives. Usually there is a parallel nisba adjective in ـِيّ (-iyy), with a parallel meaning. For example, اِشْتِرَاكِيَّة (ištirākiyya, “socialism”) is formed from اِشْتِرَاك (ištirāk, “sharing, cooperation”), with a corresponding nisba adjective اِشْتِرَاكِيّ (ištirākiyy, “socialist”). It is possible to analyze cases like these as e.g. اِشْتِرَاكِيّ (ištirākiyy, “socialist”) suffixed with ـَة (-a) to form an abstract noun. However, there are other cases, such as جَاذِبِيَّة (jāḏibiyya, “attraction, gravity”) derived from جَاذِب (jāḏib, “attractive”) or أَهَمِّيَّة (ʔahammiyya, “importance”) derived from أَهَمّ (ʔahamm, “more important”), of formation of nisba nouns from non-nisba adjectives where no corresponding nisba adjective exists.",
+        "Used to form nouns of various types from other nouns, e.g. device nouns such as بُنْدُقِيَّة (bunduqiyya, “rifle”) from بُنْدُق (bunduq, “hazelnut, bullet”)."
+      ],
+      "etiket": ["morpheme"],
+      "okunus": ["-iyya"],
+      "torunlar": [
+        ["fa-cls", "ـِیَّت", "-iyyat"],
+        ["fa-cls", "ـِیَّه", "-iyya"],
+        ["fa-cls", "ـِیَّة", "-iyya"],
+        ["tk", "-iýet", ""],
+        ["ug", "ـىيەت", "-iyet"],
+        ["uz", "-iyat", ""]
+      ],
+      "etimoloji": 4,
+      "bag": "kelime"
+    },
+    {
+      "madde": "يهنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهنا (form I)\n# يَهِنَّا (yahinnā) /ja.hin.naː/: third-person masculine dual non-past active subjunctive/jussive of هَنَّ (hanna)\n# يُهَنَّا (yuhannā) /ju.han.naː/: third-person masculine dual non-past passive subjunctive/jussive of هَنَّ (hanna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahinnā", "hanna", "yuhannā"],
+      "etimoloji": 3,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -60,6 +109,28 @@
     {
       "metin": "",
       "kognatlar": []
+    },
+    {
+      "metin": "From إِلَى (ʔilā) + ـهَا (-hā).",
+      "kognatlar": [
+        ["إِلَى", "إلى#Arabic"],
+        ["ـهَا", "ها#Arabic"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "Etymology tree\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nProto-Afroasiatic *-t\nProto-Semitic *-at-\nArabic ـَة (-a)\nArabic ية\nFrom ـِيّ (-iyy) + ـَة (-a).",
+      "kognatlar": [
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["*-t", "Reconstruction:Proto-Afroasiatic/-t#Proto-Afroasiatic:_feminine"],
+        ["*-at-", "Reconstruction:Proto-Semitic/-at-#Proto-Semitic:_feminine"],
+        ["ـَة", "ة#Arabic:_feminine"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["ـَة", "ة#Arabic:_feminine"]
+      ]
     }
   ],
   "kuran": {
@@ -120,5 +191,13 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_ek": {
+    "اليها": "-e, -a, doğru",
+    "فيها": "içinde, -de, -da"
+  },
+  "tr_ek_belirsiz": {
+    "اياه": "yalnız, sadece",
+    "ايه": "onun, onu (zamir)"
   }
 }

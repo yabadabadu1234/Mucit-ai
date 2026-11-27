@@ -1162,6 +1162,28 @@
       "ust": [],
       "tanim_tr": "İnsanın içine düştüğü ve neticelerine katlandığı hatalı fiil.",
       "misal_tr": "Bâsim cihazın terkibinde bir hata yaptı; bu yüzden cihaz iyi çalışmadı."
+    },
+    {
+      "id": "334000026",
+      "arapca": ["تخطيئيه"],
+      "ingilizce": ["fallibilism"],
+      "tanim": "NULL",
+      "misal": "",
+      "veri_kaynagi": "334",
+      "ust": [
+        ["alt_tur_of", "0", ""]
+      ],
+      "bag": "kelime"
+    },
+    {
+      "id": "50301",
+      "arapca": ["خَطَّ", "خَطَّ على", "خَطَّ في"],
+      "ingilizce": [],
+      "tanim": "كتب ورسم حروفاً وأشكالاً ذات معنى تعبر عن مشاعره وتفكيره بواسطة قلم أو شبيهه ما يترك اثرا عند الكتابة فيه",
+      "misal": "_ الطفل على دفتره زهوراً جميلة",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk": [
@@ -2226,6 +2248,27 @@
       "okunus": ["iḵṭaʔū", "ḵaṭiʔa"],
       "kok_yazilis": "خطئ",
       "etimoloji": 10
+    },
+    {
+      "madde": "الخطا",
+      "tur": "name",
+      "baslik": "الْخَطَا • (al-ḵaṭā) ?",
+      "esanlamli": ["بِلَاد الْخَطَا"],
+      "anlam": ["the Khitans", "Cathay, northern China"],
+      "okunus": ["al-ḵaṭā"],
+      "ipa": ["/al.xa.tˤaː/"],
+      "etimoloji": 11,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "تخطوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تخطوا (form I)\n# تَخُطُّوا (taḵuṭṭū) /ta.xutˤ.tˤuː/: second-person masculine plural non-past active subjunctive/jussive of خَطَّ (ḵaṭṭa)\n# تُخَطُّوا (tuḵaṭṭū) /tu.xatˤ.tˤuː/: second-person masculine plural non-past passive subjunctive/jussive of خَطَّ (ḵaṭṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵuṭṭū", "ḵaṭṭa", "tuḵaṭṭū"],
+      "etimoloji": 10,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -2303,6 +2346,16 @@
     {
       "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
+    },
+    {
+      "metin": "Etymology tree\nArabic اَل (al-)\n▲\nArabic الْخَطَا (al-ḵaṭā)\nArabic خَطَا (ḵaṭā)\nArabic الخطا\nFrom اَل (al-) + خَطَا (ḵaṭā).",
+      "kognatlar": [
+        ["اَل", "ال#Arabic"],
+        ["الْخَطَا", "الخطا#Arabic:_cathay"],
+        ["خَطَا", "خطا#Arabic"],
+        ["اَل", "ال#Arabic"],
+        ["خَطَا", "خطا#Arabic"]
+      ]
     }
   ],
   "etymarab": {
@@ -2797,5 +2850,15 @@
       }
     ],
     "ortalama_benzerlik": 0.553
+  },
+  "tr_ek": {
+    "اخطاتم": "yanıldı",
+    "اخطانا": "yanıldı",
+    "بالخاطئة": "hatalı (dişil)",
+    "خطيتكم": "hata, günah",
+    "خطيته": "hata, günah",
+    "خطيتهم": "hata, günah",
+    "خطيتي": "hata, günah",
+    "لخطين": "hatalı, suçlu"
   }
 }

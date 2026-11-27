@@ -508,6 +508,49 @@
       "etiket": ["form-i", "no-gloss"],
       "okunus": ["wahū", "wahiya"],
       "etimoloji": 0
+    },
+    {
+      "madde": "أتهاون",
+      "tur": "verb",
+      "baslik": "أتهاون (form VI)\n# أَتَهَاوَنُ (ʔatahāwanu) /ʔa.ta.haː.wa.nu/: first-person singular non-past active indicative of تَهَاوَنَ (tahāwana)\n# أُتَهَاوَنُ (ʔutahāwanu) /ʔu.ta.haː.wa.nu/: first-person singular non-past passive indicative of تَهَاوَنَ (tahāwana)\n# أَتَهَاوَنَ (ʔatahāwana) /ʔa.ta.haː.wa.na/: first-person singular non-past active subjunctive of تَهَاوَنَ (tahāwana)\n# أُتَهَاوَنَ (ʔutahāwan",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["ʔatahāwanu", "tahāwana", "ʔutahāwanu"],
+      "etimoloji": 0,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "أوها",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أُوهَا • (ʔūhā) (form I) /ʔuː.haː/\n# second-person dual imperative of آهَ (ʔāha)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔūhā", "ʔāha"],
+      "etimoloji": 0,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "أيها",
+      "tur": "particle",
+      "etim_no": "1.1",
+      "baslik": "أَيُّهَا • (ʔayyuhā)",
+      "anlam": [
+        "vocative particle preceding a noun used in direct address; only rarely omitted in such contexts; occasionally translated as O or hey"
+      ],
+      "okunus": ["ʔayyuhā"],
+      "ipa": ["/ʔaj.ju.haː/"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "أيها",
+      "tur": "pron",
+      "etim_no": "1.2",
+      "baslik": "أَيِّهَا • (ʔayyihā) f",
+      "anlam": ["which one of them"],
+      "okunus": ["ʔayyihā"],
+      "ipa": ["/ʔaj.ji.haː/"],
+      "etimoloji": 3,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -518,6 +561,23 @@
     {
       "metin": "",
       "kognatlar": []
+    },
+    {
+      "metin": "From أَيُّ (ʔayyu) + هَا (hā).",
+      "kognatlar": [
+        ["أَيُّ", "أي#Arabic"],
+        ["هَا", "ها#Arabic"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nProto-Semitic *ʔayy-\nArabic أَيِّ (ʔayyi)\nArabic هَا (hā)\nArabic أيها\nFrom أَيِّ (ʔayyi) + هَا (hā).",
+      "kognatlar": [
+        ["*ʔayy-", "Reconstruction:Proto-Semitic/ʔayy-"],
+        ["أَيِّ", "أي#Arabic"],
+        ["هَا", "ها#Arabic"],
+        ["أَيِّ", "أي#Arabic"],
+        ["هَا", "ها#Arabic"]
+      ]
     }
   ],
   "etymarab": {
@@ -678,5 +738,8 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_belirsiz": {
+    "ايها": "hangi, ne"
   }
 }

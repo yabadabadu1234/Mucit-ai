@@ -962,6 +962,46 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["yulawwinū", "lawwana", "yulawwanū"],
       "etimoloji": 3
+    },
+    {
+      "madde": "لأن",
+      "tur": "conj",
+      "etim_no": "1",
+      "baslik": "لِأَنَّ • (liʔanna)",
+      "etim_sablon": [
+        ["compound", "لِـ (li-, “for”) + أَنَّ (ʔanna, “that”)"]
+      ],
+      "anlam": ["because, on the grounds that, for"],
+      "okunus": ["liʔanna"],
+      "ipa": ["/li.ʔan.na/"],
+      "etimoloji": 8,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "لأن",
+      "tur": "conj",
+      "etim_no": "2",
+      "baslik": "لِأَنْ • (liʔan)",
+      "etim_sablon": [
+        ["compound", "لِـ (li-, “for”) + أَنْ (ʔan, “that”)"]
+      ],
+      "esanlamli": ["لِـ"],
+      "anlam": ["that, for that, so that, in order that, in order to (used with the subjunctive)"],
+      "okunus": ["liʔan"],
+      "ipa": ["/li.ʔan/"],
+      "etimoloji": 9,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "لئن",
+      "tur": "conj",
+      "baslik": "لَئِن • (laʔin)",
+      "anlam": ["if"],
+      "etiket": ["conditional"],
+      "okunus": ["laʔin"],
+      "ipa": ["/la.ʔin/"],
+      "etimoloji": 10,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -1013,6 +1053,33 @@
       "metin": "Borrowed from Translingual Launaea.",
       "kognatlar": [
         ["Launaea", "Launaea#Translingual"]
+      ]
+    },
+    {
+      "metin": "Morphologically لِـ (li-, “for”) + أَنَّ (ʔanna, “that”)",
+      "kognatlar": [
+        ["لِـ", "ل#Arabic"],
+        ["أَنَّ", "أن#Arabic"]
+      ]
+    },
+    {
+      "metin": "Compound of لِـ (li-, “for”) + أَنْ (ʔan, “that”) with the same grammatical rules as أَنْ (ʔan, “to, that”).",
+      "kognatlar": [
+        ["لِـ", "ل#Arabic"],
+        ["أَنْ", "أن#Arabic"],
+        ["أَنْ", "أن#Arabic"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nProto-Afroasiatic\nProto-Semitic *lV-\nArabic لَـ (la-)\nProto-Semitic *šim\nProto-West Semitic *him\nArabic إِن (ʔin)\nArabic لئن\nFrom لَـ (la-) + إِن (ʔin).",
+      "kognatlar": [
+        ["*lV-", "Reconstruction:Proto-Semitic/lV-"],
+        ["لَـ", "ل#Arabic"],
+        ["*šim", "Reconstruction:Proto-Semitic/šim"],
+        ["*him", "Reconstruction:Proto-West Semitic/him"],
+        ["إِن", "إن#Arabic"],
+        ["لَـ", "ل#Arabic"],
+        ["إِن", "إن#Arabic"]
       ]
     }
   ],
@@ -1090,7 +1157,10 @@
     }
   ],
   "tr_ek": {
-    "لان": "-ki, -mek üzere (masdar edatı)"
+    "لان": "-ki, -mek üzere (masdar edatı)",
+    "الونه": "renk",
+    "الونها": "renk",
+    "والونكم": "renk"
   },
   "mustak_kanit": [
     ["masdar · sülâsî mücerred", 0, "fa'l", "semâî aday", "لَوْن", "lawn", "Renk", "lugat", "Kur'ân · Luggat"],
@@ -1194,5 +1264,8 @@
       }
     ],
     "ortalama_benzerlik": 0.549
+  },
+  "tr_ek_belirsiz": {
+    "لئن": "eğer, şayet"
   }
 }

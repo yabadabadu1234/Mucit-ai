@@ -1607,6 +1607,75 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["layyantunna", "layyana", "luyyintunna"],
       "etimoloji": 2
+    },
+    {
+      "madde": "أللن",
+      "tur": "verb",
+      "baslik": "أللن (form I)\n# أَلَلْنَ (ʔalalna) /ʔa.lal.na/: third-person feminine plural past active of أَلَّ (ʔalla)\n# أُلِلْنَ (ʔulilna) /ʔu.lil.na/: third-person feminine plural past passive of أَلَّ (ʔalla)\n# أَلِلْنَ (ʔalilna) /ʔa.lil.na/: third-person feminine plural past active of أَلَّ (ʔalla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalalna", "ʔalla", "ʔulilna"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "أللنا",
+      "tur": "verb",
+      "baslik": "أللنا (form I)\n# أَلَلْنَا (ʔalalnā) /ʔa.lal.naː/: first-person plural past active of أَلَّ (ʔalla)\n# أُلِلْنَا (ʔulilnā) /ʔu.lil.naː/: first-person plural past passive of أَلَّ (ʔalla)\n# أَلِلْنَا (ʔalilnā) /ʔa.lil.naː/: first-person plural past active of أَلَّ (ʔalla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalalnā", "ʔalla", "ʔulilnā"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "لأن",
+      "tur": "conj",
+      "etim_no": "1",
+      "baslik": "لِأَنَّ • (liʔanna)",
+      "etim_sablon": [
+        ["compound", "لِـ (li-, “for”) + أَنَّ (ʔanna, “that”)"]
+      ],
+      "anlam": ["because, on the grounds that, for"],
+      "okunus": ["liʔanna"],
+      "ipa": ["/li.ʔan.na/"],
+      "etimoloji": 4,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "لأن",
+      "tur": "conj",
+      "etim_no": "2",
+      "baslik": "لِأَنْ • (liʔan)",
+      "etim_sablon": [
+        ["compound", "لِـ (li-, “for”) + أَنْ (ʔan, “that”)"]
+      ],
+      "esanlamli": ["لِـ"],
+      "anlam": ["that, for that, so that, in order that, in order to (used with the subjunctive)"],
+      "okunus": ["liʔan"],
+      "ipa": ["/li.ʔan/"],
+      "etimoloji": 5,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "لئن",
+      "tur": "conj",
+      "baslik": "لَئِن • (laʔin)",
+      "anlam": ["if"],
+      "etiket": ["conditional"],
+      "okunus": ["laʔin"],
+      "ipa": ["/la.ʔin/"],
+      "etimoloji": 6,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "لن",
+      "tur": "adv",
+      "etim_no": "1",
+      "baslik": "لَنْ • (lan)",
+      "anlam": ["not (future)"],
+      "okunus": ["lan"],
+      "ipa": ["/lan/"],
+      "etimoloji": 7,
+      "bag": "kelime"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -1631,6 +1700,44 @@
       "metin": "Verbal noun of لَيَّنَ (layyana).",
       "kognatlar": [
         ["لَيَّنَ", "لين#Arabic"]
+      ]
+    },
+    {
+      "metin": "Morphologically لِـ (li-, “for”) + أَنَّ (ʔanna, “that”)",
+      "kognatlar": [
+        ["لِـ", "ل#Arabic"],
+        ["أَنَّ", "أن#Arabic"]
+      ]
+    },
+    {
+      "metin": "Compound of لِـ (li-, “for”) + أَنْ (ʔan, “that”) with the same grammatical rules as أَنْ (ʔan, “to, that”).",
+      "kognatlar": [
+        ["لِـ", "ل#Arabic"],
+        ["أَنْ", "أن#Arabic"],
+        ["أَنْ", "أن#Arabic"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nProto-Afroasiatic\nProto-Semitic *lV-\nArabic لَـ (la-)\nProto-Semitic *šim\nProto-West Semitic *him\nArabic إِن (ʔin)\nArabic لئن\nFrom لَـ (la-) + إِن (ʔin).",
+      "kognatlar": [
+        ["*lV-", "Reconstruction:Proto-Semitic/lV-"],
+        ["لَـ", "ل#Arabic"],
+        ["*šim", "Reconstruction:Proto-Semitic/šim"],
+        ["*him", "Reconstruction:Proto-West Semitic/him"],
+        ["إِن", "إن#Arabic"],
+        ["لَـ", "ل#Arabic"],
+        ["إِن", "إن#Arabic"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nProto-Semitic *lā\nArabic لَا (lā)\nArabic أَنْ (ʔan)\nArabic لن\nFrom لَا (lā) + أَنْ (ʔan). Compare أَلَّا (ʔallā).",
+      "kognatlar": [
+        ["*lā", "Reconstruction:Proto-Semitic/lā"],
+        ["لَا", "لا#Arabic"],
+        ["أَنْ", "أن#Arabic"],
+        ["لَا", "لا#Arabic"],
+        ["أَنْ", "أن#Arabic"],
+        ["أَلَّا", "ألا#Arabic"]
       ]
     }
   ],
@@ -1747,7 +1854,8 @@
     }
   ],
   "tr_ek": {
-    "لن": "asla, hiçbir zaman"
+    "لن": "asla, hiçbir zaman",
+    "والنا": "âl, ehli, hanedan"
   },
   "mustak_kanit": [
     [
@@ -2043,5 +2151,11 @@
       }
     ],
     "ortalama_benzerlik": 0.441
+  },
+  "tr_ek_belirsiz": {
+    "لئن": "eğer, şayet"
+  },
+  "tr_ek_ek": {
+    "ولن": "asla, hiçbir zaman"
   }
 }

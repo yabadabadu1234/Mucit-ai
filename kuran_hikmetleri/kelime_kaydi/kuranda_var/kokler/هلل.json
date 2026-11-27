@@ -1336,6 +1336,36 @@
       "ust": [
         ["alt_tur_of", "293576", "Moment | Time Point"]
       ]
+    },
+    {
+      "id": "48066",
+      "arapca": ["أَطْنَبَ في", "غَالَى في", "هَوَّلَ", "هَوَّلَ على", "بالَغَ في"],
+      "ingilizce": [],
+      "tanim": "اجتهد في الأمر و استقصى فيه بكثرة وتشدد",
+      "misal": "_ في حديثه حول إنجازاته إنه شخص يحب المفاخرة",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "49045",
+      "arapca": ["طُفاوَةٌ", "دَارَةٌ", "هَالَةٌ"],
+      "ingilizce": [],
+      "tanim": "دائرة منيرة يحيط بها الرسامون رؤوس القديسين",
+      "misal": "تُحيط بالقمر _ من ضوء",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "53627",
+      "arapca": ["طُفاوَةٌ", "دَارَةٌ", "هَالَةٌ"],
+      "ingilizce": [],
+      "tanim": "دائرةٌ من الضوء تحيط بجِرْم سمأوي .",
+      "misal": "كانت _ القمر واضحةً جداً الليلة",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -1975,6 +2005,46 @@
       "bag": "müştak",
       "etimoloji": 8,
       "anlam_tr": ["kadın ismi, Hâlâ"]
+    },
+    {
+      "madde": "بهلول",
+      "tur": "noun",
+      "baslik": "بُهْلُول • (buhlūl) m",
+      "anlam": ["joker, jester, fool"],
+      "okunus": ["buhlūl"],
+      "ipa": ["/buh.luːl/"],
+      "bag": "ek"
+    },
+    {
+      "madde": "تهالكن",
+      "tur": "verb",
+      "baslik": "تَهَالَكْنَ • (tahālakna) (form VI) /ta.haː.lak.na/\n# inflection of تَهَالَكَ (tahālaka):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tahālakna", "tahālaka"],
+      "etimoloji": 7,
+      "bag": "ek"
+    },
+    {
+      "madde": "هلا",
+      "tur": "phrase",
+      "baslik": "هَلَّا • (hallā)",
+      "etiket": ["no-gloss"],
+      "okunus": ["hallā"],
+      "bag": "kelime"
+    },
+    {
+      "madde": "هليون",
+      "tur": "noun",
+      "baslik": "هِلْيَوْن or هِلْيُون or هَلْيُون • (hilyawn or hilyūn or halyūn) m",
+      "etim_sablon": [
+        ["bor", "Classical Syriac ܗܠܝܘܢ (/⁠*helyōn⁠/)"],
+        ["der", "Ancient Greek ἕλειον (héleion, “asparagus”)"]
+      ],
+      "esanlamli": ["سَكُّوم", "أَسْفَرَاج"],
+      "anlam": ["asparagus (Asparagus gen. et spp.)"],
+      "okunus": ["hilyawn", "hilyūn", "halyūn"],
+      "etimoloji": 9,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -2039,6 +2109,14 @@
       "kognatlar": [
         ["ἅλως", "ἅλως#Ancient_Greek"],
         ["ἅλως", "ἅλως#Ancient_Greek"]
+      ]
+    },
+    {
+      "metin": "From Classical Syriac ܗܠܝܘܢ (/⁠*helyōn⁠/), from Ancient Greek ἕλειον (héleion, “asparagus”), literally the neuter of ἕλειος (héleios, “of the marshland”).",
+      "kognatlar": [
+        ["ܗܠܝܘܢ", "ܗܠܝܘܢ#Classical_Syriac"],
+        ["ἕλειον", "ἕλειον#Ancient_Greek"],
+        ["ἕλειος", "ἕλειος#Ancient_Greek"]
       ]
     }
   ],
@@ -2109,7 +2187,8 @@
     }
   ],
   "tr_ek": {
-    "هل": "acaba, mi"
+    "هل": "acaba, mi",
+    "الاهلة": "hilaller"
   },
   "mustak_kanit": [
     [
@@ -2308,5 +2387,12 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_belirsiz": {
+    "اهل": "ehil, halk, aile",
+    "اهله": "ehil, halk, aile"
+  },
+  "tr_ek_ek": {
+    "فهل": "acaba, mi"
   }
 }

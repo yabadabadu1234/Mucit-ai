@@ -1655,6 +1655,41 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["yumassiḥāni", "massaḥa", "yumassaḥāni"],
       "etimoloji": 9
+    },
+    {
+      "madde": "المسيح",
+      "tur": "name",
+      "baslik": "الْمَسِيح • (al-masīḥ) m",
+      "anlam": ["Christ; the Messiah (Jesus of Nazareth)", "the awaited Messiah"],
+      "etiket": ["Judaism"],
+      "okunus": ["al-masīḥ"],
+      "ipa": ["/al.ma.siːħ/"],
+      "dr": ["مَسِيحِيّ"],
+      "etimoloji": 10,
+      "bag": "kelime"
+    },
+    {
+      "madde": "مسيحاني",
+      "tur": "adj",
+      "baslik": "مَسِيحَانِيّ • (masīḥāniyy) (feminine مَسِيحَانِيَّة (masīḥāniyya), masculine plural مَسِيحَانِيُّون (masīḥāniyyūn), feminine plural مَسِيحَانِيَّات (masīḥāniyyāt))",
+      "etim_sablon": [
+        ["af", "مَسِيح (masīḥ, “Messiah, Christ”) + ـِيّ (-iyy)"]
+      ],
+      "anlam": ["messianic"],
+      "okunus": ["masīḥāniyy"],
+      "etimoloji": 11,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "مسيحيون",
+      "tur": "adj",
+      "baslik": "مَسِيحِيُّون • (masīḥiyyūn)",
+      "anlam": ["masculine plural of مَسِيحِيّ (masīḥiyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["مَسِيحِيّ"],
+      "okunus": ["masīḥiyyūn"],
+      "etimoloji": 9,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -1719,6 +1754,23 @@
     {
       "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
+    },
+    {
+      "metin": "Definite form of مَسِيح (masīḥ).",
+      "kognatlar": [
+        ["مَسِيح", "مسيح#Arabic"]
+      ]
+    },
+    {
+      "metin": "مَسِيح (masīḥ, “Messiah, Christ”) + ـِيّ (-iyy), with the infix to distinguish it from مَسِيحِيّ (masīḥiyy, “Christian”).",
+      "kognatlar": [
+        ["مَسِيح", "مسيح#Arabic"],
+        ["Messiah", "Messiah"],
+        ["Christ", "Christ"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["مَسِيحِيّ", "مسيحي#Arabic"],
+        ["Christian", "Christian"]
+      ]
     }
   ],
   "etymarab": {
@@ -2121,5 +2173,13 @@
       }
     ],
     "ortalama_benzerlik": 0.7
+  },
+  "tr_ek": {
+    "فامسحوا": "meshet",
+    "والمسيح": "Mesih",
+    "وامسحوا": "meshet"
+  },
+  "tr_ek_belirsiz": {
+    "مسحا": "silme"
   }
 }

@@ -481,6 +481,7 @@ def yaz():
         with open(os.path.join(kd, ad_ + '.json'), 'w', encoding='utf-8') as f:
             f.write(okunur(dugum))
     d['sayilar']['kelime_dosyasi'] = len(d['kelime_dosyalari'])
+    d['sayilar']['kelime_dagitimi'] = [KS.kelimeleri_dagit(True)[1:]]
     for ad in ('kuranda_var', 'kuranda_yok'):
         with open(os.path.join(taban, ad, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
             f.write(okunur({'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],

@@ -1763,6 +1763,74 @@
       "etiket": ["form-i", "no-gloss"],
       "okunus": ["qitna", "waqata"],
       "etimoloji": 2
+    },
+    {
+      "madde": "أقتت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أقتت (form VIII)\n# أَقْتَتْ (ʔaqtat) /ʔaq.tat/: first-person singular non-past active jussive of اِقْتَاتَ (iqtāta)\n# أُقْتَتْ (ʔuqtat) /ʔuq.tat/: first-person singular non-past passive jussive of اِقْتَاتَ (iqtāta)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔaqtat", "iqtāta", "ʔuqtat"],
+      "etimoloji": 2,
+      "bag": "kelime"
+    },
+    {
+      "madde": "أقتت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أقتت (form I)\n# أَقْتُتْ (ʔaqtut) /ʔaq.tut/: first-person singular non-past active jussive of قَتَّ (qatta)\n# أُقْتَتْ (ʔuqtat) /ʔuq.tat/: first-person singular non-past passive jussive of قَتَّ (qatta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaqtut", "qatta", "ʔuqtat"],
+      "etimoloji": 2,
+      "bag": "kelime"
+    },
+    {
+      "madde": "اقتت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اقتت (form VIII)\n# اِقْتَتُّ (iqtattu) /iq.tat.tu/: first-person singular past active of اِقْتَاتَ (iqtāta)\n# اِقْتَتَّ (iqtatta) /iq.tat.ta/: second-person masculine singular past active of اِقْتَاتَ (iqtāta)\n# اِقْتَتِّ (iqtatti) /iq.tat.ti/: second-person feminine singular past active of اِقْتَاتَ (iqtāta)\n# اُقْتِتُّ (uqtittu) /uq.tit.tu/: first-person singular past passive of اِقْتَاتَ (iqtāt",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iqtattu", "iqtāta", "iqtatta"],
+      "etimoloji": 2,
+      "bag": "kelime"
+    },
+    {
+      "madde": "اقتت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اُقْتُتْ • (uqtut) (form I) /uq.tut/\n# second-person masculine singular imperative of قَتَّ (qatta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uqtut", "qatta"],
+      "etimoloji": 2,
+      "bag": "kelime"
+    },
+    {
+      "madde": "اقتتنا",
+      "tur": "verb",
+      "baslik": "اقتتنا (form VIII)\n# اِقْتَتْنَا (iqtatnā) /iq.tat.naː/: first-person plural past active of اِقْتَاتَ (iqtāta)\n# اُقْتِتْنَا (uqtitnā) /uq.tit.naː/: first-person plural past passive of اِقْتَاتَ (iqtāta)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iqtatnā", "iqtāta", "uqtitnā"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "مؤقتا",
+      "tur": "adv",
+      "baslik": "مُؤَقَّتًا • (muʔaqqatan)",
+      "etim_sablon": [
+        ["adverbial accusative", "Adverbial accusative of مُوَقَّت (muwaqqat, “temporary”)"]
+      ],
+      "anlam": ["temporarily, ad interim, provisionally"],
+      "okunus": ["muʔaqqatan"],
+      "ipa": ["/mu.ʔaq.qa.tan/"],
+      "torunlar": [
+        ["az", "müvəqqətən", ""],
+        ["fa", "موقتاً", ""],
+        ["tr", "muvakkaten", ""],
+        ["uz", "muvaqqatan", ""]
+      ],
+      "etimoloji": 8,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -1854,6 +1922,13 @@
       "metin": "Derived from the passive participle of وَقَتَ (waqata).",
       "kognatlar": [
         ["وَقَتَ", "وقت#Arabic"]
+      ]
+    },
+    {
+      "metin": "Adverbial accusative of مُوَقَّت (muwaqqat, “temporary”).",
+      "kognatlar": [
+        ["Adverbial accusative", "adverbial accusative"],
+        ["مُوَقَّت", "موقت#Arabic"]
       ]
     }
   ],
@@ -2147,5 +2222,9 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek": {
+    "اقتت": "vakti belirlendi",
+    "لوقتها": "vakit"
   }
 }

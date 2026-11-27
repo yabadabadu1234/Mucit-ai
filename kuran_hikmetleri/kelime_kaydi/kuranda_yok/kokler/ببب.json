@@ -46,6 +46,94 @@
       "okunus": ["bōb"],
       "ipa": ["/boːb/"],
       "bag": "müştak"
+    },
+    {
+      "madde": "أببنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَبِبْنَا • (ʔabibnā) (form I) /ʔa.bib.naː/\n# first-person plural past active of أَبَّ (ʔabba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabibnā", "ʔabba"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "ألبب",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ألبب (form I)\n# أَلْبُبْ (ʔalbub) /ʔal.bub/: first-person singular non-past active jussive of لَبَّ (labba)\n# أَلْبَبْ (ʔalbab) /ʔal.bab/: first-person singular non-past active jussive of لَبَّ (labba)\n# أُلْبَبْ (ʔulbab) /ʔul.bab/: first-person singular non-past passive jussive of لَبَّ (labba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalbub", "labba", "ʔalbab"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "البب",
+      "tur": "verb",
+      "baslik": "البب (form I)\n# اُلْبُبْ (ulbub) /ul.bub/: second-person masculine singular imperative of لَبَّ (labba)\n# اِلْبَبْ (ilbab) /il.bab/: second-person masculine singular imperative of لَبَّ (labba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ulbub", "labba", "ilbab"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "سببنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سببنا (form I)\n# سَبَبْنَا (sababnā) /sa.bab.naː/: first-person plural past active of سَبَّ (sabba)\n# سُبِبْنَا (subibnā) /su.bib.naː/: first-person plural past passive of سَبَّ (sabba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sababnā", "sabba", "subibnā"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "سببية",
+      "tur": "noun",
+      "baslik": "سَبَبِيَّة • (sababiyya) f",
+      "etim_sablon": [
+        ["suffix", "سَبَب (sabab) + ـِيَّة (-iyya)"],
+        ["ar-etym-iyya", "Relative noun (nisba) composed of سَبَب (sabab) + ـِيَّة (-iyya)"]
+      ],
+      "anlam": ["causality"],
+      "okunus": ["sababiyya"],
+      "ipa": ["/sa.ba.bij.ja/"],
+      "torunlar": [
+        ["az", "səbəbiyyət", ""],
+        ["ota", "سببیت", "sebebiyet"],
+        ["ur", "سببیہ", ""],
+        ["uz", "sababiyat", ""]
+      ],
+      "etimoloji": 3,
+      "bag": "ek"
+    },
+    {
+      "madde": "كببنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كببنا (form I)\n# كَبَبْنَا (kababnā) /ka.bab.naː/: first-person plural past active of كَبَّ (kabba)\n# كُبِبْنَا (kubibnā) /ku.bib.naː/: first-person plural past passive of كَبَّ (kabba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kababnā", "kabba", "kubibnā"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "لببنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "لببنا (form I)\n# لَبَبْنَا (lababnā) /la.bab.naː/: first-person plural past active of لَبَّ (labba)\n# لُبِبْنَا (lubibnā) /lu.bib.naː/: first-person plural past passive of لَبَّ (labba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lababnā", "labba", "lubibnā"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "وببنا",
+      "tur": "verb",
+      "baslik": "وببنا (form I)\n# وَبَبْنَا (wababnā) /wa.bab.naː/: first-person plural past active of وَبَّ (wabba)\n# وُبِبْنَا (wubibnā) /wu.bib.naː/: first-person plural past passive of وَبَّ (wabba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wababnā", "wabba", "wubibnā"],
+      "etimoloji": 2,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -71,6 +159,17 @@
     {
       "metin": "",
       "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "Relative noun (nisba) composed of سَبَب (sabab) + ـِيَّة (-iyya).",
+      "kognatlar": [
+        ["سَبَب", "سبب#Arabic"],
+        ["ـِيَّة", "ية#Arabic"]
+      ]
     }
   ],
   "kuran": {
@@ -130,5 +229,27 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
-  }
+  },
+  "ontoloji": [
+    {
+      "id": "52904",
+      "arapca": ["سَبَبِيٌّ"],
+      "ingilizce": [],
+      "tanim": "الحدث المعروف سبب وقوعه",
+      "misal": "الشمس عامل _ للصدأ في الحديد.",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "ek"
+    },
+    {
+      "id": "51773",
+      "arapca": ["عِلِّيَّةٌ", "سَبَبِيَّةٌ"],
+      "ingilizce": ["causality"],
+      "tanim": "العلاقة بين المنتِج والناتج بحيث يكون الأول عامل أساسي في تكون الثاني",
+      "misal": "ال_ تستخدم في الشرع لبيان بعض الأحكام الشرعيّة",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "ek"
+    }
+  ]
 }

@@ -2807,6 +2807,76 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["hawwantum", "hawwana", "huwwintum"],
       "etimoloji": 3
+    },
+    {
+      "madde": "أهنن",
+      "tur": "verb",
+      "baslik": "أهنن (form I)\n# أَهْنِنْ (ʔahnin) /ʔah.nin/: first-person singular non-past active jussive of هَنَّ (hanna)\n# أُهْنَنْ (ʔuhnan) /ʔuh.nan/: first-person singular non-past passive jussive of هَنَّ (hanna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahnin", "hanna", "ʔuhnan"],
+      "etimoloji": 3,
+      "bag": "kelime"
+    },
+    {
+      "madde": "إليهن",
+      "tur": "prep_phrase",
+      "baslik": "إِلَيْهِنَّ • (ʔilayhinna)",
+      "etim_sablon": [
+        ["af", "إِلَى (ʔilā) + هنَّ"]
+      ],
+      "anlam": ["to them"],
+      "okunus": ["ʔilayhinna"],
+      "etimoloji": 9,
+      "bag": "ek"
+    },
+    {
+      "madde": "اهنن",
+      "tur": "verb",
+      "baslik": "اهنن (form I)\n# اِهْنِنْ (ihnin) /ih.nin/: second-person masculine singular imperative of هَنَّ (hanna)\n# اِهْنِنَّ (ihninna) /ih.nin.na/: second-person feminine plural imperative of هَنَّ (hanna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ihnin", "hanna", "ihninna"],
+      "etimoloji": 3,
+      "bag": "kelime"
+    },
+    {
+      "madde": "تهاونا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهاونا (form VI)\n# تَهَاوَنَا (tahāwanā) /ta.haː.wa.naː/: inflection of تَهَاوَنَ (tahāwana):\n## third-person masculine dual past active\n## second-person dual imperative\n# تَهَاوَنَّا (tahāwannā) /ta.haː.wan.naː/: first-person plural past active of تَهَاوَنَ (tahāwana)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tahāwanā", "tahāwana", "tahāwannā"],
+      "etimoloji": 3,
+      "bag": "ek"
+    },
+    {
+      "madde": "يهن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يهن (form I)\n# يَهِنُّ (yahinnu) /ja.hin.nu/: third-person masculine singular non-past active indicative of هَنَّ (hanna)\n# يُهَنُّ (yuhannu) /ju.han.nu/: third-person masculine singular non-past passive indicative of هَنَّ (hanna)\n# يَهِنَّ (yahinna) /ja.hin.na/: third-person masculine singular non-past active subjunctive/jussive of هَنَّ (hanna)\n# يُهَنَّ (yuhanna) /ju.han.na/: third-person masc",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahinnu", "hanna", "yuhannu"],
+      "etimoloji": 3,
+      "bag": "kelime"
+    },
+    {
+      "madde": "يهنان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهنان (form I)\n# يَهِنَّانِ (yahinnāni) /ja.hin.naː.ni/: third-person masculine dual non-past active indicative of هَنَّ (hanna)\n# يُهَنَّانِ (yuhannāni) /ju.han.naː.ni/: third-person masculine dual non-past passive indicative of هَنَّ (hanna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahinnāni", "hanna", "yuhannāni"],
+      "etimoloji": 3,
+      "bag": "ek"
+    },
+    {
+      "madde": "يهنون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يهنون (form I)\n# يَهِنُّونَ (yahinnūna) /ja.hin.nuː.na/: third-person masculine plural non-past active indicative of هَنَّ (hanna)\n# يُهَنُّونَ (yuhannūna) /ju.han.nuː.na/: third-person masculine plural non-past passive indicative of هَنَّ (hanna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahinnūna", "hanna", "yuhannūna"],
+      "etimoloji": 3,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -2863,6 +2933,13 @@
       "metin": "Verbal noun of اِسْتَهَانَ (istahāna).",
       "kognatlar": [
         ["اِسْتَهَانَ", "استهان#Arabic"]
+      ]
+    },
+    {
+      "metin": "Morphologically إِلَى (ʔilā) + هنَّ.",
+      "kognatlar": [
+        ["إِلَى", "إلى#Arabic"],
+        ["هنَّ", "هن#Arabic"]
       ]
     }
   ],
@@ -3368,5 +3445,15 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_ek": {
+    "اليهن": "-e, -a, doğru",
+    "فيهن": "içinde, -de, -da"
+  },
+  "tr_ek": {
+    "اهنن": "aşağıladı"
+  },
+  "tr_ek_belirsiz": {
+    "اهون": "daha kolay"
   }
 }

@@ -31,12 +31,88 @@
       "form_of": ["رَبَا"],
       "okunus": ["rabāʔ"],
       "bag": "müştak"
+    },
+    {
+      "madde": "الرب",
+      "tur": "name",
+      "baslik": "الرَّبّ • (ar-rabb) m",
+      "anlam": ["the Lord, God"],
+      "okunus": ["ar-rabb"],
+      "etimoloji": 1,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "تربوا",
+      "tur": "verb",
+      "etim_no": "7",
+      "baslik": "تربوا (form I)\n# تَرُبُّوا (tarubbū) /ta.rub.buː/: second-person masculine plural non-past active subjunctive/jussive of رَبَّ (rabba)\n# تُرَبُّوا (turabbū) /tu.rab.buː/: second-person masculine plural non-past passive subjunctive/jussive of رَبَّ (rabba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarubbū", "rabba", "turabbū"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "تربوي",
+      "tur": "adj",
+      "baslik": "تَرْبَوِيّ • (tarbawiyy) (feminine تَرْبَوِيَّة (tarbawiyya), masculine plural تَرْبَوِيُّون (tarbawiyyūn), feminine plural تَرْبَوِيَّات (tarbawiyyāt))",
+      "etim_sablon": [
+        ["affix", "تَرْبِيَة (tarbiya, “education”) + ـَوـ (-aw-) + ـِيّ (-iyy)"],
+        [
+          "ar-etym-nisba-linking",
+          "Relative adjective (nisba) composed of تَرْبِيَة (tarbiya, “education”) + ـَوـ (-aw-) + ـِيّ (-iyy)"
+        ]
+      ],
+      "anlam": ["educational, educative, pedagogical"],
+      "okunus": ["tarbawiyy"],
+      "ipa": ["/tar.ba.wijj/"],
+      "etimoloji": 3,
+      "bag": "ek"
+    },
+    {
+      "madde": "فربيون",
+      "tur": "noun",
+      "baslik": "فَرْبِيُون • (farbiyūn) m",
+      "etim_sablon": [
+        ["bor", "Ancient Greek εὐφόρβιον (euphórbion)"]
+      ],
+      "esanlamli": ["حُلَّب", "تَاكُوت", "يَتُّوع"],
+      "anlam": ["spurge"],
+      "okunus": ["farbiyūn"],
+      "ipa": ["/far.bi.juːn/"],
+      "etimoloji": 4,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
     {
       "metin": "",
       "kognatlar": []
+    },
+    {
+      "metin": "Definite form of رَبّ (rabb, “lord, master”).",
+      "kognatlar": [
+        ["رَبّ", "رب#Arabic"],
+        ["lord", "lord"],
+        ["master", "master"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "Relative adjective (nisba) composed of تَرْبِيَة (tarbiya, “education”) + ـَوـ (-aw-) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["تَرْبِيَة", "تربية#Arabic"],
+        ["ـَوـ", "و#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
+    },
+    {
+      "metin": "Borrowed from Ancient Greek εὐφόρβιον (euphórbion) in the science translation environment.",
+      "kognatlar": [
+        ["εὐφόρβιον", "εὐφόρβιον#Ancient_Greek"]
+      ]
     }
   ],
   "kuran": {
@@ -138,5 +214,81 @@
       }
     ],
     "ortalama_benzerlik": 0.363
-  }
+  },
+  "ontoloji": [
+    {
+      "id": "46635",
+      "arapca": [
+        "رَبَا",
+        "رَبَا في",
+        "أَنَافَ",
+        "أَنَافَ عَلَى",
+        "فَاقَ",
+        "سَمَا1",
+        "سَمَا1 إلى",
+        "سَمَا1 ب",
+        "تَجاوَزَ",
+        "تَجاوَزَ على",
+        "تَجاوَزَ عن",
+        "تَجاوَزَ في",
+        "زَادَ2",
+        "زَادَ2 على",
+        "زَادَ2 عن",
+        "زَادَ2 في",
+        "زَادَ2 من",
+        "تَفَوَّقَ على",
+        "تَفَوَّقَ في",
+        "فاقَ1"
+      ],
+      "ingilizce": [],
+      "tanim": "علا وارتفع ونما وأصبح أكثر ما هو عليه سواء ماديا أو اعتبارياً كالعلو في المكانة",
+      "misal": "دخل الجامعة في عمر صغير لأنه قد _ زملائه في القدرة الذهنية",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "303019895",
+      "arapca": ["تَرْبَويٌّ"],
+      "ingilizce": [],
+      "tanim": "اسم منسوب إلى تَرْبية - منهجٌ تربويّ - مؤسسة تربويَّة \". مُدرِّس تربويّ : يجمع بين الدراسة الأكاديمية ومناهج التربية وطرق التدريس\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "454211012", "Educational, Guidance, and Career Counselors and Advisor"]
+      ],
+      "bag": "ek"
+    },
+    {
+      "id": "53083",
+      "arapca": ["رَبَّى", "رَبَّتَ", "رَبَّتَ على", "نَشَّأَ"],
+      "ingilizce": [],
+      "tanim": "عملية رعاية وعناية بشيء ما حتى يكبر",
+      "misal": "_ الولد قطاً صغيراً",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "47622",
+      "arapca": ["سَوَّاقٌ", "سائِسٌ", "ضابِطٌ2", "طَيَّارٌ", "رُبَّانٌ"],
+      "ingilizce": [],
+      "tanim": "دور من يقوم بقيادة السفينة وتوجيهها",
+      "misal": "كانَ أبو خالدٍ يعملُ _اً",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    }
+  ],
+  "jeffery": [
+    {
+      "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
+      "translit": "Ribbīyūn",
+      "ayet_atiflari": "iii, 146",
+      "ilk_baslik_dilleri": ["Syriac"],
+      "metin": "iii, 146. Myriads. 1 Dalman, Worte Jesu, 267, and see his Grammatik des jüd. paläst. Aramäisch, p. 176. Hübschmann, Arm. Gramm, i, 376; ZDMG, xlvi, 251. 3 Mingana, Syriac Influence, 85, agrees, but see Horovitz, JPN, 200. 4 Fraenkel in Beit. Ass, iii, 74, says that Nöldeke suggested this derivation, but I cannot locate the reference. 2 foreign vocabulary of the qurn 139 The passage is a late Madinan one encouraging the Prophet in his difficulties. as-Suyūtī, Itq, 321, says that certain early authorities considered it a Syriac word, and this is probably correct. Syr. F!, the plu. of ! meaning myriads, translates both μυρίοι and μυριάδες of the LXX.1",
+      "arapca": "ربيون",
+      "bag": "belirsiz"
+    }
+  ]
 }

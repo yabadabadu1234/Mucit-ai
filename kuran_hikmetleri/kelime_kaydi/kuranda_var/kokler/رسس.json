@@ -320,6 +320,36 @@
       "ipa": ["/ma.ras/"],
       "bag": "müştak",
       "anlam_tr": ["مَرَسَة (merese, “ip, halat”) kelimesinin diğer bir şekli"]
+    },
+    {
+      "madde": "فرساي",
+      "tur": "name",
+      "baslik": "فِرْسَايْ • (firsāy) f",
+      "anlam": [
+        "Versailles (a city, suburb of Paris and capital of Yvelines department, Île-de-France, and the former capital of France)"
+      ],
+      "okunus": ["firsāy"],
+      "etimoloji": 6,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "فرسك",
+      "tur": "noun",
+      "baslik": "فِرْسِك • (firsik) m",
+      "etim_sablon": [
+        ["bor", "Aramaic פּרְסִיקָא , פּרְסְקָא (pirsəqā, pirsīqā)"],
+        ["der", "Ancient Greek μῆλον περσικόν (mêlon persikón, “peach”)"]
+      ],
+      "esanlamli": ["خَوْخ", "دُرَّاق", "بَرْقُوق"],
+      "anlam": ["peach (Prunus persica tree and fruit)"],
+      "etiket": ["al-Andalus"],
+      "okunus": ["firsik"],
+      "ipa": ["/fir.sik/"],
+      "torunlar": [
+        ["he", "אֲפַרְסֵק", "afarsék"]
+      ],
+      "etimoloji": 7,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -370,6 +400,23 @@
       "metin": "Borrowed from Ancient Greek μυρσίνη (mursínē).",
       "kognatlar": [
         ["μυρσίνη", "μυρσίνη#Ancient_Greek"]
+      ]
+    },
+    {
+      "metin": "Borrowed from French Versailles.",
+      "kognatlar": [
+        ["Versailles", "Versailles#French"]
+      ]
+    },
+    {
+      "metin": "From Aramaic פּרְסִיקָא , פּרְסְקָא (pirsəqā, pirsīqā), from Ancient Greek μῆλον περσικόν (mêlon persikón, “peach”), μηλέα περσική (mēléa persikḗ, “peach tree”).",
+      "kognatlar": [
+        ["פּרְסִיקָא", "פרסיקא#Aramaic"],
+        ["פּרְסְקָא", "פרסקא#Aramaic"],
+        ["μῆλον", "μῆλον#Ancient_Greek"],
+        ["περσικόν", "περσικόν#Ancient_Greek"],
+        ["μηλέα", "μηλέα#Ancient_Greek"],
+        ["περσική", "περσική#Ancient_Greek"]
       ]
     }
   ],
@@ -578,5 +625,27 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
-  }
+  },
+  "ontoloji": [
+    {
+      "id": "53177",
+      "arapca": ["رَأَسَ", "رَأَسَ على", "تَرَأَّسَ"],
+      "ingilizce": [],
+      "tanim": "تقلّد موقعا قياديا مباشرا كرئاسة دولة أو مؤسسة أو شركة وغيرها بحيث يكون مسؤولا عن كل شيء فيها",
+      "misal": "_ بلال إدارة الشركة",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "54036",
+      "arapca": ["رَسَا", "رَسَا على", "أَرْسى"],
+      "ingilizce": [],
+      "tanim": "فعل تثبيت السفينة في مكانها",
+      "misal": "_ القبطان سفينته في الميناء",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    }
+  ]
 }

@@ -54,6 +54,48 @@
       "etiket": ["form-i", "no-gloss"],
       "okunus": ["baqqā", "baqqa", "buqqā"],
       "bag": "müştak"
+    },
+    {
+      "madde": "استبقا",
+      "tur": "verb",
+      "baslik": "استبقا (form VIII)\n# اِسْتَبَقَا (istabaqā) /is.ta.ba.qaː/: third-person masculine dual past active of اِسْتَبَقَ (istabaqa)\n# اُسْتُبِقَا (ustubiqā) /us.tu.bi.qaː/: third-person masculine dual past passive of اِسْتَبَقَ (istabaqa)\n# اِسْتَبِقَا (istabiqā) /is.ta.bi.qaː/: second-person dual imperative of اِسْتَبَقَ (istabaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["istabaqā", "istabaqa", "ustubiqā"],
+      "etimoloji": 0,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "بقوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "بقوا (form I)\n# بَقُّوا (baqqū) /baq.quː/: third-person masculine plural past active of بَقَّ (baqqa)\n# بُقُّوا (buqqū) /buq.quː/: inflection of بَقَّ (baqqa):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["baqqū", "baqqa", "buqqū"],
+      "etimoloji": 0,
+      "bag": "kelime"
+    },
+    {
+      "madde": "تبقى",
+      "tur": "verb",
+      "etim_no": "1.1",
+      "baslik": "تَبَقَّى • (tabaqqā) V (non-past يَتَبَقَّى (yatabaqqā), verbal noun تَبَقٍّ (tabaqqin))",
+      "anlam": ["to remain, to continue, to stay", "to remain, to be left over", "to try to keep (something)"],
+      "etiket": ["transitive"],
+      "okunus": ["tabaqqā"],
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "سابقا",
+      "tur": "adv",
+      "etim_no": "1",
+      "baslik": "سَابِقًا • (sābiqan)",
+      "etim_sablon": [
+        ["adverbial accusative", "Adverbial accusative of سَابِق (sābiq)"]
+      ],
+      "anlam": ["previously", "formerly"],
+      "okunus": ["sābiqan"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -64,6 +106,13 @@
     {
       "metin": "",
       "kognatlar": []
+    },
+    {
+      "metin": "Adverbial accusative of سَابِق (sābiq).",
+      "kognatlar": [
+        ["Adverbial accusative", "adverbial accusative"],
+        ["سَابِق", "سابق#Arabic"]
+      ]
     }
   ],
   "kuran": {
@@ -142,5 +191,20 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
-  }
+  },
+  "tr_ek_belirsiz": {
+    "ابقي": "kaldı"
+  },
+  "ontoloji": [
+    {
+      "id": "52387",
+      "arapca": ["ظَلَّ2", "بَقِيَ", "بَقِيَ ب", "بَقِيَ في", "بَقِيَ من", "تَبَقَّى", "تَبَقَّى من"],
+      "ingilizce": [],
+      "tanim": "حالة الشيء إذا دام وثبت في ما كان فيه",
+      "misal": "_ هاني واقفاً تحت المظلة ينتظر حتى توقف المطر",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    }
+  ]
 }

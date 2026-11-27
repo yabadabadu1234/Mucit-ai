@@ -34,6 +34,41 @@
       "ipa": ["/is.tiħ.laːʔ/"],
       "bag": "müştak",
       "etimoloji": 0
+    },
+    {
+      "madde": "استحلا",
+      "tur": "verb",
+      "baslik": "استحلا (form X)\n# اِسْتَحَلَّا (istaḥallā) /is.ta.ħal.laː/: third-person masculine dual past active of اِسْتَحَلَّ (istaḥalla)\n# اِسْتَحِلَّا (istaḥillā) /is.ta.ħil.laː/: second-person dual imperative of اِسْتَحَلَّ (istaḥalla)",
+      "etiket": ["form-x", "no-gloss"],
+      "okunus": ["istaḥallā", "istaḥalla", "istaḥillā"],
+      "etimoloji": 1,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "حلواني",
+      "tur": "noun",
+      "baslik": "حَلْوَانِيّ • (ḥalwāniyy) m (plural حَلْوَانِيُّون (ḥalwāniyyūn), feminine حَلْوَانِيَّة (ḥalwāniyya))",
+      "etim_sablon": [
+        ["affix", "حَلْوَى (ḥalwā) + ـَانـ (-ān-) + ـِيّ (-iyy)"],
+        [
+          "ar-etym-nisba-linking",
+          "Relative adjective (nisba) composed of حَلْوَى (ḥalwā) + ـَانـ (-ān-) + ـِيّ (-iyy)"
+        ]
+      ],
+      "anlam": ["confectioner"],
+      "okunus": ["ḥalwāniyy"],
+      "ipa": ["/ħal.waː.nijj/"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كحيلاء",
+      "tur": "noun",
+      "baslik": "كُحَيْلَاء • (kuḥaylāʔ) f",
+      "anlam": ["alternative form of كَحْلَاء (kaḥlāʔ)"],
+      "etiket": ["alt-of", "alternative"],
+      "okunus": ["kuḥaylāʔ"],
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -41,6 +76,18 @@
       "metin": "Verbal noun of اِسْتَحْلَى (istaḥlā).",
       "kognatlar": [
         ["اِسْتَحْلَى", "استحلى#Arabic"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "Relative adjective (nisba) composed of حَلْوَى (ḥalwā) + ـَانـ (-ān-) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["حَلْوَى", "حلوى#Arabic"],
+        ["ـَانـ", "ان#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
       ]
     }
   ],
@@ -76,5 +123,31 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
-  }
+  },
+  "ontoloji": [
+    {
+      "id": "303012294",
+      "arapca": ["حَلْوَانِيٌّ"],
+      "ingilizce": [],
+      "tanim": "بائع الحَلْوى كثيرًا ما يذهب الأطفالُ إلى الحَلْوانيّ \".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "454412031", "Retail Salesperson"]
+      ],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "303012295",
+      "arapca": ["حَلْوَانِيٌّ"],
+      "ingilizce": [],
+      "tanim": "صانع الحَلْوى يعمل حَلْوانيًّا \".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "454351011", "Chefs and Head Cook"]
+      ],
+      "bag": "belirsiz"
+    }
+  ]
 }

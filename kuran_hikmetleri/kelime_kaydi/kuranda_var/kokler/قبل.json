@@ -5172,6 +5172,86 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["qabbalatā", "qabbala", "qubbilatā"],
       "etimoloji": 2
+    },
+    {
+      "madde": "استقبالات",
+      "tur": "noun",
+      "baslik": "اِسْتِقْبَالَات • (istiqbālāt) m pl",
+      "anlam": ["plural of اِسْتِقْبَال (istiqbāl)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["اِسْتِقْبَال"],
+      "okunus": ["istiqbālāt"],
+      "etimoloji": 2,
+      "bag": "kelime"
+    },
+    {
+      "madde": "القبلتان",
+      "tur": "name",
+      "baslik": "الْقِبْلَتَانِ • (al-qiblatāni) f du",
+      "anlam": ["the Two Qiblas (Mecca and Jerusalem)"],
+      "okunus": ["al-qiblatāni"],
+      "ipa": ["/al.qib.la.taː.ni/"],
+      "torunlar": [
+        ["az", "Qibləteyn", ""],
+        ["ota", "قبلتین", ""],
+        ["fa", "قبلتین", "qeblateyn"],
+        ["uz", "Qiblatayn", ""]
+      ],
+      "etimoloji": 25,
+      "bag": "ek"
+    },
+    {
+      "madde": "تقابلا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَقَابَلَا • (taqābalā) (form VI) /ta.qaː.ba.laː/\n# inflection of تَقَابَلَ (taqābala):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taqābalā", "taqābala"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "تقابلنا",
+      "tur": "verb",
+      "baslik": "تَقَابَلْنَا • (taqābalnā) (form VI) /ta.qaː.bal.naː/\n# first-person plural past active of تَقَابَلَ (taqābala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taqābalnā", "taqābala"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "قبائلي",
+      "tur": "noun",
+      "baslik": "قَبَائِلِيّ • (qabāʔiliyy) m (plural قَبَائِلِيُّون (qabāʔiliyyūn), feminine قَبَائِلِيَّة (qabāʔiliyya))",
+      "anlam": ["Kabyle person"],
+      "okunus": ["qabāʔiliyy"],
+      "ipa": ["/qa.baː.ʔi.lijj/"],
+      "etimoloji": 19,
+      "bag": "ek"
+    },
+    {
+      "madde": "قبلا",
+      "tur": "adv",
+      "etim_no": "1",
+      "baslik": "قَبْلًا • (qablan)",
+      "etim_sablon": [
+        ["adverbial accusative", "Adverbial accusative of قَبْلَ (qabla)"]
+      ],
+      "anlam": ["previously, formerly, earlier", "beforehand, before"],
+      "okunus": ["qablan"],
+      "ipa": ["/qab.lan/"],
+      "etimoloji": 26,
+      "bag": "kelime"
+    },
+    {
+      "madde": "مستقبلي",
+      "tur": "adj",
+      "baslik": "مُسْتَقْبَلِيّ • (mustaqbaliyy) (feminine مُسْتَقْبَلِيَّة (mustaqbaliyya), masculine plural مُسْتَقْبَلِيُّون (mustaqbaliyyūn), feminine plural مُسْتَقْبَلِيَّات (mustaqbaliyyāt))",
+      "anlam": ["future"],
+      "etiket": ["future"],
+      "okunus": ["mustaqbaliyy"],
+      "ipa": ["/mus.taq.ba.lijj/"],
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -5351,6 +5431,19 @@
       "kognatlar": [
         ["قَبْلَ", "قبل#Arabic"],
         ["ذَاكَ", "ذاك#Arabic"]
+      ]
+    },
+    {
+      "metin": "From the dual of قِبْلَة (qibla).",
+      "kognatlar": [
+        ["قِبْلَة", "قبلة#Arabic"]
+      ]
+    },
+    {
+      "metin": "Adverbial accusative of قَبْلَ (qabla).",
+      "kognatlar": [
+        ["Adverbial accusative", "adverbial accusative"],
+        ["قَبْلَ", "قبل#Arabic"]
       ]
     }
   ],
@@ -6644,5 +6737,17 @@
       }
     ],
     "ortalama_benzerlik": 0.629
+  },
+  "tr_ek": {
+    "اقبل": "yöneldi, geldi",
+    "اقبلنا": "yöneldi, geldi",
+    "تقبلوا": "kabul eder",
+    "فاقبل": "yöneldi, geldi",
+    "فاقبلت": "yöneldi, geldi",
+    "فاقبلوا": "yöneldi, geldi",
+    "واقبل": "yöneldi, geldi",
+    "واقبلوا": "yöneldi, geldi",
+    "وقبائل": "kabileler",
+    "وقبيله": "topluluk"
   }
 }

@@ -75,6 +75,90 @@
       "ipa": ["/raj.jaːn/"],
       "bag": "müştak",
       "etimoloji": 2
+    },
+    {
+      "madde": "بروناي",
+      "tur": "name",
+      "baslik": "بُرُونَاي • (burūnāy) f",
+      "anlam": ["Brunei (a country in Southeast Asia)"],
+      "okunus": ["burūnāy"],
+      "ipa": ["/bu.ruː.naːj/"],
+      "bag": "ek"
+    },
+    {
+      "madde": "سرياني",
+      "tur": "adj",
+      "baslik": "سُرْيَانِيّ • (suryāniyy) (feminine سُرْيَانِيَّة (suryāniyya), masculine plural سُرْيَانِيُّون (suryāniyyūn), feminine plural سُرْيَانِيَّات (suryāniyyāt))",
+      "etim_sablon": [
+        ["affix", "سُورِيَة (sūriya) + ـَانـ (-ān-) + ـِيّ (-iyy)"],
+        [
+          "ar-etym-nisba-linking",
+          "Relative adjective (nisba) composed of سُورِيَة (sūriya) + ـَانـ (-ān-) + ـِيّ (-iyy)"
+        ]
+      ],
+      "anlam": ["Syriac"],
+      "okunus": ["suryāniyy"],
+      "etimoloji": 3,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "سرياني",
+      "tur": "noun",
+      "baslik": "سُرْيَانِيّ • (suryāniyy) m (plural سُرْيَان (suryān), feminine سُرْيَانِيَّة (suryāniyya))",
+      "etim_sablon": [
+        ["affix", "سُورِيَة (sūriya) + ـَانـ (-ān-) + ـِيّ (-iyy)"],
+        [
+          "ar-etym-nisba-linking",
+          "Relative adjective (nisba) composed of سُورِيَة (sūriya) + ـَانـ (-ān-) + ـِيّ (-iyy)"
+        ]
+      ],
+      "anlam": ["Syriac (person)"],
+      "okunus": ["suryāniyy"],
+      "torunlar": [
+        ["az", "süryani", ""],
+        ["chg", "سریانی", "sryʾny"],
+        ["ms", "Suryani", ""],
+        ["ml", "സുറിയാനി", "suṟiyāni"],
+        ["ota", "سریانی", "Süryânî"],
+        ["ps", "سرياني", ""],
+        ["fa", "سریانی", "soryâni"],
+        ["pa", "سُرْیانِی", "suryānī"],
+        ["sd", "سرياني", "sryāne"],
+        ["tk", "sürýany", ""],
+        ["ur", "سریانی", "suryānī"]
+      ],
+      "etimoloji": 3,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "سريانية",
+      "tur": "adj",
+      "baslik": "سُرْيَانِيَّة • (suryāniyya)",
+      "anlam": ["feminine singular of سُرْيَانِيّ (suryāniyy, “Syriac”)"],
+      "etiket": ["feminine", "form-of", "singular"],
+      "form_of": ["سُرْيَانِيّ"],
+      "okunus": ["suryāniyya"],
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "سريانية",
+      "tur": "noun",
+      "baslik": "سُرْيَانِيَّة • (suryāniyya) f",
+      "anlam": ["the Syriac language"],
+      "etiket": ["definite", "usually"],
+      "okunus": ["suryāniyya"],
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "سريانيون",
+      "tur": "adj",
+      "baslik": "سُرْيَانِيُّون • (suryāniyyūn)",
+      "anlam": ["masculine plural of سُرْيَانِيّ (suryāniyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["سُرْيَانِيّ"],
+      "okunus": ["suryāniyyūn"],
+      "etimoloji": 4,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -97,6 +181,20 @@
         ["watering", "watering"],
         ["ـَان", "ان#Arabic"]
       ]
+    },
+    {
+      "metin": "Relative adjective (nisba) composed of سُورِيَة (sūriya) + ـَانـ (-ān-) + ـِيّ (-iyy), based on a modified form of سُورِيَة (sūriya, “Syria”).",
+      "kognatlar": [
+        ["سُورِيَة", "سورية#Arabic"],
+        ["ـَانـ", "ان#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["سُورِيَة", "سورية#Arabic"],
+        ["Syria", "Syria"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
     }
   ],
   "kuran": {
@@ -156,5 +254,8 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_belirsiz": {
+    "راينه": "gördü"
   }
 }

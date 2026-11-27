@@ -2258,6 +2258,77 @@
       "okunus": ["yabdaʔā", "badaʔa", "yubdaʔā"],
       "kok_yazilis": "بدأ",
       "etimoloji": 2
+    },
+    {
+      "madde": "ابتدآ",
+      "tur": "verb",
+      "baslik": "اِبْتَدَآ • (ibtadaʔā) (form VIII) /ib.ta.da.ʔaː/\n# third-person masculine dual past active of اِبْتَدَأَ (ibtadaʔa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ibtadaʔā", "ibtadaʔa"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "ابتدأنا",
+      "tur": "verb",
+      "baslik": "اِبْتَدَأْنَا • (ibtadaʔnā) (form VIII) /ib.ta.daʔ.naː/\n# first-person plural past active of اِبْتَدَأَ (ibtadaʔa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ibtadaʔnā", "ibtadaʔa"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "ابتدائيون",
+      "tur": "adj",
+      "baslik": "اِبْتِدَائِيُّون • (ibtidāʔiyyūn)",
+      "anlam": ["masculine plural of اِبْتِدَائِيّ (ibtidāʔiyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["اِبْتِدَائِيّ"],
+      "okunus": ["ibtidāʔiyyūn"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "استبدا",
+      "tur": "verb",
+      "baslik": "استبدا (form X)\n# اِسْتَبَدَّا (istabaddā) /is.ta.bad.daː/: third-person masculine dual past active of اِسْتَبَدَّ (istabadda)\n# اُسْتُبِدَّا (ustubiddā) /us.tu.bid.daː/: third-person masculine dual past passive of اِسْتَبَدَّ (istabadda)\n# اِسْتَبِدَّا (istabiddā) /is.ta.bid.daː/: second-person dual imperative of اِسْتَبَدَّ (istabadda)",
+      "etiket": ["form-x", "no-gloss"],
+      "okunus": ["istabaddā", "istabadda", "ustubiddā"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "بمبديون",
+      "tur": "noun",
+      "baslik": "بِمْبِدِيُون • (bimbidiyūn) m",
+      "anlam": ["bembidion (Bembidion-genus beetle)"],
+      "okunus": ["bimbidiyūn"],
+      "ipa": ["/bim.bi.di.juːn/"],
+      "etimoloji": 8,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "مبدئيا",
+      "tur": "adv",
+      "baslik": "مَبْدَئِيًّا • (mabdaʔiyyan)",
+      "etim_sablon": [
+        ["adverbial accusative", "Adverbial accusative of مَبْدَئِيّ (mabdaʔiyy)"]
+      ],
+      "anlam": ["in principle"],
+      "okunus": ["mabdaʔiyyan"],
+      "ipa": ["/mab.da.ʔij.jan/"],
+      "etimoloji": 9,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "يبدوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يبدوا (form I)\n# يَبُدُّوا (yabuddū) /ja.bud.duː/: third-person masculine plural non-past active subjunctive/jussive of بَدَّ (badda)\n# يُبَدُّوا (yubaddū) /ju.bad.duː/: third-person masculine plural non-past passive subjunctive/jussive of بَدَّ (badda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabuddū", "badda", "yubaddū"],
+      "etimoloji": 2,
+      "bag": "kelime"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -2309,6 +2380,23 @@
         ["اِبْتِدَاء", "ابتداء#Arabic"],
         ["beginning", "beginning"],
         ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nPre-Greekder.\nAncient Greek βέμβῐξ (bémbĭx)\nAncient Greek -ίδιον (-ídion)\nAncient Greek βεμβίδιον (bembídion)lbor.\nTranslingual Bembidionbor.\nArabic بمبديون\nBorrowed from Translingual Bembidion.",
+      "kognatlar": [
+        ["βέμβῐξ", "βέμβιξ#Ancient_Greek"],
+        ["-ίδιον", "-ίδιον#Ancient_Greek"],
+        ["βεμβίδιον", "βεμβίδιον#Ancient_Greek"],
+        ["Bembidion", "Bembidion#Translingual"],
+        ["Bembidion", "Bembidion#Translingual"]
+      ]
+    },
+    {
+      "metin": "Adverbial accusative of مَبْدَئِيّ (mabdaʔiyy).",
+      "kognatlar": [
+        ["Adverbial accusative", "adverbial accusative"],
+        ["مَبْدَئِيّ", "مبدئي#Arabic"]
       ]
     }
   ],
@@ -2687,5 +2775,11 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek": {
+    "بداكم": "başlattı",
+    "بدانا": "başlattı",
+    "فبدا": "başlattı",
+    "يبدؤا": "başlattı"
   }
 }

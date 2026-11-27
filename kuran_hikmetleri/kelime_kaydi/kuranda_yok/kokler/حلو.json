@@ -263,6 +263,30 @@
       "misal": "يحب الأطفال تنأول ال_",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "303012294",
+      "arapca": ["حَلْوَانِيٌّ"],
+      "ingilizce": [],
+      "tanim": "بائع الحَلْوى كثيرًا ما يذهب الأطفالُ إلى الحَلْوانيّ \".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "454412031", "Retail Salesperson"]
+      ],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "303012295",
+      "arapca": ["حَلْوَانِيٌّ"],
+      "ingilizce": [],
+      "tanim": "صانع الحَلْوى يعمل حَلْوانيًّا \".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "454351011", "Chefs and Head Cook"]
+      ],
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk": [
@@ -436,6 +460,42 @@
       "ipa": ["/ʔiħ.laːʔ/"],
       "bag": "asıl madde",
       "etimoloji": 4
+    },
+    {
+      "madde": "استحلا",
+      "tur": "verb",
+      "baslik": "استحلا (form X)\n# اِسْتَحَلَّا (istaḥallā) /is.ta.ħal.laː/: third-person masculine dual past active of اِسْتَحَلَّ (istaḥalla)\n# اِسْتَحِلَّا (istaḥillā) /is.ta.ħil.laː/: second-person dual imperative of اِسْتَحَلَّ (istaḥalla)",
+      "etiket": ["form-x", "no-gloss"],
+      "okunus": ["istaḥallā", "istaḥalla", "istaḥillā"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "حلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حلوا (form I)\n# حَلُّوا (ḥallū) /ħal.luː/: third-person masculine plural past active of حَلَّ (ḥalla)\n# حُلُّوا (ḥullū) /ħul.luː/: inflection of حَلَّ (ḥalla):\n## third-person masculine plural past passive\n## second-person masculine plural imperative\n# حِلُّوا (ḥillū) /ħil.luː/: second-person masculine plural imperative of حَلَّ (ḥalla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥallū", "ḥalla", "ḥullū"],
+      "etimoloji": 2,
+      "bag": "kelime"
+    },
+    {
+      "madde": "حلواني",
+      "tur": "noun",
+      "baslik": "حَلْوَانِيّ • (ḥalwāniyy) m (plural حَلْوَانِيُّون (ḥalwāniyyūn), feminine حَلْوَانِيَّة (ḥalwāniyya))",
+      "etim_sablon": [
+        ["affix", "حَلْوَى (ḥalwā) + ـَانـ (-ān-) + ـِيّ (-iyy)"],
+        [
+          "ar-etym-nisba-linking",
+          "Relative adjective (nisba) composed of حَلْوَى (ḥalwā) + ـَانـ (-ān-) + ـِيّ (-iyy)"
+        ]
+      ],
+      "anlam": ["confectioner"],
+      "okunus": ["ḥalwāniyy"],
+      "ipa": ["/ħal.waː.nijj/"],
+      "etimoloji": 5,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -466,6 +526,14 @@
       "metin": "Verbal noun of أَحْلَى (ʔaḥlā).",
       "kognatlar": [
         ["أَحْلَى", "أحلى#Arabic"]
+      ]
+    },
+    {
+      "metin": "Relative adjective (nisba) composed of حَلْوَى (ḥalwā) + ـَانـ (-ān-) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["حَلْوَى", "حلوى#Arabic"],
+        ["ـَانـ", "ان#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
       ]
     }
   ],

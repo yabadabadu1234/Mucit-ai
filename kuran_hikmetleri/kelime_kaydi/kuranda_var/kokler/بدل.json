@@ -2233,6 +2233,74 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["baddalatā", "baddala", "buddilatā"],
       "etimoloji": 3
+    },
+    {
+      "madde": "بدلا",
+      "tur": "adv",
+      "etim_no": "1",
+      "baslik": "بَدَلًا • (badalan)",
+      "etim_sablon": [
+        ["adverbial accusative", "Adverbial accusative of بَدَل (badal, “substitute, equivalent”)"]
+      ],
+      "anlam": ["instead"],
+      "okunus": ["badalan"],
+      "etimoloji": 8,
+      "bag": "kelime"
+    },
+    {
+      "madde": "تبادلا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَبَادَلَا • (tabādalā) (form VI) /ta.baː.da.laː/\n# inflection of تَبَادَلَ (tabādala):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tabādalā", "tabādala"],
+      "etimoloji": 3,
+      "bag": "ek"
+    },
+    {
+      "madde": "تبادلنا",
+      "tur": "verb",
+      "baslik": "تَبَادَلْنَا • (tabādalnā) (form VI) /ta.baː.dal.naː/\n# first-person plural past active of تَبَادَلَ (tabādala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tabādalnā", "tabādala"],
+      "etimoloji": 3,
+      "bag": "ek"
+    },
+    {
+      "madde": "يستبدل",
+      "tur": "verb",
+      "baslik": "يستبدل (form X)\n# يَسْتَبْدِلُ (yastabdilu) /jas.tab.di.lu/: third-person masculine singular non-past active indicative of اِسْتَبْدَلَ (istabdala)\n# يُسْتَبْدَلُ (yustabdalu) /jus.tab.da.lu/: third-person masculine singular non-past passive indicative of اِسْتَبْدَلَ (istabdala)\n# يَسْتَبْدِلَ (yastabdila) /jas.tab.di.la/: third-person masculine singular non-past active subjunctive of اِسْتَبْدَل",
+      "etiket": ["form-x", "no-gloss"],
+      "okunus": ["yastabdilu", "istabdala", "yustabdalu"],
+      "etimoloji": 3,
+      "bag": "kelime"
+    },
+    {
+      "madde": "يستبدلا",
+      "tur": "verb",
+      "baslik": "يستبدلا (form X)\n# يَسْتَبْدِلَا (yastabdilā) /jas.tab.di.laː/: third-person masculine dual non-past active subjunctive/jussive of اِسْتَبْدَلَ (istabdala)\n# يُسْتَبْدَلَا (yustabdalā) /jus.tab.da.laː/: third-person masculine dual non-past passive subjunctive/jussive of اِسْتَبْدَلَ (istabdala)",
+      "etiket": ["form-x", "no-gloss"],
+      "okunus": ["yastabdilā", "istabdala", "yustabdalā"],
+      "etimoloji": 3,
+      "bag": "ek"
+    },
+    {
+      "madde": "يستبدلان",
+      "tur": "verb",
+      "baslik": "يستبدلان (form X)\n# يَسْتَبْدِلَانِ (yastabdilāni) /jas.tab.di.laː.ni/: third-person masculine dual non-past active indicative of اِسْتَبْدَلَ (istabdala)\n# يُسْتَبْدَلَانِ (yustabdalāni) /jus.tab.da.laː.ni/: third-person masculine dual non-past passive indicative of اِسْتَبْدَلَ (istabdala)",
+      "etiket": ["form-x", "no-gloss"],
+      "okunus": ["yastabdilāni", "istabdala", "yustabdalāni"],
+      "etimoloji": 3,
+      "bag": "ek"
+    },
+    {
+      "madde": "يستبدلون",
+      "tur": "verb",
+      "baslik": "يستبدلون (form X)\n# يَسْتَبْدِلُونَ (yastabdilūna) /jas.tab.di.luː.na/: third-person masculine plural non-past active indicative of اِسْتَبْدَلَ (istabdala)\n# يُسْتَبْدَلُونَ (yustabdalūna) /jus.tab.da.luː.na/: third-person masculine plural non-past passive indicative of اِسْتَبْدَلَ (istabdala)",
+      "etiket": ["form-x", "no-gloss"],
+      "okunus": ["yastabdilūna", "istabdala", "yustabdalūna"],
+      "etimoloji": 3,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -2279,6 +2347,15 @@
       "kognatlar": [
         ["اِسْتَبْدَلَ", "استبدل#Arabic"],
         ["replace", "replace"]
+      ]
+    },
+    {
+      "metin": "Adverbial accusative of بَدَل (badal, “substitute, equivalent”).",
+      "kognatlar": [
+        ["Adverbial accusative", "adverbial accusative"],
+        ["بَدَل", "بدل#Arabic"],
+        ["substitute", "substitute"],
+        ["equivalent", "equivalent"]
       ]
     }
   ],
@@ -2965,5 +3042,14 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek": {
+    "ابدله": "değiştirdi",
+    "اتستبدلون": "değiştirir",
+    "بدلوا": "değiştirdi",
+    "تتبدلوا": "değişir",
+    "يبدله": "değiştirir",
+    "يبدلوا": "değiştirdi",
+    "يبدلونه": "değiştirdi"
   }
 }

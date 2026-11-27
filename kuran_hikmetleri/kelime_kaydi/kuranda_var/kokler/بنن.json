@@ -83,6 +83,40 @@
       "misal": "يصنع مشروب القهوة من حبوب ال_",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "52355",
+      "arapca": ["أَشَّرَ عَلى", "بَيَّنَ"],
+      "ingilizce": [],
+      "tanim": "أعطاه إشارة أو معلومة أو أومأ إليه معبِّرًا عن معنى يفيد مكان وجوده",
+      "misal": "اغتاله الجيش الاسرائيلي بعد أن _ مكان وجوده احدُ المتواطئين معهم",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "303004864",
+      "arapca": ["بَنَّاءٌ", "بَاطُونْجِيٌّ"],
+      "ingilizce": [],
+      "tanim": "من حرفته البناء بنّاء مدن - <وَالشَّيَاطِينَ كُلَّ بَنَّاءٍ وَغَوَّاصٍ> ص/ 37 \".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "454472061", "Construction Laborer"]
+      ],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "303004863",
+      "arapca": ["بَنَى", "بَنَى ب", "بَنَى على"],
+      "ingilizce": [],
+      "tanim": "بنَى على كلامه:- احتذاه واعتمد عليه، استند إليه بنى نظريتَه على وقائع ثابتة/ النتائجَ على المقدِّمات/ شبهاته على الاحتمال \".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "455000266", "thinking | act of thinking"]
+      ],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -619,6 +653,122 @@
       "okunus": ["bananna", "banna", "buninna"],
       "bag": "müştak",
       "etimoloji": 15
+    },
+    {
+      "madde": "ابن",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "اِبْن • (ibn) m (plural أَبْنَاء (ʔabnāʔ) or بَنُون (banūn) or بَنَات (banāt), feminine اِبْنَة (ibna) or بِنْت (bint))",
+      "anlam": [
+        "son",
+        "descendant, scion",
+        "offspring, son of the fatherland",
+        "member (of a group or set of people or things)"
+      ],
+      "okunus": ["ibn"],
+      "ipa": ["/ibn/"],
+      "torunlar": [
+        ["acw", "ابن", "ibin"],
+        ["mt", "iben", ""],
+        ["ary", "بن", "bin"],
+        ["en", "ibn", ""],
+        ["ms", "bin", ""],
+        ["fa-cls", "اِبن", ""],
+        ["sw", "bin", ""]
+      ],
+      "rl": ["بُنُوَّة", "بَنَوِيّ", "تَبَنٍّ"],
+      "ct": [
+        "أَب",
+        "أُمّ",
+        "جَدّ",
+        "جَدَّة",
+        "أَخ",
+        "أُخْت",
+        "اِبْن",
+        "اِبْنَة",
+        "حَفِيد",
+        "حَفِيدَة",
+        "عَمّ",
+        "عَمَّة",
+        "خَال",
+        "خَالَة",
+        "زَوْج",
+        "زَوْجَة",
+        "حَم",
+        "حَمَاة",
+        "صِهْر",
+        "كَنَّة",
+        "رَابّ",
+        "رَابَّة",
+        "رَبِيب",
+        "رَبِيبَة"
+      ],
+      "etimoloji": 18,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "ابنة",
+      "tur": "noun",
+      "baslik": "اِبْنَة • (ibna) f (dual اِبْنَتَان (ibnatān), plural بَنَات (banāt), masculine اِبْن (ibn))",
+      "anlam": ["daughter"],
+      "okunus": ["ibna"],
+      "ipa": ["/ib.na/"],
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "بناءان",
+      "tur": "noun",
+      "baslik": "بِنَاءَانِ • (bināʔāni) m du",
+      "anlam": ["nominative dual of بِنَاء (bināʔ)"],
+      "etiket": ["dual", "form-of", "nominative"],
+      "form_of": ["بِنَاء"],
+      "okunus": ["bināʔāni"],
+      "etimoloji": 15,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "بناءان",
+      "tur": "noun",
+      "baslik": "بَنَّاءَانِ • (bannāʔāni) m du",
+      "anlam": ["nominative dual of بَنَّاء (bannāʔ)"],
+      "etiket": ["dual", "form-of", "nominative"],
+      "form_of": ["بَنَّاء"],
+      "okunus": ["bannāʔāni"],
+      "etimoloji": 15,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "بننا",
+      "tur": "verb",
+      "baslik": "بننا (form I)\n# بَنَنَّا (banannā) /ba.nan.naː/: first-person plural past active of بَنَّ (banna)\n# بُنِنَّا (buninnā) /bu.nin.naː/: first-person plural past passive of بَنَّ (banna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["banannā", "banna", "buninnā"],
+      "etimoloji": 15,
+      "bag": "ek"
+    },
+    {
+      "madde": "لبنانيات",
+      "tur": "noun",
+      "baslik": "لُبْنَانِيَّات • (lubnāniyyāt) f pl",
+      "anlam": ["plural of لُبْنَانِيَّة (lubnāniyya)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["لُبْنَانِيَّة"],
+      "okunus": ["lubnāniyyāt"],
+      "ipa": ["/lub.naː.nij.jaːt/"],
+      "etimoloji": 15,
+      "bag": "ek"
+    },
+    {
+      "madde": "لبنن",
+      "tur": "verb",
+      "baslik": "لَبْنَنَ • (labnana) Iq (non-past يُلَبْنِنُ (yulabninu), verbal noun لَبْنَنَة (labnana))",
+      "etim_sablon": [
+        ["denominal verb", "Denominal verb of لِبْنَان (libnān, “Lebanon”)"]
+      ],
+      "anlam": ["to Lebanonize, to make Lebanese"],
+      "okunus": ["labnana"],
+      "etimoloji": 19,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -778,6 +928,18 @@
       "kognatlar": [
         ["تِبْن", "تبن#Arabic"]
       ]
+    },
+    {
+      "metin": "Inherited from Proto-Semitic *bin-.",
+      "kognatlar": [
+        ["*bin-", "Reconstruction:Proto-Semitic/bin-"]
+      ]
+    },
+    {
+      "metin": "Denominal verb of لِبْنَان (libnān, “Lebanon”), with the first quadriliteral conjugation implying the bestowing of a particular quality.",
+      "kognatlar": [
+        ["لِبْنَان", "لبنان#Arabic"]
+      ]
     }
   ],
   "etymarab": {
@@ -842,7 +1004,8 @@
     "البنون": "oğulcuğum",
     "البنين": "oğulcuğum",
     "بانية": "kaplar",
-    "البينة": "apaçık delil, belge"
+    "البينة": "apaçık delil, belge",
+    "بنانه": "parmak uçları"
   },
   "mustak_kanit": [
     [
@@ -995,5 +1158,10 @@
       }
     ],
     "ortalama_benzerlik": 0.35
+  },
+  "tr_ek_belirsiz": {
+    "ابنه": "oğul",
+    "بانه": "muhakkak ki",
+    "بنينه": "bina"
   }
 }

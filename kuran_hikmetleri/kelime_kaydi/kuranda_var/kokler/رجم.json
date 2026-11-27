@@ -781,6 +781,59 @@
       "misal": "قام المؤرخون ب_ حياة هتلر",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "49186",
+      "arapca": ["تَرْجَمَ", "تَرْجَمَ ل"],
+      "ingilizce": [],
+      "tanim": "عملية تحويل ونقل الكلام من لغة ما إلى أخرى",
+      "misal": "_ القاضي الشكوى المقدّمة لديه للغة العبرية ليتم نقل القضية إلى محكمة داخل القدس",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "kelime"
+    },
+    {
+      "id": "54053",
+      "arapca": ["تَرْجَمَ", "تَرْجَمَ ل", "عَرَّبَ", "عَرَّبَ عن", "نَقَلَ"],
+      "ingilizce": [],
+      "tanim": "غير لغة الكلام إلى لغة أخْرَى",
+      "misal": "_ الطالب القصة من الإسبانية إلى العربية",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "kelime"
+    },
+    {
+      "id": "46913",
+      "arapca": [
+        "مُفْصِحٌ",
+        "شَارِحٌ",
+        "مُعَبِّرٌ",
+        "مُبَيَّنٌ",
+        "تَرْجَمَانٌ",
+        "تَرْجُمَانٌ",
+        "تُرْجُمَانٌ",
+        "مُترجِمٌ",
+        "مُبَيِّنٌ",
+        "مُفَسِّرٌ"
+      ],
+      "ingilizce": [],
+      "tanim": "دور الشخص الذي يحول الكلام المكتوب أو المسموع إلى لغة أخرى لإفهامه لمن يتحدث بلغة مختلفة عن لغة النص الأم",
+      "misal": "يستخدم الطلّاب كتاباً _ يبيِّن لهم الذي يستصعبون دراسته",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "kelime"
+    },
+    {
+      "id": "303005756",
+      "arapca": ["تَرْجَمَانٌ", "تَرْجُمَانٌ", "تُرْجُمَانٌ"],
+      "ingilizce": [],
+      "tanim": "مترجم، ناقل الكلام من لغة إلى أخرى قام التراجمةُ بنقل الفكر اليونانيّ إلى العربية \".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "454273091", "Interpreters and Translator"]
+      ],
+      "bag": "ek"
     }
   ],
   "ontoloji_tr": [
@@ -1272,6 +1325,24 @@
       "etiket": ["form-i", "no-gloss"],
       "okunus": ["urjumna", "rajama"],
       "etimoloji": 1
+    },
+    {
+      "madde": "تراجما",
+      "tur": "verb",
+      "baslik": "تَرَاجَمَا • (tarājamā) (form VI) /ta.raː.d͡ʒa.maː/\n# inflection of تَرَاجَمَ (tarājama):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tarājamā", "tarājama"],
+      "etimoloji": 1,
+      "bag": "ek"
+    },
+    {
+      "madde": "تراجمنا",
+      "tur": "verb",
+      "baslik": "تَرَاجَمْنَا • (tarājamnā) (form VI) /ta.raː.d͡ʒam.naː/\n# first-person plural past active of تَرَاجَمَ (tarājama)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tarājamnā", "tarājama"],
+      "etimoloji": 1,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -1718,5 +1789,9 @@
       }
     ],
     "ortalama_benzerlik": 0.591
+  },
+  "tr_ek": {
+    "رجما": "taşladı",
+    "لارجمنك": "nun harfi"
   }
 }

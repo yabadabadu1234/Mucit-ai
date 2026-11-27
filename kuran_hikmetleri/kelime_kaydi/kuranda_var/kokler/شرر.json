@@ -812,6 +812,26 @@
       "ust": [
         ["alt_tur_of", "455000259", "judging | act of judging"]
       ]
+    },
+    {
+      "id": "49492",
+      "arapca": ["بَشَّرَ", "بَشَّرَ ب"],
+      "ingilizce": [],
+      "tanim": "نَقَلَ إِلَيْهِ خَبَراً مُفْرِحاً",
+      "misal": "_ باسم أخاه بنجاحه",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "48053",
+      "arapca": ["حَنْظَلٌ", "مُرٌّ", "عَلْقَمٌ", "شَرْيٌ"],
+      "ingilizce": [],
+      "tanim": "ضد حُلْو، صفة ما كان به مَرَارَة في الطعم",
+      "misal": "تَجَرَّعَ دَوَاءً _",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -1202,6 +1222,55 @@
       "etiket": ["collective"],
       "okunus": ["šarar"],
       "anlam_tr": ["kıvılcım, şerare; gayret, ateşlilik"]
+    },
+    {
+      "madde": "تشاركن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَشَارَكْنَ • (tašārakna) (form VI) /ta.ʃaː.rak.na/\n# inflection of تَشَارَكَ (tašāraka):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tašārakna", "tašāraka"],
+      "etimoloji": 0,
+      "bag": "ek"
+    },
+    {
+      "madde": "شرايين",
+      "tur": "noun",
+      "baslik": "شَرَايِين • (šarāyīn) m pl",
+      "anlam": ["plural of شِرْيَان (širyān)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["شِرْيَان"],
+      "okunus": ["šarāyīn"],
+      "etimoloji": 0,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "شررنا",
+      "tur": "verb",
+      "baslik": "شررنا (form I)\n# شَرَرْنَا (šararnā) /ʃa.rar.naː/: first-person plural past active of شَرَّ (šarra)\n# شُرِرْنَا (šurirnā) /ʃu.rir.naː/: first-person plural past passive of شَرَّ (šarra)\n# شَرِرْنَا (šarirnā) /ʃa.rir.naː/: first-person plural past active of شَرَّ (šarra)\n# شَرُرْنَا (šarurnā) /ʃa.rur.naː/: first-person plural past active of شَرَّ (šarra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šararnā", "šarra", "šurirnā"],
+      "etimoloji": 0,
+      "bag": "ek"
+    },
+    {
+      "madde": "فاشر",
+      "tur": "noun",
+      "baslik": "فَاشِر • (fāšir) m",
+      "anlam": ["alternative form of فَاشِرَا (fāširā)"],
+      "etiket": ["alt-of", "alternative"],
+      "okunus": ["fāšir"],
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "فشار",
+      "tur": "noun",
+      "baslik": "فُشَار • (fušār) m",
+      "anlam": ["popcorn"],
+      "etiket": ["uncountable"],
+      "okunus": ["fušār"],
+      "etimoloji": 7,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -1266,6 +1335,21 @@
       "kognatlar": [
         ["شَرَى", "شرى#Arabic"],
         ["buy", "buy"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nPersian فشردن (fešordan)\nPersian فشار (fešâr)bor.\nArabic فشار\nBorrowed from Persian فشار (fešâr, “pressure”), from فشردن (fešordan, “to press, to squeeze”).",
+      "kognatlar": [
+        ["فشردن", "فشردن#Persian"],
+        ["فشار", "فشار#Persian"],
+        ["pressure", "pressure"],
+        ["press", "press"],
+        ["squeeze", "squeeze"],
+        ["فشار", "فشار#Persian"],
+        ["pressure", "pressure"],
+        ["فشردن", "فشردن#Persian"],
+        ["press", "press"],
+        ["squeeze", "squeeze"]
       ]
     }
   ],
@@ -1852,5 +1936,12 @@
       }
     ],
     "ortalama_benzerlik": 0.415
+  },
+  "tr_ek_belirsiz": {
+    "اشر": "kötülük, şer"
+  },
+  "tr_ek": {
+    "الاشرار": "kötülük, şer",
+    "بالشر": "kötülük, şer"
   }
 }

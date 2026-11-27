@@ -56,12 +56,57 @@
       "okunus": ["yahummāni", "hamma", "yuhammāni"],
       "bag": "müştak",
       "etimoloji": 0
+    },
+    {
+      "madde": "إليهم",
+      "tur": "adv",
+      "baslik": "إِلَيْهِمْ • (ʔilayhim)",
+      "anlam": ["to them"],
+      "okunus": ["ʔilayhim"],
+      "etimoloji": 1,
+      "bag": "ek"
+    },
+    {
+      "madde": "إليهما",
+      "tur": "prep_phrase",
+      "baslik": "إِلَيْهِمَا • (ʔilayhimā)",
+      "anlam": ["to them"],
+      "okunus": ["ʔilayhimā"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "يهما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يهما (form I)\n# يَهُمَّا (yahummā) /ja.hum.maː/: third-person masculine dual non-past active subjunctive/jussive of هَمَّ (hamma)\n# يُهَمَّا (yuhammā) /ju.ham.maː/: third-person masculine dual non-past passive subjunctive/jussive of هَمَّ (hamma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahummā", "hamma", "yuhammā"],
+      "etimoloji": 0,
+      "bag": "kelime"
     }
   ],
   "vikisozluk_etimolojiler": [
     {
       "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
+    },
+    {
+      "metin": "Etymology tree\nArabic إِلَى (ʔilā)\nArabic ه م م (h m m)\nArabic همْ\nArabic إليهم\nFrom إِلَى (ʔilā) + همْ.",
+      "kognatlar": [
+        ["إِلَى", "إلى#Arabic"],
+        ["ه م م", "ه م م#Arabic:_important"],
+        ["همْ", "هم#Arabic"],
+        ["إِلَى", "إلى#Arabic"],
+        ["همْ", "هم#Arabic"]
+      ]
+    },
+    {
+      "metin": "From إِلَى (ʔilā) + ـهمَا.",
+      "kognatlar": [
+        ["إِلَى", "إلى#Arabic"],
+        ["ـهمَا", "هما#Arabic"]
+      ]
     }
   ],
   "kuran": {
@@ -115,5 +160,12 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_belirsiz": {
+    "ايهم": "hangi, ne"
+  },
+  "tr_ek_ek": {
+    "فيهما": "içinde, -de, -da",
+    "واياهم": "yalnız, sadece"
   }
 }

@@ -440,6 +440,18 @@
       "misal": "أصبحَ جدِّي رجُلاً _اً",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "50684",
+      "arapca": ["بِنْسِيون"],
+      "ingilizce": [],
+      "tanim": "فندق صغير",
+      "misal": "نزل باسم في بَنسيون لليلة واحدة",
+      "veri_kaynagi": "200",
+      "ust": [
+        ["alt_tur_of", "49855", "hotel"]
+      ],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -883,6 +895,34 @@
       "etiket": ["form-i", "no-gloss"],
       "okunus": ["nasiyatā", "nasiya", "nusiyatā"],
       "etimoloji": 4
+    },
+    {
+      "madde": "تناسيا",
+      "tur": "verb",
+      "baslik": "تَنَاسَيَا • (tanāsayā) (form VI) /ta.naː.sa.jaː/\n# inflection of تَنَاسَى (tanāsā):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tanāsayā", "tanāsā"],
+      "etimoloji": 4,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "تناسينا",
+      "tur": "verb",
+      "baslik": "تَنَاسَيْنَا • (tanāsaynā) (form VI) /ta.naː.saj.naː/\n# first-person plural past active of تَنَاسَى (tanāsā)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tanāsaynā", "tanāsā"],
+      "etimoloji": 4,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "تنس",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "تِنِس • (tinis) m",
+      "anlam": ["tennis"],
+      "okunus": ["tinis"],
+      "etimoloji": 6,
+      "bag": "kelime"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -918,6 +958,12 @@
       "metin": "Derived from the passive participle of the verb نَسِيَ (nasiya).",
       "kognatlar": [
         ["نَسِيَ", "نسي#Arabic"]
+      ]
+    },
+    {
+      "metin": "Borrowed from English tennis.",
+      "kognatlar": [
+        ["tennis", "tennis#English"]
       ]
     }
   ],
@@ -1545,5 +1591,23 @@
       }
     ],
     "ortalama_benzerlik": 0.259
+  },
+  "tr_ek": {
+    "انسوكم": "unutturdu",
+    "انسينيه": "unutturdu",
+    "تنسوا": "unuttu",
+    "فانسيه": "unutturdu",
+    "فانسيهم": "unutturdu",
+    "فنسوا": "unuttu",
+    "فنسي": "unuttu",
+    "نسينا": "unuttu",
+    "ننسيكم": "unuttu",
+    "ننسيهم": "unuttu",
+    "ونسوا": "unuttu",
+    "ونسي": "unuttu",
+    "ينسي": "unuttu"
+  },
+  "tr_ek_belirsiz": {
+    "نسوا": "unuttu"
   }
 }

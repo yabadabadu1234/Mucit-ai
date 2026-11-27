@@ -1327,6 +1327,16 @@
       "misal": "_ الماء من فتحة صغيرة في أنبوب الري",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "53315",
+      "arapca": ["قَطْرَانِيٌّ", "قَارِيٌّ"],
+      "ingilizce": [],
+      "tanim": "وصف لما نسب إلى مادة النفط السوداء كثيفة اللزوجة",
+      "misal": "وَضعَ طبقةً _ةً على الشّارع",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "ek"
     }
   ],
   "ontoloji_tr": [
@@ -2402,6 +2412,49 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["yuqaṭṭirā", "qaṭṭara", "yuqaṭṭarā"],
       "etimoloji": 2
+    },
+    {
+      "madde": "تقاطرا",
+      "tur": "verb",
+      "baslik": "تَقَاطَرَا • (taqāṭarā) (form VI) /ta.qaː.tˤa.raː/\n# inflection of تَقَاطَرَ (taqāṭara):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taqāṭarā", "taqāṭara"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "تقاطرنا",
+      "tur": "verb",
+      "baslik": "تَقَاطَرْنَا • (taqāṭarnā) (form VI) /ta.qaː.tˤar.naː/\n# first-person plural past active of تَقَاطَرَ (taqāṭara)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taqāṭarnā", "taqāṭara"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "سقطرة",
+      "tur": "name",
+      "baslik": "سُقُطْرَة • (suquṭra) f",
+      "anlam": ["alternative form of سُقُطْرَى (suquṭrā): Socotra"],
+      "etiket": ["alt-of", "alternative"],
+      "okunus": ["suquṭra"],
+      "ipa": ["/su.qutˤ.ra/"],
+      "bag": "ek"
+    },
+    {
+      "madde": "سقطرى",
+      "tur": "name",
+      "baslik": "سُقُطْرَى • (suquṭrā) f",
+      "etim_sablon": [
+        ["univerbation", "سُوق (sūq, “market”) + قَطْرَة (qaṭra, “drop”)"],
+        ["bor", "Old South Arabian"],
+        ["bor", "Modern South Arabian"]
+      ],
+      "anlam": ["Socotra (an island of Yemen)"],
+      "okunus": ["suquṭrā"],
+      "ipa": ["/su.qutˤ.raː/"],
+      "etimoloji": 9,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -2473,6 +2526,16 @@
       "metin": "Derived from the passive participle of قَطَرَ (qaṭara).",
       "kognatlar": [
         ["قَطَرَ", "قطر#Arabic"]
+      ]
+    },
+    {
+      "metin": "In respect of the age of the name, the derivation is not set in stone, but one thinks of سُوق (sūq, “market”) + قَطْرَة (qaṭra, “drop”), respectively a corresponding Old South Arabian or Modern South Arabian combination, due to the trading port basing its economy around the plantation of aloe, dragon blood trees, frankincense and such resins.",
+      "kognatlar": [
+        ["سُوق", "سوق#Arabic"],
+        ["قَطْرَة", "قطرة#Arabic"],
+        ["aloe", "aloe"],
+        ["frankincense", "frankincense"],
+        ["resin", "resin"]
       ]
     }
   ],
@@ -3032,5 +3095,9 @@
       }
     ],
     "ortalama_benzerlik": 0.731
+  },
+  "tr_ek": {
+    "اقطار": "bölgeler",
+    "اقطارها": "bölgeler"
   }
 }

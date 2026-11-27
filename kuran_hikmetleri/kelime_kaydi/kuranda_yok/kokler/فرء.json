@@ -37,11 +37,61 @@
       "okunus": ["farāʔ"],
       "ipa": ["/fa.raːʔ/"],
       "bag": "müştak"
+    },
+    {
+      "madde": "الفرات",
+      "tur": "name",
+      "baslik": "الْفُرَات • (al-furāt) m",
+      "etim_sablon": [
+        ["sup", "^(ÍD<)"],
+        ["der", "Akkadian 𒀀𒇉𒌓𒄒𒉣 (^(ÍD<)Purattu)"]
+      ],
+      "anlam": ["the Euphrates"],
+      "okunus": ["al-furāt"],
+      "ipa": ["/al.fu.raːt/"],
+      "torunlar": [
+        ["kmr", "Firat", ""],
+        ["kmr", "Ferat", ""],
+        ["ota", "فرات", "furat, fırat"],
+        ["fa", "فرات", "forât"]
+      ],
+      "etimoloji": 1,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "تفروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَفِرُّوا • (tafirrū) (form I) /ta.fir.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of فَرَّ (farra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafirrū", "farra"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "فرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "فرا (form I)\n# فَرَّا (farrā) /far.raː/: third-person masculine dual past active of فَرَّ (farra)\n# فِرَّا (firrā) /fir.raː/: second-person dual imperative of فَرَّ (farra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["farrā", "farra", "firrā"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
     {
       "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "Ultimately from Akkadian 𒀀𒇉𒌓𒄒𒉣 (^(ÍD<)Purattu).",
+      "kognatlar": [
+        ["𒀀𒇉𒌓𒄒𒉣", "𒀀𒇉𒌓𒄒𒉣#Akkadian"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
     }
   ],
@@ -109,5 +159,31 @@
       }
     ],
     "ortalama_benzerlik": 0.411
-  }
+  },
+  "ontoloji": [
+    {
+      "id": "53541",
+      "arapca": [
+        "أَبَقَ",
+        "أَبِقَ",
+        "وَلَّىَ",
+        "وَلَّىَ على",
+        "وَلَّىَ عن",
+        "فَرَّ",
+        "فَرَّ إلى",
+        "فَرَّ من",
+        "هَرَبَ في",
+        "هَرَبَ من",
+        "اِخْتَفى",
+        "اِخْتَفى عن",
+        "اِخْتَفى من"
+      ],
+      "ingilizce": [],
+      "tanim": "ذَهَبَ من المكان الذي يتواجد فيه بسرعةٍ بسبب عملٍ قامَ به أو خطر يحيط به",
+      "misal": "_ السّارق من الشّرطيّ",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    }
+  ]
 }

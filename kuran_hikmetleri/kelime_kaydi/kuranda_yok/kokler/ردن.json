@@ -638,6 +638,48 @@
       "etiket": ["form-i", "no-gloss"],
       "okunus": ["irdinī", "radana", "urdunī"],
       "etimoloji": 1
+    },
+    {
+      "madde": "أردني",
+      "tur": "adj",
+      "etim_no": "1",
+      "baslik": "أُرْدُنِيّ • (ʔurduniyy) (feminine أُرْدُنِيَّة (ʔurduniyya), masculine plural أُرْدُنِيُّون (ʔurduniyyūn), feminine plural أُرْدُنِيَّات (ʔurduniyyāt))",
+      "anlam": ["Jordanian"],
+      "okunus": ["ʔurduniyy", "ʔurdunniyy"],
+      "ipa": ["/ʔur.du.nijj/", "/ʔur.dun.nijj/"],
+      "etimoloji": 8,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "أردني",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "أُرْدُنِيّ or أُرْدُنِّيّ • (ʔurduniyy or ʔurdunniyy) m (plural أُرْدُنِيُّون (ʔurduniyyūn) or أُرْدُنِّيُّون (ʔurdunniyyūn), feminine أُرْدُنِيَّة (ʔurduniyya) or أُرْدُنِّيَّة (ʔurdunniyya))",
+      "anlam": ["Jordanian"],
+      "okunus": ["ʔurduniyy", "ʔurdunniyy"],
+      "ipa": ["/ʔur.du.nijj/", "/ʔur.dun.nijj/"],
+      "etimoloji": 8,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "الأردن",
+      "tur": "name",
+      "baslik": "الْأُرْدُن or الْأُرْدُنّ • (al-ʔurdun or al-ʔurdunn) m",
+      "etim_sablon": [
+        ["bor", "Aramaic"],
+        ["cog", "Jewish Babylonian Aramaic"],
+        ["cog", "Jewish Literary Aramaic"],
+        ["cog", "Hebrew יַרְדֵּן (yardén)"]
+      ],
+      "anlam": [
+        "Jordan (a country in West Asia in the Middle East)",
+        "Jordan (a river in West Asia in the Middle East, that empties into the Dead Sea, flowing through Israel, the Golan Heights, the West Bank and Jordan)"
+      ],
+      "okunus": ["al-ʔurdun", "al-ʔurdunn"],
+      "ipa": ["/al.ʔur.dun/", "/al.ʔur.dunn/"],
+      "dr": ["أُرْدُنِيّ", "أُرْدُنِّيّ"],
+      "etimoloji": 9,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -689,6 +731,35 @@
         ["ܥܕ݂ܸܢ", "ܥܕܢ#Assyrian_Neo-Aramaic"],
         ["ܐܲܪܲܥ", "ܐܪܥ#Assyrian_Neo-Aramaic"],
         ["ܥܕ݂ܸܢ", "ܥܕܢ#Assyrian_Neo-Aramaic"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nArabic الْأُرْدُن /الْأُرْدُنّ (al-ʔurdun)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic أردني\nFrom الْأُرْدُن /الْأُرْدُنّ (al-ʔurdun, “Jordan”) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["الْأُرْدُن", "الأردن#Arabic"],
+        ["الْأُرْدُنّ", "الأردن#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["Jordan", "Jordan"],
+        ["الْأُرْدُن", "الأردن#Arabic"],
+        ["الْأُرْدُنّ", "الأردن#Arabic"],
+        ["Jordan", "Jordan"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nProto-Semitic *warad-?\nBiblical Hebrew יַרְדֵּן (yardēn)der.\nAramaicbor.\nArabic الأردن\nFrom جُنْد الْأُرْدُنّ (jund al-ʔurdunn), “the military district of Jordan”, probably directly borrowed from the Aramaic isolect spoken there at the time, attested by the written Jewish Babylonian Aramaic and Jewish Literary Aramaic as יֹורְדְּנא (yordənā) and יַרְדְּנא (yardənā). Both forms give the present Arabic one regularly: The emphatic state ending was rendered by the Arabic article, and the distinction of the onset consonants /j/, /ʔ/ and /ʕ/ either had already little functional load, in the same fashion as the etyma of هُود (hūd), يَافُوخ (yāfūḵ), يَلَب (yalab), الْعِرَاق (al-ʕirāq) etc., or the onset يُـ (yu-) or the pattern of *يَرْدُن (*yardun) or *أَرْدُن (*ʔardun) in Arabic was hardly admissible and had to be regularized, that is classicized. See Hebrew יַרְדֵּן (yardén) for the ultimate derivation of the toponym.",
+      "kognatlar": [
+        ["*warad-", "Reconstruction:Proto-Semitic/warad-"],
+        ["יַרְדֵּן", "ירדן#Hebrew"],
+        ["יֹורְדְּנא", "יורדנא#Aramaic"],
+        ["יַרְדְּנא", "ירדנא#Aramaic"],
+        ["emphatic state", "emphatic state"],
+        ["functional load", "functional load"],
+        ["هُود", "هود#Arabic"],
+        ["يَافُوخ", "يافوخ#Arabic"],
+        ["يَلَب", "يلب#Arabic"],
+        ["الْعِرَاق", "العراق#Arabic"],
+        ["יַרְדֵּן", "ירדן#Hebrew"]
       ]
     }
   ],
@@ -748,5 +819,9 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_belirsiz": {
+    "اردن": "diledi, istedi",
+    "اردنه": "diledi, istedi"
   }
 }

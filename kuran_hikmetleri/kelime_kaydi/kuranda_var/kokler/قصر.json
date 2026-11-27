@@ -3008,6 +3008,64 @@
       "etiket": ["form-i", "no-gloss"],
       "okunus": ["uqṣurū", "qaṣura", "qaṣara"],
       "etimoloji": 3
+    },
+    {
+      "madde": "الأقصر",
+      "tur": "name",
+      "baslik": "الْأُقْصُر • (al-ʔuqṣur) f",
+      "anlam": ["Luxor (a city in Egypt, located on the site of the ancient Thebes)", "Luxor (a governorate of Egypt)"],
+      "okunus": ["al-ʔuqṣur"],
+      "ipa": ["/al.ʔuq.sˤur/"],
+      "etimoloji": 13,
+      "bag": "ek"
+    },
+    {
+      "madde": "تقصيرات",
+      "tur": "noun",
+      "baslik": "تَقْصِيرَات • (taqṣīrāt) m pl",
+      "anlam": ["plural of تَقْصِير (taqṣīr)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["تَقْصِير"],
+      "okunus": ["taqṣīrāt"],
+      "etimoloji": 3,
+      "bag": "kelime"
+    },
+    {
+      "madde": "قياصرة",
+      "tur": "noun",
+      "baslik": "قَيَاصِرَة • (qayāṣira) pl",
+      "anlam": ["plural of قَيْصَر (qayṣar)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["قَيْصَر"],
+      "okunus": ["qayāṣira"],
+      "ipa": ["/qa.jaː.sˤi.ra/"],
+      "etimoloji": 3,
+      "bag": "kelime"
+    },
+    {
+      "madde": "قيصري",
+      "tur": "adj",
+      "etim_no": "1",
+      "baslik": "قَيْصَرِيّ • (qayṣariyy) (feminine قَيْصَرِيَّة (qayṣariyya), masculine plural قَيْصَرِيُّون (qayṣariyyūn), feminine plural قَيْصَرِيَّات (qayṣariyyāt))",
+      "anlam": ["Caesarean (relating to Julius Caesar or other Caesars)", "tsarist (relating to Russian tsars)", "Caesarean"],
+      "okunus": ["qayṣariyy"],
+      "ipa": ["/qaj.sˤa.rijj/"],
+      "etimoloji": 14,
+      "bag": "ek"
+    },
+    {
+      "madde": "قيصري",
+      "tur": "name",
+      "etim_no": "2",
+      "baslik": "قَيْصَرِي • (qayṣarī) f",
+      "anlam": [
+        "Kayseri (the capital city of Kayseri Province in the Central Anatolian Region, in southern Turkey)",
+        "a province of Turkey"
+      ],
+      "okunus": ["qayṣarī"],
+      "ipa": ["/qaj.sˤa.riː/"],
+      "etimoloji": 15,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -3101,6 +3159,30 @@
       "kognatlar": [
         ["قَصُرَ", "قصر#Arabic"],
         ["مَا", "ما#Arabic"]
+      ]
+    },
+    {
+      "metin": "Apparently a corruption of الْقُصُور (al-quṣūr, “the palaces”).",
+      "kognatlar": [
+        ["الْقُصُور", "قصر#Arabic"],
+        ["palaces", "palace"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nArabic قَيْصَر (qayṣar)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic قيصري\nFrom قَيْصَر (qayṣar, “Caesar”) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["قَيْصَر", "قيصر#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["Caesar", "Caesar"],
+        ["قَيْصَر", "قيصر#Arabic"],
+        ["Caesar", "Caesar"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
+    },
+    {
+      "metin": "Borrowed from Ottoman Turkish قیصری (Kayseri).",
+      "kognatlar": [
+        ["قیصری", "قیصری#Ottoman_Turkish"]
       ]
     }
   ],
@@ -3699,5 +3781,9 @@
       }
     ],
     "ortalama_benzerlik": 0.368
+  },
+  "tr_ek": {
+    "تقصروا": "kısaltırsınız",
+    "كالقصر": "köşk, kısaltma"
   }
 }

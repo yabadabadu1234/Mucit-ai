@@ -55,12 +55,104 @@
       "okunus": ["yanummāni", "namma", "yunammāni"],
       "bag": "müştak",
       "etimoloji": 0
+    },
+    {
+      "madde": "أتنامى",
+      "tur": "verb",
+      "baslik": "أَتَنَامَى • (ʔatanāmā) (form VI) /ʔa.ta.naː.maː/\n# first-person singular non-past active indicative/subjunctive of تَنَامَى (tanāmā)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["ʔatanāmā", "tanāmā"],
+      "etimoloji": 0,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "أيانما",
+      "tur": "adv",
+      "baslik": "أَيَّانَمَا • (ʔayyānamā)",
+      "anlam": ["whenever"],
+      "etiket": ["conditional"],
+      "okunus": ["ʔayyānamā"],
+      "ipa": ["/ʔaj.jaː.na.maː/"],
+      "etimoloji": 1,
+      "bag": "ek"
+    },
+    {
+      "madde": "أينما",
+      "tur": "adv",
+      "baslik": "أَيْنَمَا • (ʔaynamā)",
+      "esanlamli": ["حَيْثُمَا", "أَنَّى"],
+      "anlam": ["wherever"],
+      "etiket": ["conditional"],
+      "okunus": ["ʔaynamā"],
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "بينما",
+      "tur": "conj",
+      "baslik": "بَيْنَمَا • (baynamā)",
+      "esanlamli": ["بَيْنَا", "فِي حِينِ"],
+      "anlam": ["while", "whereas"],
+      "etiket": ["proscribed", "sometimes"],
+      "okunus": ["baynamā"],
+      "ipa": ["/baj.na.maː/"],
+      "etimoloji": 2,
+      "bag": "ek"
+    },
+    {
+      "madde": "سينما",
+      "tur": "noun",
+      "baslik": "سِينَمَا • (sīnamā) f (plural سِينَمَات (sīnamāt))",
+      "anlam": ["cinema"],
+      "okunus": ["sīnamā"],
+      "ipa": ["/siː.na.maː/"],
+      "etimoloji": 3,
+      "bag": "ek"
+    },
+    {
+      "madde": "سينمات",
+      "tur": "noun",
+      "baslik": "سِينَمَات • (sīnamāt) f pl",
+      "anlam": ["plural of سِينَمَا (sīnamā)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["سِينَمَا"],
+      "okunus": ["sīnamāt"],
+      "etimoloji": 0,
+      "bag": "ek"
+    },
+    {
+      "madde": "ينما",
+      "tur": "verb",
+      "baslik": "ينما (form I)\n# يَنُمَّا (yanummā) /ja.num.maː/: third-person masculine dual non-past active subjunctive/jussive of نَمَّ (namma)\n# يُنَمَّا (yunammā) /ju.nam.maː/: third-person masculine dual non-past passive subjunctive/jussive of نَمَّ (namma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanummā", "namma", "yunammā"],
+      "etimoloji": 0,
+      "bag": "kelime"
     }
   ],
   "vikisozluk_etimolojiler": [
     {
       "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
+    },
+    {
+      "metin": "From أَيَّانَ (ʔayyāna, “whenever”) + ـمَا (-mā, “soever”).",
+      "kognatlar": [
+        ["أَيَّانَ", "أيان#Arabic"],
+        ["ـمَا", "ما#Arabic"]
+      ]
+    },
+    {
+      "metin": "From بَيْنَ (bayna) + مَا (mā).",
+      "kognatlar": [
+        ["بَيْنَ", "بين#Arabic"],
+        ["مَا", "ما#Arabic"]
+      ]
+    },
+    {
+      "metin": "Borrowed from French cinéma.",
+      "kognatlar": [
+        ["cinéma", "cinéma#French"]
+      ]
     }
   ],
   "kuran": {
@@ -112,5 +204,22 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
-  }
+  },
+  "tr_ek_belirsiz": {
+    "اينما": "ne, şey; olumsuzluk"
+  },
+  "ontoloji": [
+    {
+      "id": "53090",
+      "arapca": ["سِيْنَمَا"],
+      "ingilizce": [],
+      "tanim": "مسرح مخصص لتعرض فيه الأفلام والصور المتحركة على شاشة ضخمة في مدرج مسرحي ويجتمع فيه الناس للمشاهدة",
+      "misal": "استمتعنا بمشاهدة الفلم الوثائقي في سينما الجامعة",
+      "veri_kaynagi": "200",
+      "ust": [
+        ["alt_tur_of", "172905", "theater"]
+      ],
+      "bag": "ek"
+    }
+  ]
 }

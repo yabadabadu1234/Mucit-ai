@@ -1159,6 +1159,26 @@
       "misal": "لن يمرّ على البشرية إنسانٌ _ من سيد الخلق محمد (ص)",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "46673",
+      "arapca": ["مَدَىً2", "مُدَّةٌ", "أَجَلٌ", "أَمَدٌ"],
+      "ingilizce": [],
+      "tanim": "خاصية زمنية تعبر عن طول الحدث مقاس بوحدة قياس الزمن.",
+      "misal": "مهما كان _ اللقاء يجب على المتحدث أن يحافظ على توازنه حتى النهاية",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "47115",
+      "arapca": ["آخِرَةٌ", "مَعَادٌ2", "آجِلَةٌ"],
+      "ingilizce": [],
+      "tanim": "اسم ل الحياة الآخرة بعد أن يحاسب الله الناس على ما فعلوه في الدنيا منهم من سوف يعيش في الجنة ومنهم من سيعيش في النار",
+      "misal": "قم بأداء فرائضك وأعمل ل_ ك لعل الله يدخلك جنته",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -2075,6 +2095,33 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["jallilī", "jallala"],
       "etimoloji": 5
+    },
+    {
+      "madde": "جللنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جَلَلْنَا • (jalalnā) (form I) /d͡ʒa.lal.naː/\n# first-person plural past active of جَلَّ (jalla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jalalnā", "jalla"],
+      "etimoloji": 5,
+      "bag": "ek"
+    },
+    {
+      "madde": "جلهم",
+      "tur": "noun",
+      "baslik": "جَلْهَم or جُلْهُم • (jalham or julhum) m",
+      "etim_sablon": [
+        ["bor", "Middle Persian"],
+        ["cog", "Ottoman Turkish جهری (cehri, “buckthorn, shrub of yellowberry”)"]
+      ],
+      "anlam": [
+        "buckthorn or certain species thereof, yellowberry, Persian berry (Rhamnus infectoria, Rhamnus amygdalina, Rhamnus lycioides subsp. oleoides)"
+      ],
+      "etiket": ["obsolete"],
+      "okunus": ["jalham", "julhum"],
+      "ipa": ["/d͡ʒal.ham/", "/d͡ʒul.hum/"],
+      "etimoloji": 15,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -2195,6 +2242,12 @@
       "metin": "Verbal noun of جَلَا (jalā).",
       "kognatlar": [
         ["جَلَا", "جلا#Arabic"]
+      ]
+    },
+    {
+      "metin": "From Middle Persian, equivalent to the well-known Ottoman Turkish جهری (cehri, “buckthorn, shrub of yellowberry”).",
+      "kognatlar": [
+        ["جهری", "جهری#Ottoman_Turkish"]
       ]
     }
   ],
@@ -2731,5 +2784,9 @@
       }
     ],
     "ortalama_benzerlik": 0.164
+  },
+  "tr_ek_belirsiz": {
+    "اجل": "ecel, vade",
+    "اجله": "ecel, vade"
   }
 }

@@ -415,6 +415,38 @@
       "misal": "_ت السيارة في الوادي حين فقد السائق السيطرة عليها",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "47254",
+      "arapca": ["غَلْصَمٌ", "أَنْفٌ", "مَنْخَرٌ", "مَنْخِرٌ", "مُنْخُرٌ", "مِنْخَرٌ", "خَيْشُومٌ"],
+      "ingilizce": [],
+      "tanim": "عضو لدى الكائن الحي الذي يتنفس الهواء عبر تجويف رئوي يقع في الوجه ويحتوى شعيرات وأغشية مخاطية",
+      "misal": "إذا أقفلت _ه ومنعته من التنفس سوف يموت خنقاً",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "303040859",
+      "arapca": ["فَخَرَانِيٌّ"],
+      "ingilizce": [],
+      "tanim": "اسم منسوب إلى فَخّار : على غير قياس: صانع الفخّار",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "454519195", "Survey Researcher"]
+      ],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "47115",
+      "arapca": ["آخِرَةٌ", "مَعَادٌ2", "آجِلَةٌ"],
+      "ingilizce": [],
+      "tanim": "اسم ل الحياة الآخرة بعد أن يحاسب الله الناس على ما فعلوه في الدنيا منهم من سوف يعيش في الجنة ومنهم من سيعيش في النار",
+      "misal": "قم بأداء فرائضك وأعمل ل_ ك لعل الله يدخلك جنته",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -622,6 +654,51 @@
       "ipa": ["/xaw.waːr/", "/xu.waːr/"],
       "bag": "müştak",
       "anlam_tr": ["gevşek, sarkık, yumuşak, zayıf"]
+    },
+    {
+      "madde": "خرا",
+      "tur": "verb",
+      "baslik": "خرا (form I)\n# خَرَّا (ḵarrā) /xar.raː/: third-person masculine dual past active of خَرَّ (ḵarra)\n# خِرَّا (ḵirrā) /xir.raː/: second-person dual imperative of خَرَّ (ḵarra)\n# خُرَّا (ḵurrā) /xur.raː/: second-person dual imperative of خَرَّ (ḵarra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵarrā", "ḵarra", "ḵirrā"],
+      "etimoloji": 3,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "خررنا",
+      "tur": "verb",
+      "baslik": "خَرَرْنَا • (ḵararnā) (form I) /xa.rar.naː/\n# first-person plural past active of خَرَّ (ḵarra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵararnā", "ḵarra"],
+      "etimoloji": 3,
+      "bag": "ek"
+    },
+    {
+      "madde": "خروا",
+      "tur": "verb",
+      "baslik": "خروا (form I)\n# خَرُّوا (ḵarrū) /xar.ruː/: third-person masculine plural past active of خَرَّ (ḵarra)\n# خِرُّوا (ḵirrū) /xir.ruː/: second-person masculine plural imperative of خَرَّ (ḵarra)\n# خُرُّوا (ḵurrū) /xur.ruː/: second-person masculine plural imperative of خَرَّ (ḵarra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵarrū", "ḵarra", "ḵirrū"],
+      "etimoloji": 3,
+      "bag": "kelime"
+    },
+    {
+      "madde": "يخروا",
+      "tur": "verb",
+      "baslik": "يخروا (form I)\n# يَخِرُّوا (yaḵirrū) /ja.xir.ruː/: third-person masculine plural non-past active subjunctive/jussive of خَرَّ (ḵarra)\n# يَخُرُّوا (yaḵurrū) /ja.xur.ruː/: third-person masculine plural non-past active subjunctive/jussive of خَرَّ (ḵarra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵirrū", "ḵarra", "yaḵurrū"],
+      "etimoloji": 3,
+      "bag": "kelime"
+    },
+    {
+      "madde": "يخرون",
+      "tur": "verb",
+      "baslik": "يخرون (form I)\n# يَخِرُّونَ (yaḵirrūna) /ja.xir.ruː.na/: third-person masculine plural non-past active indicative of خَرَّ (ḵarra)\n# يَخُرُّونَ (yaḵurrūna) /ja.xur.ruː.na/: third-person masculine plural non-past active indicative of خَرَّ (ḵarra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵirrūna", "ḵarra", "yaḵurrūna"],
+      "etimoloji": 3,
+      "bag": "kelime"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -755,7 +832,10 @@
   "tr_ek": {
     "الخير": "hayır, iyi",
     "المستخرين": "geri kalan",
-    "الخيرة": "hayır, seçki"
+    "الخيرة": "hayır, seçki",
+    "خروا": "yıkıldı, düştü",
+    "وخروا": "yıkıldı, düştü",
+    "يخروا": "yıkıldı, düştü"
   },
   "mustak_kanit": [
     [
@@ -1016,5 +1096,9 @@
       }
     ],
     "ortalama_benzerlik": 0.363
+  },
+  "tr_ek_belirsiz": {
+    "ءاخره": "başka, öteki",
+    "اخر": "başka, öteki"
   }
 }

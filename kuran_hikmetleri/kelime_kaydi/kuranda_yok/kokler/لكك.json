@@ -241,6 +241,67 @@
       "ipa": ["/ma.la.kij.ja/"],
       "bag": "müştak",
       "etimoloji": 5
+    },
+    {
+      "madde": "بلوك",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "بْلُوك • (blūk) m (plural بْلُوكَات (blūkāt))",
+      "etim_sablon": [
+        ["bor+", "Borrowed from English block"],
+        ["bor", "French bloc"]
+      ],
+      "esanlamli": ["كُتْلَة"],
+      "anlam": [
+        "block",
+        "block, any element in building or machinery approximating cuboid form",
+        "a block, faction of people"
+      ],
+      "okunus": ["blūk"],
+      "etimoloji": 6,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "بلوك",
+      "tur": "noun",
+      "etim_no": "2",
+      "baslik": "بُلُوك • (bulūk) m (plural بُلُوكَات (bulūkāt))",
+      "anlam": ["company", "wing of a building"],
+      "etiket": ["Egypt", "obsolete"],
+      "okunus": ["bulūk"],
+      "etimoloji": 7,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كلك",
+      "tur": "noun",
+      "baslik": "كَلَك • (kalak) m (plural كَلَكَات (kalakāt))",
+      "etim_sablon": [
+        ["sup", "^(KUŠ)"]
+      ],
+      "esanlamli": ["شَنَان", "رَمَث", "طَوْف"],
+      "anlam": ["raft (of inflated skins)"],
+      "etiket": ["Iraq"],
+      "okunus": ["kalak"],
+      "ipa": ["/ka.lak/"],
+      "torunlar": [
+        ["fa", "کلک", "kalak"],
+        ["ota", "كلك", "kelek"],
+        ["zza", "kelek", ""]
+      ],
+      "etimoloji": 8,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كلكات",
+      "tur": "noun",
+      "baslik": "كَلَكَات • (kalakāt) m pl",
+      "anlam": ["plural of كَلَك (kalak)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["كَلَك"],
+      "okunus": ["kalakāt"],
+      "etimoloji": 9,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -290,6 +351,34 @@
         ["ـِيَّة", "ية#Arabic"],
         ["م ل ك", "Appendix:Arabic roots/م ل ك"]
       ]
+    },
+    {
+      "metin": "Borrowed from English block and French bloc.",
+      "kognatlar": [
+        ["block", "block#English"],
+        ["bloc", "bloc#French"]
+      ]
+    },
+    {
+      "metin": "Borrowed from Ottoman Turkish بلوك (bölük).",
+      "kognatlar": [
+        ["بلوك", "بلوك#Ottoman_Turkish"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nSumerian 𒋢𒆠𒇲 (/⁠kila⁠/)\nAkkadian 𒋢𒅗𒆷𒆠 (^(KUŠ)ka-la-ke /⁠kalakku⁠/)\nClassical Syriac ܟܰܠܟܳܐ (kalkā)bor.\nArabic كلك\nBorrowed from Classical Syriac ܟܰܠܟܳܐ (kalkā), from Akkadian 𒋢𒅗𒆷𒆠 (^(KUŠ)ka-la-ke /⁠kalakku⁠/), from Sumerian 𒋢𒆠𒇲 (/⁠kila⁠/, “box, container, vessel”).",
+      "kognatlar": [
+        ["𒋢𒆠𒇲", "𒋢𒆠𒇲#Sumerian"],
+        ["𒋢𒅗𒆷𒆠", "kalakku#Akkadian"],
+        ["ܟܰܠܟܳܐ", "ܟܠܟܐ#Classical_Syriac"],
+        ["ܟܰܠܟܳܐ", "ܟܠܟܐ#Classical_Syriac"],
+        ["𒋢𒅗𒆷𒆠", "kalakku#Akkadian"],
+        ["𒋢𒆠𒇲", "𒋢𒆠𒇲#Sumerian"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
     }
   ],
   "kuran": {
@@ -407,5 +496,8 @@
       }
     ],
     "ortalama_benzerlik": 0.592
+  },
+  "tr_ek_belirsiz": {
+    "ملكه": "mülk, hükümranlık"
   }
 }

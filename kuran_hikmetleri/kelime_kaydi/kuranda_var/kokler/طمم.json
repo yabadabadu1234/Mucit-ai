@@ -309,6 +309,18 @@
       "misal": "الجار الحسن يقف مع جاره في _ تصيبه يواسيه ويقدم له ما استطاع من المساعدة",
       "veri_kaynagi": "43",
       "ust": []
+    },
+    {
+      "id": "303034378",
+      "arapca": ["تَطَمْأَنَ", "طَمْأَنَ"],
+      "ingilizce": [],
+      "tanim": "طمأنه على النَّتيجة:- سكّنه، أدخل إلى نفسه السَّكينة طَمأَنَهُ مديرهُ بأنه لن يفقد وظيفته - طَمأنه الطبيبُ على صحَّته - نبأ مُطَمْئِن \".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "455000385", "serenity"]
+      ],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -342,11 +354,59 @@
       "okunus": ["ṭāmma"],
       "ipa": ["/tˤaːm.ma/"],
       "anlam_tr": ["musibet, âfet, felâket"]
+    },
+    {
+      "madde": "بطم",
+      "tur": "noun",
+      "etim_sablon": [
+        ["bor", "Aramaic בּוּטְמָא"],
+        ["der", "Aramaic בּוּטְנָא"],
+        ["der", "Akkadian 𒌑𒁍𒌓𒉡 (buṭnu)"],
+        ["der", "Sumerian 𒁍𒌓𒉡 (/⁠budnu⁠/)"],
+        ["cog", "Hebrew בוטן (bóten, “peanut”)"]
+      ],
+      "anlam": ["Pistacia, especially terebinth"],
+      "etiket": ["collective"],
+      "okunus": ["buṭm"],
+      "ipa": ["/butˤm/"],
+      "torunlar": [
+        ["am", "ቡጥም", "buṭəm"],
+        ["axm", "պուտմ", "putm"],
+        ["gez", "ቡጥም", "buṭm"],
+        ["ti", "ቡጥም", "buṭəm"]
+      ],
+      "etimoloji": 1,
+      "bag": "ek"
+    },
+    {
+      "madde": "تطأمنا",
+      "tur": "verb",
+      "baslik": "تطأمنا (form IIq)\n# تَطَأْمَنَا (taṭaʔmanā) /ta.tˤaʔ.ma.naː/: inflection of تَطَأْمَنَ (taṭaʔmana):\n## third-person masculine dual past active\n## second-person dual imperative\n# تَطَأْمَنَّا (taṭaʔmannā) /ta.tˤaʔ.man.naː/: first-person plural past active of تَطَأْمَنَ (taṭaʔmana)",
+      "etiket": ["form-iiq", "no-gloss"],
+      "okunus": ["taṭaʔmanā", "taṭaʔmana", "taṭaʔmannā"],
+      "etimoloji": 2,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
     {
       "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "From Aramaic בּוּטְמָא / בֻּטְמָא (buṭmā), from Aramaic בּוּטְנָא / בֻּטְנָא (buṭnā), from Akkadian 𒌑𒁍𒌓𒉡 (buṭnu), from Sumerian 𒁍𒌓𒉡 (/⁠budnu⁠/). Compare also Hebrew בוטן (bóten, “peanut”).",
+      "kognatlar": [
+        ["בּוּטְמָא", "בוטמא#Aramaic"],
+        ["בֻּטְמָא", "בטמא#Aramaic"],
+        ["בּוּטְנָא", "בוטנא#Aramaic"],
+        ["בֻּטְנָא", "בטנא#Aramaic"],
+        ["𒌑𒁍𒌓𒉡", "𒌑𒁍𒌓𒉡#Akkadian"],
+        ["𒁍𒌓𒉡", "𒁍𒌓𒉡#Sumerian"],
+        ["בוטן", "בוטן#Hebrew"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
     }
   ],

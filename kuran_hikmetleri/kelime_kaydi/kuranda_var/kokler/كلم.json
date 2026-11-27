@@ -2060,6 +2060,36 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["tukallimāni", "kallama", "tukallamāni"],
       "etimoloji": 4
+    },
+    {
+      "madde": "تكالما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَكَالَمَا • (takālamā) (form VI) /ta.kaː.la.maː/\n# inflection of تَكَالَمَ (takālama):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["takālamā", "takālama"],
+      "etimoloji": 4,
+      "bag": "ek"
+    },
+    {
+      "madde": "تكالمنا",
+      "tur": "verb",
+      "baslik": "تَكَالَمْنَا • (takālamnā) (form VI) /ta.kaː.lam.naː/\n# first-person plural past active of تَكَالَمَ (takālama)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["takālamnā", "takālama"],
+      "etimoloji": 4,
+      "bag": "ek"
+    },
+    {
+      "madde": "كلما",
+      "tur": "conj",
+      "etim_no": "1",
+      "baslik": "كُلَّمَا • (kullamā)",
+      "anlam": ["every time, whenever", "the more…"],
+      "okunus": ["kullamā"],
+      "ipa": ["/kul.la.maː/"],
+      "etimoloji": 9,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -2122,6 +2152,19 @@
         ["گلیم", "گلیم#Persian"],
         ["κάλυμμα", "κάλυμμα#Ancient_Greek"],
         ["καλύπτω", "καλύπτω#Ancient_Greek"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nProto-Afroasiatic *ʔa-kʷall-\nProto-Semitic *kull-\nArabic كُلَّ (kulla)\nArabic مَا (mā)\nArabic كلما\nFrom كُلَّ (kulla, “every”) + مَا (mā, “that”).",
+      "kognatlar": [
+        ["*ʔa-kʷall-", "Reconstruction:Proto-Afroasiatic/ʔa-kʷall-#Proto-Afroasiatic:_all"],
+        ["*kull-", "Reconstruction:Proto-Semitic/kull-#Proto-Semitic:_all"],
+        ["كُلَّ", "كل#Arabic"],
+        ["مَا", "ما#Arabic"],
+        ["every", "every"],
+        ["كُلَّ", "كل#Arabic"],
+        ["every", "every"],
+        ["مَا", "ما#Arabic"]
       ]
     }
   ],
@@ -2881,5 +2924,15 @@
       }
     ],
     "ortalama_benzerlik": 0.448
+  },
+  "tr_ek": {
+    "اكلم": "konuştu",
+    "بكلمته": "kelime, söz",
+    "كلمه": "konuştu",
+    "لكلمته": "kelime, söz",
+    "وبكلمي": "söz, konuşma",
+    "وتكلمنا": "konuştu",
+    "وكلمته": "kelime, söz",
+    "وكلمه": "konuştu"
   }
 }

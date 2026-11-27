@@ -277,12 +277,71 @@
       "etiket": ["form-iq", "no-gloss"],
       "okunus": ["tuhadhidī", "hadhada", "tuhadhadī"],
       "etimoloji": 0
+    },
+    {
+      "madde": "هداهد",
+      "tur": "noun",
+      "baslik": "هَدَاهِد • (hadāhid) m pl",
+      "anlam": ["plural of هُدْهُد (hudhud)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["هُدْهُد"],
+      "okunus": ["hadāhid"],
+      "etimoloji": 0,
+      "bag": "kelime"
+    },
+    {
+      "madde": "هدهد",
+      "tur": "verb",
+      "etim_no": "1.1",
+      "baslik": "هَدْهَدَ • (hadhada) Iq (non-past يُهَدْهِدُ (yuhadhidu), verbal noun هَدْهَدَة (hadhada))",
+      "etim_sablon": [
+        ["onomatopoeic", "Onomatopoeic"],
+        ["glossary", "reduplicated"],
+        ["ar-reduplicated", "reduplicated"],
+        ["cog", "Classical Syriac ܝܕܝܕܐ (yaḏyāḏā, “hoopoe”)"]
+      ],
+      "anlam": ["to emit a modulated voice"],
+      "etiket": ["ambitransitive"],
+      "okunus": ["hadhada"],
+      "ipa": ["/had.ha.da/"],
+      "etimoloji": 1,
+      "bag": "kelime"
+    },
+    {
+      "madde": "هدهد",
+      "tur": "noun",
+      "etim_no": "1.2",
+      "baslik": "هُدْهُد • (hudhud) m (plural هَدَاهِد (hadāhid))",
+      "etim_sablon": [
+        ["lang", "هُدْهُد"],
+        ["img", ""]
+      ],
+      "anlam": ["hoopoe"],
+      "okunus": ["hudhud"],
+      "ipa": ["/hud.hud/"],
+      "torunlar": [
+        ["ary", "هدهود", "hadhūd"],
+        ["aii", "ܗܲܕܗܲܕ", "hadhad"],
+        ["fa-cls", "هُدْهُد", "hudhud"],
+        ["ba", "һөҙһөт", "hüðhüt"],
+        ["ha", "alhudahuda", ""],
+        ["ms", "hud-hud", ""],
+        ["mid", "ࡄࡅࡃࡄࡅࡃ", "hudhud"],
+        ["ota", "هدهد", "hüdhüd, hüthüt"]
+      ],
+      "bag": "kelime"
     }
   ],
   "vikisozluk_etimolojiler": [
     {
       "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
+    },
+    {
+      "metin": "Onomatopoeic reduplicated. Compare Classical Syriac ܝܕܝܕܐ (yaḏyāḏā, “hoopoe”).",
+      "kognatlar": [
+        ["ܝܕܝܕܐ", "ܝܕܝܕܐ#Classical_Syriac"]
+      ]
     }
   ],
   "etymarab": {
@@ -356,5 +415,8 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek": {
+    "الهدهد": "ağaçkakan"
   }
 }

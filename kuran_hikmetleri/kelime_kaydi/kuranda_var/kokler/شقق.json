@@ -2148,6 +2148,30 @@
       "ust": [
         ["alt_tur_of", "0", ""]
       ]
+    },
+    {
+      "id": "303030229",
+      "arapca": ["شَاقَ", "شَاقَ إلى", "شَاقَ ل"],
+      "ingilizce": [],
+      "tanim": "شاقه الحُبُّ:- هاجه وحرّك نفسَه شاقته رؤيةُ الحبيب - شاقني أسلوبُ الأديب : هاجني وأطربني\".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "455000315", "libido"]
+      ],
+      "bag": "belirsiz"
+    },
+    {
+      "id": "303029592",
+      "arapca": ["شَقِيَ", "شَقِيَ في"],
+      "ingilizce": [],
+      "tanim": "شقِي في حياته:- تعب واشتدّ عَناؤُه، تعس وساءت حالُه، عكسه سعِد إنّ الشقيَّ بكلّ حبلٍ يُخنق - ذو العقل يشقى في النعيم بعقله ... وأخو الجهالة بالشّقاوة ينعمِ - <فَمِنْهُمْ شَقِيٌّ وَسَعِيدٌ> هود/ 105 \".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "455000534", "mood process"]
+      ],
+      "bag": "belirsiz"
     }
   ],
   "ontoloji_tr": [
@@ -3398,6 +3422,51 @@
       "etiket": ["form-ii", "no-gloss"],
       "okunus": ["yušaqqiqā", "šaqqaqa", "yušaqqaqā"],
       "etimoloji": 5
+    },
+    {
+      "madde": "باشق",
+      "tur": "noun",
+      "baslik": "بَاشِق or بَاشَق • (bāšiq or bāšaq) m (plural بَوَاشِق (bawāšiq))",
+      "etim_sablon": [
+        ["bor", "Middle Persian"],
+        ["cog", "Classical Persian بَاشَه (bāša, “sparrowhawk”)"]
+      ],
+      "anlam": ["falcon, hawk", "sparrowhawk"],
+      "okunus": ["bāšiq", "bāšaq"],
+      "ipa": ["/baː.ʃiq/", "/baː.ʃaq/"],
+      "dr": ["بَاشَقِيّ", "بَاشِقِيّ"],
+      "etimoloji": 9,
+      "bag": "ek"
+    },
+    {
+      "madde": "بمشقة",
+      "tur": "adv",
+      "baslik": "بِمَشَقَّة • (bimašaqqa)",
+      "anlam": ["barely"],
+      "okunus": ["bimašaqqa"],
+      "ipa": ["/bi.ma.ʃaq.qa/"],
+      "etimoloji": 10,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "شققنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "شققنا (form I)\n# شَقَقْنَا (šaqaqnā) /ʃa.qaq.naː/: first-person plural past active of شَقَّ (šaqqa)\n# شُقِقْنَا (šuqiqnā) /ʃu.qiq.naː/: first-person plural past passive of شَقَّ (šaqqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šaqaqnā", "šaqqa", "šuqiqnā"],
+      "etimoloji": 5,
+      "bag": "kelime"
+    },
+    {
+      "madde": "يشقق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يشقق (form I)\n# يَشْقُقْ (yašquq) /jaʃ.quq/: third-person masculine singular non-past active jussive of شَقَّ (šaqqa)\n# يُشْقَقْ (yušqaq) /juʃ.qaq/: third-person masculine singular non-past passive jussive of شَقَّ (šaqqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašquq", "šaqqa", "yušqaq"],
+      "etimoloji": 5,
+      "bag": "kelime"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -3472,6 +3541,19 @@
       "metin": "Derived from the passive participle of شَقَّ (šaqqa, “to make a cut or gap in”)",
       "kognatlar": [
         ["شَقَّ", "شق#Arabic"]
+      ]
+    },
+    {
+      "metin": "From the Middle Persian ancestor of Classical Persian بَاشَه (bāša, “sparrowhawk”).",
+      "kognatlar": [
+        ["بَاشَه", "باشه#Persian"]
+      ]
+    },
+    {
+      "metin": "From بِ (bi, “on/in”) + مَشَقَّة (mašaqqa, “ hardship”).",
+      "kognatlar": [
+        ["بِ", "ب#Arabic"],
+        ["مَشَقَّة", "مشقة#Arabic"]
       ]
     }
   ],
@@ -4515,5 +4597,14 @@
       }
     ],
     "ortalama_benzerlik": 0.608
+  },
+  "tr_ek": {
+    "اشق": "yardı",
+    "انشقت": "yarıldı",
+    "شاقوا": "zor, güç",
+    "وانشق": "yarıldı",
+    "وانشقت": "yarıldı",
+    "وشاقوا": "zor, güç",
+    "يشاق": "zor, güç"
   }
 }

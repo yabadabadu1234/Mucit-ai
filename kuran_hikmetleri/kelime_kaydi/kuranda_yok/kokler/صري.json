@@ -81,6 +81,49 @@
       "okunus": ["ṣūriyy"],
       "bag": "müştak",
       "etimoloji": 3
+    },
+    {
+      "madde": "المصري",
+      "tur": "name",
+      "baslik": "اَلْمَصْرِيّ • (al-maṣriyy) ?",
+      "etim_sablon": [
+        ["yesno", "L"],
+        ["m-g", "“the Egyptian”"],
+        ["lit", "Literally, “the Egyptian”"]
+      ],
+      "anlam": ["a surname"],
+      "okunus": ["al-maṣriyy"],
+      "ipa": ["/al.masˤ.rijj/"],
+      "etimoloji": 4,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "بصريات",
+      "tur": "noun",
+      "baslik": "بَصَرِيَّات • (baṣariyyāt) pl",
+      "anlam": ["optics"],
+      "okunus": ["baṣariyyāt"],
+      "ipa": ["/ba.sˤa.rij.jaːt/"],
+      "etimoloji": 5,
+      "bag": "ek"
+    },
+    {
+      "madde": "صرا",
+      "tur": "verb",
+      "baslik": "صرا (form I)\n# صَرَّا (ṣarrā) /sˤar.raː/: third-person masculine dual past active of صَرَّ (ṣarra)\n# صُرَّا (ṣurrā) /sˤur.raː/: third-person masculine dual past passive of صَرَّ (ṣarra)\n# صِرَّا (ṣirrā) /sˤir.raː/: second-person dual imperative of صَرَّ (ṣarra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣarrā", "ṣarra", "ṣurrā"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "صروا",
+      "tur": "verb",
+      "baslik": "صروا (form I)\n# صَرُّوا (ṣarrū) /sˤar.ruː/: third-person masculine plural past active of صَرَّ (ṣarra)\n# صُرُّوا (ṣurrū) /sˤur.ruː/: third-person masculine plural past passive of صَرَّ (ṣarra)\n# صِرُّوا (ṣirrū) /sˤir.ruː/: second-person masculine plural imperative of صَرَّ (ṣarra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣarrū", "ṣarra", "ṣurrū"],
+      "etimoloji": 2,
+      "bag": "ek"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -114,6 +157,19 @@
         ["picture", "picture"],
         ["appearance", "appearance"],
         ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
+    },
+    {
+      "metin": "Literally, “the Egyptian”",
+      "kognatlar": []
+    },
+    {
+      "metin": "From بَصَر (baṣar, “vision”) + ـِيَّات (-iyyāt).",
+      "kognatlar": [
+        ["vision", "vision"],
+        ["بَصَر", "بصر#Arabic"],
+        ["vision", "vision"],
+        ["ـِيَّات", "يات#Arabic"]
       ]
     }
   ],
@@ -189,5 +245,9 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_belirsiz": {
+    "اصرا": "ısrar etti",
+    "اصري": "ısrar etti"
   }
 }

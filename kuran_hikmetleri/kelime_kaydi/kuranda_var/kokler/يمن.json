@@ -988,6 +988,67 @@
       "okunus": ["yamunnāni", "yumannāni"],
       "bag": "müştak",
       "etimoloji": 5
+    },
+    {
+      "madde": "فيمن",
+      "tur": "det",
+      "baslik": "فِيمَنْ • (fīman)",
+      "anlam": ["at those who"],
+      "okunus": ["fīman"],
+      "ipa": ["/fiː.man/"],
+      "etimoloji": 8,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "ليمونة",
+      "tur": "noun",
+      "baslik": "لَيْمُونَة • (laymūna) f (plural لَيْمُونَات (laymūnāt))",
+      "anlam": ["singulative of لَيْمُون (laymūn)"],
+      "etiket": ["form-of", "singulative"],
+      "form_of": ["لَيْمُون"],
+      "okunus": ["laymūna"],
+      "etimoloji": 5,
+      "bag": "ek"
+    },
+    {
+      "madde": "ليموني",
+      "tur": "adj",
+      "baslik": "لَيْمُونِيّ • (laymūniyy) (feminine لَيْمُونِيَّة (laymūniyya), masculine plural لَيْمُونِيُّون (laymūniyyūn), feminine plural لَيْمُونِيَّات (laymūniyyāt))",
+      "anlam": ["lemon …"],
+      "okunus": ["laymūniyy"],
+      "ipa": ["/laj.muː.nijj/"],
+      "etimoloji": 9,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "يؤمن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يؤمن (form I)\n# يَؤُمْنَ (yaʔumna) /ja.ʔum.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of آمَ (ʔāma)\n# يُؤَمْنَ (yuʔamna) /ju.ʔam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of آمَ (ʔāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʔumna", "ʔāma", "yuʔamna"],
+      "etimoloji": 5,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "يمنا",
+      "tur": "verb",
+      "baslik": "يمنا (form I)\n# يَمُنَّا (yamunnā) /ja.mun.naː/: third-person masculine dual non-past active subjunctive/jussive of مَنَّ (manna)\n# يُمَنَّا (yumannā) /ju.man.naː/: third-person masculine dual non-past passive subjunctive/jussive of مَنَّ (manna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamunnā", "yumannā"],
+      "etimoloji": 5,
+      "bag": "kelime"
+    },
+    {
+      "madde": "يمينيون",
+      "tur": "adj",
+      "baslik": "يَمِينِيُّون • (yamīniyyūn)",
+      "anlam": ["masculine plural of يَمِينِيّ (yamīniyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["يَمِينِيّ"],
+      "okunus": ["yamīniyyūn"],
+      "etimoloji": 5,
+      "bag": "kelime"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -1048,6 +1109,26 @@
       "metin": "Noun of place from the root ي م ن (y m n).",
       "kognatlar": [
         ["ي م ن", "Appendix:Arabic roots/ي م ن"]
+      ]
+    },
+    {
+      "metin": "From فِي (fī) + مَنْ (man).",
+      "kognatlar": [
+        ["فِي", "في#Arabic"],
+        ["مَنْ", "من#Arabic"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nAustroasiaticbor.\nSanskrit निम्बू (nimbū)bor.\nClassical Persian لِیمُو (līmū)bor.\nArabic لَيْمُون (laymūn)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic ليموني\nFrom لَيْمُون (laymūn, “lemon”) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["निम्बू", "निम्बू#Sanskrit"],
+        ["لِیمُو", "لیمو#Persian"],
+        ["لَيْمُون", "ليمون#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["lemon", "lemon"],
+        ["لَيْمُون", "ليمون#Arabic"],
+        ["lemon", "lemon"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
       ]
     }
   ],
@@ -1303,7 +1384,13 @@
     }
   ],
   "tr_ek": {
-    "يامن": "iman etti"
+    "يامن": "iman etti",
+    "ايمنهن": "yemin, sağ",
+    "باليمين": "yemin, sağ",
+    "بيمينه": "yemin, sağ",
+    "لايمنكم": "yemin, sağ",
+    "وايمنهم": "yemin, sağ",
+    "وبايمنهم": "yemin, sağ"
   },
   "mustak_kanit": [
     [
@@ -1558,5 +1645,12 @@
       }
     ],
     "ortalama_benzerlik": 0.435
+  },
+  "tr_ek_belirsiz": {
+    "الايمن": "iman",
+    "ايمن": "yemin, sağ",
+    "ايمنكم": "yemin, sağ",
+    "ايمنه": "iman",
+    "ايمنهم": "iman"
   }
 }

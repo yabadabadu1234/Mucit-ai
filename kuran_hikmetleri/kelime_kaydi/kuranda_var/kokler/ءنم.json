@@ -108,6 +108,62 @@
       "okunus": ["ʔanummu", "namma", "ʔunammu"],
       "bag": "müştak",
       "etimoloji": 1
+    },
+    {
+      "madde": "أنما",
+      "tur": "particle",
+      "baslik": "أَنَّمَا • (ʔannamā)",
+      "anlam": ["only, just, but"],
+      "okunus": ["ʔannamā"],
+      "ipa": ["/ʔan.na.maː/"],
+      "etimoloji": 2,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "أنيميا",
+      "tur": "noun",
+      "baslik": "أَنِيمِيَا or أَنَيْمِيَا • (ʔanīmiyā or ʔanaymiyā) f",
+      "etim_sablon": [
+        ["internationalism", "Internationalism"],
+        ["bor", "Ancient Greek ἀναιμίᾱ (anaimíā)"],
+        ["etydate", "First attested in 1864"]
+      ],
+      "esanlamli": ["فَقْر دَم"],
+      "anlam": ["anemia"],
+      "etiket": ["uncountable"],
+      "okunus": ["ʔanīmiyā", "ʔanaymiyā"],
+      "ipa": ["/ʔa.niː.mi.jaː/", "/ʔa.naj.mi.jaː/"],
+      "etimoloji": 3,
+      "bag": "ek"
+    },
+    {
+      "madde": "أينما",
+      "tur": "adv",
+      "baslik": "أَيْنَمَا • (ʔaynamā)",
+      "esanlamli": ["حَيْثُمَا", "أَنَّى"],
+      "anlam": ["wherever"],
+      "etiket": ["conditional"],
+      "okunus": ["ʔaynamā"],
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "إنما",
+      "tur": "particle",
+      "baslik": "إِنَّمَا • (ʔinnamā)",
+      "anlam": ["only", "but rather"],
+      "okunus": ["ʔinnamā"],
+      "ipa": ["/ʔin.na.maː/"],
+      "etimoloji": 4,
+      "bag": "belirsiz"
+    },
+    {
+      "madde": "كأنما",
+      "tur": "conj",
+      "baslik": "كَأَنَّمَا • (kaʔannamā)",
+      "anlam": ["as if, as though"],
+      "okunus": ["kaʔannamā"],
+      "etimoloji": 5,
+      "bag": "belirsiz"
     }
   ],
   "vikisozluk_etimolojiler": [
@@ -142,6 +198,33 @@
     {
       "metin": "See the etymology of the corresponding lemma form.",
       "kognatlar": []
+    },
+    {
+      "metin": "From مَا (mā) + أَنَّ (ʔanna).",
+      "kognatlar": [
+        ["مَا", "ما#Arabic"],
+        ["أَنَّ", "أن#Arabic"]
+      ]
+    },
+    {
+      "metin": "Internationalism; borrowed from Ancient Greek ἀναιμίᾱ (anaimíā). First attested in 1864.",
+      "kognatlar": [
+        ["ἀναιμίᾱ", "ἀναιμία#Ancient_Greek"]
+      ]
+    },
+    {
+      "metin": "From إِنَّ (ʔinna) + مَا (mā).",
+      "kognatlar": [
+        ["إِنَّ", "إن#Arabic"],
+        ["مَا", "ما#Arabic"]
+      ]
+    },
+    {
+      "metin": "From كَأَنَّ (kaʔanna) + مَا (mā).",
+      "kognatlar": [
+        ["كَأَنَّ", "كأن#Arabic"],
+        ["مَا", "ما#Arabic"]
+      ]
     }
   ],
   "kuran": {
@@ -226,5 +309,15 @@
   },
   "prototip": {
     "durum": "prototip veya mecaz kolu yok"
+  },
+  "tr_ek_belirsiz": {
+    "انما": "ne, şey; olumsuzluk",
+    "اينما": "ne, şey; olumsuzluk",
+    "فانما": "ne, şey; olumsuzluk",
+    "كانما": "ne, şey; olumsuzluk",
+    "وانما": "ne, şey; olumsuzluk"
+  },
+  "tr_ek": {
+    "للانام": "hayvanlar"
   }
 }
